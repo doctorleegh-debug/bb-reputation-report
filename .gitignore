@@ -1,0 +1,5 @@
+.env
+*.cookie
+*cookies*.json
+.agent-reach/
+.opencli/
