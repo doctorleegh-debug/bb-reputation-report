@@ -42,6 +42,14 @@ h1{margin:0;font-size:clamp(28px,5vw,46px);line-height:1.14;letter-spacing:-.03e
 .date{display:inline-flex;gap:10px;align-items:center;background:var(--ink);color:var(--ground);
   padding:8px 15px;border-radius:3px;margin-top:14px;font-size:13px;font-weight:700}
 .note0{margin:14px 0 0;color:var(--muted);font-size:13.5px;max-width:80ch}
+.arch{margin:14px 0 0;font-size:12.5px;color:var(--faint)}
+.arch a{margin-right:12px}
+.reply{display:flex;flex-wrap:wrap;align-items:baseline;gap:9px;margin:10px 0 0;
+  padding:11px 14px;background:var(--panel);border:1px solid var(--line);border-radius:4px}
+.reply .rl{background:var(--accent);color:#fff;font-size:11px;font-weight:700;
+  padding:3px 9px;border-radius:3px;letter-spacing:.04em;white-space:nowrap;flex:0 0 auto}
+.reply a{font-weight:700;font-size:13.5px}
+.reply .mut{flex:1 1 260px}
 .strip{display:grid;gap:1px;background:var(--line);grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
   border-bottom:1px solid var(--line)}
 .stat{background:var(--ground);padding:22px 20px}
@@ -105,6 +113,7 @@ blockquote{margin:12px 0;padding:10px 0 10px 16px;border-left:2px solid var(--ac
 <header class="mast">
   <h1>뷰블 리포트</h1>
   <div class="date"><span>보고일</span><span class="mono">2026. 08. 11.</span></div>
+  <p class="arch">회차 보관 · <a class="mono" href="w/2026-W33.html">2026-W33</a></p>
   <p class="note0">본 리포트의 모든 수치는 실제 수집 결과입니다. 수집하지 못한 항목은 “미수집”으로 명시했고, 검색이 정상 수행된 뒤의 0건과 구분했습니다. 추정과 해석은 기재하지 않았습니다.</p>
 </header>
 
@@ -177,8 +186,13 @@ blockquote{margin:12px 0;padding:10px 0 10px 16px;border-left:2px solid var(--ac
       <div class="card"><div class="k">담당</div><div class="v" style="font-size:16px">최준수 의사 · 원장 대응</div></div>
     </div>
     <p>리터치 후 단단한 결절이 생겨 점차 커졌고, 주말에 재방문하자 원장이 원인과 수정 방법을 설명하며 리터치를 시행해 3일 만에 상당히 축소됐다고 적었습니다. 총평과 평점은 만점이며, 결절이 남아 있어 걱정된다는 문장으로 후기를 맺었습니다.</p>
-    <p class="sm"><strong>원문 URL</strong> — <a class="mono" href="https://www.gangnamunni.com/jp/reviews?hospitalId=6992" target="_blank" rel="noopener">https://www.gangnamunni.com/jp/reviews?hospitalId=6992</a><br>
-    <span class="mut">페이지 진입 후 2026-08-03자 s00b!n 후기입니다.</span></p>
+    <p class="reply"><span class="rl">후기 찾기</span>
+      <a class="mono" href="https://www.gangnamunni.com/jp/reviews?hospitalId=6992" target="_blank" rel="noopener">강남언니 JP 후기 목록 →</a>
+      <span class="sm mut">진입 후 2026-08-03자 s00b!n 후기입니다.</span>
+    </p>
+    <p class="reply"><span class="rl" style="background:var(--warn)">답변 경로</span>
+      <span class="sm">강남언니는 <strong>개별 후기 URL을 제공하지 않습니다</strong>(페이지 내 링크 16개 중 후기 링크 0개 확인). 공개 페이지에서는 답변할 수 없고, <strong>병원 답변은 강남언니 파트너 콘솔에서만 가능합니다.</strong> 콘솔 주소는 병원 계정 담당자가 보유한 것을 사용하십시오.</span>
+    </p>
   </div>
   <div class="scroll"><table>
     <thead><tr><th>관측된 사실 — 병원 대응</th><th>관측된 사실 — 미해결 상태</th></tr></thead>
@@ -264,6 +278,14 @@ blockquote{margin:12px 0;padding:10px 0 10px 16px;border-left:2px solid var(--ac
   <div class="box w">
     <p class="t">답변이 달리지 않은 방문 예정자 문의가 1건 있습니다</p>
     <p class="sm">r/SeoulPlasticSurgery 스레드에서 elenav33이 “이번 금요일에 갈 생각인데 결과에 만족했는지, 장기 결과는 어땠는지” 물었으나 답변이 없습니다.</p>
+    <p class="reply"><span class="rl">바로 답변</span>
+      <a class="mono" href="https://www.reddit.com/r/SeoulPlasticSurgery/comments/1mc655p/comment/oapdef7/" target="_blank" rel="noopener">elenav33 댓글로 이동 →</a>
+      <span class="sm mut">클릭하면 해당 댓글로 바로 이동합니다. Reddit 계정으로 그 자리에서 답변할 수 있습니다.</span>
+    </p>
+    <p class="reply"><span class="rl" style="background:var(--ok)">참고</span>
+      <a class="mono" href="https://www.reddit.com/r/SeoulPlasticSurgery/comments/1mc655p/comment/o1e1dgl/" target="_blank" rel="noopener">fbd13 긍정 댓글로 이동 →</a>
+      <span class="sm mut">“업셀을 전혀 하지 않았다”고 적은 댓글입니다.</span>
+    </p>
   </div>
 
   <h3>언어별 검색어 실측</h3>
