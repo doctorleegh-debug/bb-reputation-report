@@ -122,6 +122,52 @@ blockquote{margin:12px 0;padding:10px 0 10px 16px;border-left:2px solid var(--ac
 tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
 .lgd{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin:10px 0}
 .lgd i{display:inline-block;width:14px;height:9px;border-radius:2px;margin-right:6px;vertical-align:middle}
+
+/* ---- 내비 ---- */
+.tabs{position:sticky;top:0;z-index:50;display:flex;gap:2px;overflow-x:auto;
+  background:var(--ground);border-bottom:1px solid var(--line);padding:9px 0;margin:0 -22px;
+  padding-left:22px;padding-right:22px;scrollbar-width:thin}
+.tabs a{flex:0 0 auto;padding:7px 13px;border-radius:20px;font-size:13px;font-weight:700;
+  color:var(--muted);text-decoration:none;white-space:nowrap;border:1px solid transparent}
+.tabs a:hover{background:var(--sunk);color:var(--ink);border-color:var(--line)}
+section{scroll-margin-top:58px}
+/* ---- 액션 허브 ---- */
+.hub{border-bottom:3px solid var(--ink)}
+.acts{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));margin:18px 0 0}
+.ac{border:1px solid var(--line);border-left:5px solid var(--gap);border-radius:5px;
+  padding:18px 20px;background:var(--panel);display:flex;flex-direction:column}
+.ac.c{border-left-color:var(--crit)} .ac.w{border-left-color:var(--warn)}
+.ac.o{border-left-color:var(--ok)}   .ac.i{border-left-color:var(--info)}
+.ah{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:9px}
+.am{font-size:11.5px;color:var(--faint);font-weight:700;letter-spacing:.05em}
+.ac h4{margin:0 0 7px;font-size:16.5px;line-height:1.4;letter-spacing:-.015em;font-weight:800}
+.ac p{margin:0 0 13px;font-size:13.5px;color:var(--ink2);line-height:1.62;flex:1}
+.al{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-block;padding:8px 14px;border-radius:4px;background:var(--accent);color:#fff;
+  font-size:12.5px;font-weight:700;text-decoration:none;border:1px solid var(--accent)}
+.btn:hover{opacity:.88}
+.btn.g{background:var(--ok);border-color:var(--ok)}
+.btn.q{background:transparent;color:var(--muted);border-color:var(--line)}
+.btn.q:hover{background:var(--sunk);color:var(--ink)}
+/* ---- 접이식 ---- */
+details.fold{border:1px solid var(--line);border-radius:5px;background:var(--panel);margin:14px 0}
+details.fold>summary{cursor:pointer;padding:14px 18px;font-weight:700;font-size:14.5px;
+  list-style:none;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold>summary::before{content:"▸";color:var(--accent);font-size:13px;flex:0 0 auto}
+details.fold[open]>summary::before{content:"▾"}
+details.fold[open]>summary{border-bottom:1px solid var(--line)}
+details.fold>summary:hover{background:var(--sunk)}
+details.fold .cnt{margin-left:auto;font-size:12px;color:var(--faint);font-weight:600}
+details.fold .scroll{margin:0;border:0;border-radius:0}
+details.fold>*:not(summary){padding:0}
+details.fold p{padding:0 18px}
+/* ---- 타이포 정리 ---- */
+h2{font-size:25px}
+section{padding:40px 0}
+.sh{margin-bottom:6px}
+table{font-size:13px}
+th,td{padding:10px 14px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -143,6 +189,81 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
   <div class="stat g"><div class="k">확인된 후기 총량</div><div class="v n">5,548<span class="u">건</span></div><div class="d">전주 대비 +96 · 4개 채널 동일조건</div></div>
 </div>
 
+
+
+
+<nav class="tabs" aria-label="섹션 이동">
+  <a href="#do">즉시 조치</a><a href="#wow">전주 대비</a><a href="#sev">Severity 3</a>
+  <a href="#reddit">Reddit</a><a href="#tw">대만·태국</a><a href="#fac">공장형</a>
+  <a href="#comp">경쟁사</a><a href="#scope">수집 범위</a><a href="#gap">미수집</a><a href="#act">조치</a>
+</nav>
+
+<!-- 즉시 조치 -->
+<section id="do" class="hub">
+  <div class="sh"><h2>즉시 조치</h2><span>클릭하면 해당 위치로 바로 이동합니다</span></div>
+  <p class="lead">답변·확인이 필요한 항목만 모았습니다. 나머지 섹션은 근거 자료입니다.</p>
+  <div class="acts">
+
+    <article class="ac c">
+      <div class="ah"><span class="pill p-c">미답변 · 1주 경과</span><span class="am">Reddit</span></div>
+      <h4>방문 예정자 문의에 답변이 없습니다</h4>
+      <p>elenav33이 “이번 금요일에 갈 생각인데 결과에 만족했는지” 물었습니다. 전주에도 댓글 4개, 이번 주도 4개로 <b>일주일째 그대로</b>입니다.</p>
+      <div class="al">
+        <a class="btn" href="https://www.reddit.com/r/SeoulPlasticSurgery/comments/1mc655p/comment/oapdef7/" target="_blank" rel="noopener">답변하러 가기 →</a>
+        <a class="btn g" href="https://www.reddit.com/r/SeoulPlasticSurgery/comments/1mc655p/comment/o1e1dgl/" target="_blank" rel="noopener">참고: 긍정 댓글</a>
+      </div>
+    </article>
+
+    <article class="ac c">
+      <div class="ah"><span class="pill p-c">Severity 3</span><span class="am">강남언니 JP</span></div>
+      <h4>부작용(결절) 주장 후기가 미해결로 공개돼 있습니다</h4>
+      <p>2026-08-03 · s00b!n · 평점 10/10. 결절이 남아 있어 걱정된다는 문장으로 끝납니다. 공개 페이지에서는 답변이 불가하며 <b>파트너 콘솔</b>이 필요합니다.</p>
+      <div class="al">
+        <a class="btn" href="https://www.gangnamunni.com/jp/reviews?hospitalId=6992" target="_blank" rel="noopener">후기 찾으러 가기 →</a>
+        <a class="btn q" href="#sev">상세 보기</a>
+      </div>
+    </article>
+
+    <article class="ac w">
+      <div class="ah"><span class="pill p-w">부정 · sev 1</span><span class="am">성예사 · 2건</span></div>
+      <h4>‘공장형’ 지적 2건</h4>
+      <p>“공장형 느낌인데 순환이 빨라서”(믕****, 2025-08-05), “공장형이라서 아무래도”(해****, 2026-08-05). 성예사는 개별 후기 URL이 없어 병원 페이지로 이동 후 작성자·일자로 찾으셔야 합니다.</p>
+      <div class="al">
+        <a class="btn" href="https://sungyesa.com/hlist/286854" target="_blank" rel="noopener">성예사 병원 페이지 →</a>
+        <a class="btn q" href="#fac">6건 분류 보기</a>
+      </div>
+    </article>
+
+    <article class="ac w">
+      <div class="ah"><span class="pill p-w">감소</span><span class="am">Instagram</span></div>
+      <h4>글로벌 계정 팔로워가 9명 줄었습니다</h4>
+      <p>게시물은 439→448로 9개 늘었는데 팔로워는 4,367→4,358입니다. 이번 회차 15개 지표 중 <b>유일한 마이너스</b>입니다.</p>
+      <div class="al">
+        <a class="btn" href="https://www.instagram.com/beautyblossom_global/" target="_blank" rel="noopener">계정 확인 →</a>
+        <a class="btn q" href="#wow">증감 전체 보기</a>
+      </div>
+    </article>
+
+    <article class="ac i">
+      <div class="ah"><span class="pill p-i">귀속 미확정</span><span class="am">Dcard 대만</span></div>
+      <h4>병원명 없는 홍대 후기가 자사 건인지 미확정입니다</h4>
+      <p>@ykkkkki · 2026-08-07 · 黃金微針 시술. 단서는 <b>독립 시술실</b>과 <b>전 과정 중국어 서비스</b>입니다. 해당 시기 대만 고객 시술 기록을 대조하면 특정됩니다.</p>
+      <div class="al">
+        <a class="btn" href="https://www.dcard.tw/f/facelift/p/261936202" target="_blank" rel="noopener">원문 보기 →</a>
+      </div>
+    </article>
+
+    <article class="ac o">
+      <div class="ah"><span class="pill p-o">활용 가능</span><span class="am">Reddit · 최대 도달</span></div>
+      <h4>자사 언급 글이 계속 성장 중입니다</h4>
+      <p>86점·42댓글 → <b>88점·43댓글</b>. 자사가 「Sofwave at Beauty Blossom Clinic Hongdae」로 3번 항목에 등장합니다.</p>
+      <div class="al">
+        <a class="btn" href="https://www.reddit.com/r/KoreaTravelBeauty/comments/1qkoxv8/honest_reviews_on_beauty_treatments_i_went_back/" target="_blank" rel="noopener">글 보기 →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
 
 <!-- 주간 비교 -->
 <section id="wow">
@@ -227,9 +348,9 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
 </section>
 
 <!-- 수집 범위 -->
-<section>
+<section id="scope">
   <div class="sh"><h2>수집 플랫폼</h2><span>데이터를 실제로 가져온 곳 14개 · 미수집 4개</span></div>
-  <div class="scroll"><table>
+  <details class="fold"><summary>플랫폼별 수집 내용<span class="cnt">14곳 수집 · 4곳 미수집</span></summary><div class="scroll"><table>
     <thead><tr><th>플랫폼</th><th>식별자</th><th>수집한 내용</th><th>상태</th></tr></thead>
     <tbody>
       <tr><td>네이버 플레이스</td><td class="mono">place 1518107439</td><td>리뷰 2,147건(방문자 1,937 + 블로그 210) · 전주 대비 +49</td><td><span class="pill p-o">수집</span></td></tr>
@@ -244,9 +365,9 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
       <tr><td>RedNote / 샤오홍슈</td><td class="mono">Beautyblossom丽朵</td><td>자사 계정 확인</td><td><span class="pill p-o">수집</span></td></tr>
       <tr><td>Facebook · X · Google · 자사 공식 5종</td><td class="mono">—</td><td>페이지 확인 · 검색 · 레퍼런스 확정</td><td><span class="pill p-o">수집</span></td></tr>
     </tbody>
-  </table></div>
+  </table></div></details>
 
-  <h3>언어권별 수집 매체</h3>
+  <details class="fold"><summary>언어권별 수집 매체<span class="cnt">6개 언어권 · 매체 21개</span></summary>
   <div class="scroll"><table>
     <thead><tr><th>언어권</th><th>조회한 매체</th><th>수집 결과</th></tr></thead>
     <tbody>
@@ -259,7 +380,8 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
     </tbody>
   </table></div>
 
-  <h3>평점 지표 — 100점 환산 통일</h3>
+  </details>
+<h3>평점 지표 — 100점 환산 통일</h3>
   <p class="sm">성예사는 5점, 강남언니·여신티켓은 10점, 구글맵은 5점 만점을 씁니다. 원점수를 그대로 나열하면 비교가 되지 않아 100점 환산 열을 함께 뒀습니다. 플랫폼마다 평가 모수와 집계 방식이 다르므로 환산값도 절대 비교에는 사용하지 마십시오.</p>
   <div class="scroll"><table>
     <thead><tr><th>플랫폼</th><th>원척도</th><th>원점수</th><th>100점 환산</th><th class="r">후기 수</th><th>확인 범위</th></tr></thead>
@@ -276,7 +398,7 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
 </section>
 
 <!-- SEVERITY 3 -->
-<section>
+<section id="sev">
   <div class="sh"><h2>Severity 3 — 부작용 주장</h2><span>1건 · escalate</span></div>
   <div class="box c">
     <p class="t">강남언니 일본어판 · 사각턱 보톡스 리터치 후 결절</p>
@@ -316,7 +438,7 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
 </section>
 
 <!-- REDDIT -->
-<section>
+<section id="reddit">
   <div class="sh"><h2>Reddit</h2><span>자사 언급 6건 · 검색어 10종 확장 조사</span></div>
   <div class="box o">
     <p class="t">검색어를 10종으로 확장해 재조사했습니다 — 신규 발견 0건</p>
@@ -327,7 +449,7 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
     <p class="sm">Reddit 전체 검색은 <code>--limit</code> 값이 하드 상한으로 동작해 지정한 개수를 무관한 게시물로 채웁니다(15 지정 시 정확히 15건, 50 지정 시 정확히 50건). 실제 언급량을 셀 수 없어 서브레딧 한정 검색으로 수행했습니다.</p>
   </div>
 
-  <h3>자사 언급 전수 6건</h3>
+  <details class="fold"><summary>자사 언급 전수 6건<span class="cnt">Reddit 6건 · 원문 URL 포함</span></summary>
   <div class="scroll"><table>
     <thead><tr><th>서브레딧</th><th>제목 · 작성자</th><th>확인된 내용</th><th>반응</th><th>원문 URL</th></tr></thead>
     <tbody>
@@ -389,7 +511,7 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
     </p>
   </div>
 
-  <h3>언어별 검색어 실측</h3>
+  <details class="fold"><summary>언어별 검색어 실측<span class="cnt">검색어 10종 · 40회 검색</span></summary>
   <div class="scroll"><table>
     <thead><tr><th>언어</th><th>실제 사용한 검색어 (전수)</th><th>비고</th><th class="r">자사 결과</th></tr></thead>
     <tbody>
@@ -401,7 +523,8 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
     </tbody>
   </table></div>
 
-  <h3>시술 키워드 언급 빈도</h3>
+  </details>
+<details class="fold"><summary>시술 키워드 언급 빈도<span class="cnt">코퍼스 200건 · 24개 시술</span></summary>
   <p class="sm mut">r/KoreaTravelBeauty + r/SeoulPlasticSurgery 최근 게시물 200건(257,717 bytes) 코퍼스의 제목+본문 문자열 출현 횟수입니다. 댓글은 포함하지 않았습니다. 브랜드명 표기 변형(한글·영문)을 합산했습니다.</p>
   <div style="margin:16px 0">
     <div class="bar"><div class="lab">울쎄라 / Ulthera</div><div class="tr"><div class="fi" style="width:100%"></div></div><div class="vl n">17</div></div>
@@ -424,10 +547,12 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
     <p class="t">언급량 1·2위 시술의 자사 후기 보유 현황</p>
     <p class="sm">울쎄라(17회)와 써마지(15회)가 Reddit 코퍼스 언급량 1·2위입니다. 이 중 <strong>울쎄라는 자사 네이버 후기에 존재합니다</strong> — 2026-08-09자 후기(유니9711)에 울쎄라와 온다 시술 기록이 있습니다. 써마지는 이번 회차에 수집한 자사 후기에서 확인되지 않았습니다.</p>
   </div>
+</details>
+</details>
 </section>
 
 <!-- 대만·태국 -->
-<section>
+<section id="tw">
   <div class="sh"><h2>대만 · 태국</h2><span>Dcard · Pantip 실측</span></div>
 
   <h3>자사 Dcard 계정 @beauty_blossom</h3>
@@ -459,7 +584,7 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
     <p class="sm">2026-06-16 Dcard 게시물에 「Beauty Blossom 榮獲喬雅露(Juvelook) Key Doctor 認證」이 있습니다. 쥬베룩 Key Doctor 인증 보유 사실이 대만 채널에 게시돼 있습니다. 한국어·영어·일본어 채널에서는 동일 인증 게시물이 확인되지 않았습니다.</p>
   </div>
 
-  <h3>대만 Dcard 醫美 Forum 지역 동향 — 자사 언급 아님</h3>
+  <details class="fold"><summary>대만 Dcard 醫美 Forum 지역 동향 — 자사 언급 아님<span class="cnt">4건 · 전부 자사 무관</span></summary>
   <div class="box w">
     <p class="t">아래 4건은 자사를 언급한 글이 아닙니다</p>
     <p class="sm">홍대 지역 일반 문의 2건, 병원 미지목 후기 1건, 경쟁사 자체 홍보글 1건입니다.</p>
@@ -474,7 +599,8 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
     </tbody>
   </table></div>
 
-  <h3>태국 Pantip</h3>
+  </details>
+<h3>태국 Pantip</h3>
   <div class="grid">
     <div class="card" style="background:var(--critbg);border-color:var(--critln)"><div class="k">검색어 Beauty Blossom เกาหลี</div><div class="v n" style="color:var(--crit)">0<span class="u" style="font-size:15px">건</span></div><div class="d">페이지 원문: การค้นหา … ไม่ตรงกับข้อมูลในกระทู้ใดๆ</div></div>
     <div class="card" style="background:var(--okbg);border-color:var(--okln)"><div class="k">검색어 คลินิกเกาหลี ผิว</div><div class="v n" style="color:var(--ok)">12<span class="u" style="font-size:15px">건</span></div><div class="d">태국어권에 한국 피부과 논의는 존재</div></div>
@@ -483,7 +609,7 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
 </section>
 
 <!-- 공장형 -->
-<section>
+<section id="fac">
   <div class="sh"><h2>‘공장형’ 표현 — 대상 병원별 분류</h2><span>원문 6건 · 자사 4건 · 타사 2건</span></div>
   <div class="grid">
     <div class="card" style="background:var(--critbg);border-color:var(--critln)"><div class="k">자사 대상 · 부정</div><div class="v n" style="color:var(--crit)">3<span class="u" style="font-size:15px">건</span></div><div class="d">한국어 2 · 일본어 1</div></div>
@@ -505,7 +631,7 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
 </section>
 
 <!-- 경쟁사 -->
-<section>
+<section id="comp">
   <div class="sh"><h2>경쟁사</h2><span>인스타그램 3곳 수집 · 신규 발굴 4곳</span></div>
   <div class="box c">
     <p class="t">수집한 3곳 중 2곳이 2026년 수상 내역을 게시하고 있습니다</p>
@@ -534,7 +660,7 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
 </section>
 
 <!-- 미수집 -->
-<section>
+<section id="gap">
   <div class="sh"><h2>미수집 항목</h2><span>4개</span></div>
   <p class="lead">아래 항목의 침묵은 언급이 0건이라는 뜻이 아니라 측정하지 않았다는 뜻입니다. 평판 판단에 사용하지 마십시오.</p>
   <div class="scroll"><table>
@@ -553,7 +679,7 @@ tr.own td{background:var(--accent-soft,rgba(142,66,87,.07))}
 </section>
 
 <!-- 조치 -->
-<section>
+<section id="act">
   <div class="sh"><h2>조치 항목</h2><span>관측된 사실에 근거</span></div>
   <div class="scroll"><table>
     <thead><tr><th>우선도</th><th>항목</th><th>근거가 된 관측</th></tr></thead>
