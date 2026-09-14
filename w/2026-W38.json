@@ -11,18 +11,41 @@
   "google_first_written": 30,
   "babitalk_jp": 3,
   "sungyesa": 0,
-  "unni_jp": null,
-  "total": 43,
+  "gangnamunni": 64,
+  "total": 107,
   "naver_prior_visit_posted_this_week_est": 17
  },
  "sentiment": {
-  "positive": 42,
+  "positive": 96,
   "neutral": 1,
-  "mixed": 0,
-  "negative": 0
+  "mixed": 9,
+  "negative": 1
  },
  "critical": 0,
  "severity3": 0,
+ "gangnamunni": {
+  "score_distribution": {
+   "7": 5,
+   "8": 4,
+   "9": 6,
+   "10": 49
+  },
+  "replied": 63,
+  "doctor_tags": {
+   "미기재": 42,
+   "김준혁": 2,
+   "정성호": 3,
+   "이건호": 9,
+   "최준수": 6,
+   "임문교": 1,
+   "조성만": 1
+  },
+  "complaint_themes": {
+   "consultation_attitude": 3,
+   "waiting_after_booking": 3,
+   "efficacy_perceived_low": 4
+  }
+ },
  "cumulative": {
   "Naver": {
    "prev": 2335,
@@ -227,7 +250,6 @@
   ]
  },
  "not_collected": [
-  "unni_jp_review_text",
   "instagram_comment_text",
   "x_control_search",
   "dcard",
