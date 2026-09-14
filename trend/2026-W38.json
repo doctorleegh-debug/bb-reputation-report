@@ -1159,8 +1159,8 @@
    }
   }
  },
- "layout_version": 2,
- "headline": "리프팅·스킨부스터 검색은 3주 연속 올랐고, 여름 관리 주제는 3주 연속 줄었습니다.",
+ "layout_version": 3,
+ "headline": "리프팅·스킨 시술 검색은 3주 연속 올랐고, 여름 관리 주제는 3주 연속 줄었습니다.",
  "signals": [
   {
    "type": "abs",
@@ -1328,11 +1328,6 @@
    ],
    "streak": "3주 연속 하락"
   }
- },
- "competitor_appearances": {
-  "밴스의원": 2,
-  "뷰성형외과": 2,
-  "톡스앤필": 1
  },
  "lifting_device_appearances": {
   "써마지": {
@@ -1530,5 +1525,955 @@
    "에피티콘",
    "립플립"
   ]
+ },
+ "own_devices": {
+  "울쎄라": {
+   "category": "리프팅",
+   "series": {
+    "08-26": 43860,
+    "08-31": 45100,
+    "09-07": 47130,
+    "09-14": 47890
+   },
+   "streak": "3주 연속 상승",
+   "google_7day_pct": 12.94
+  },
+  "소프웨이브": {
+   "category": "리프팅",
+   "series": {
+    "08-26": 6310,
+    "08-31": 6830,
+    "09-07": 7320,
+    "09-14": 7860
+   },
+   "streak": "3주 연속 상승",
+   "google_7day_pct": null
+  },
+  "써마지": {
+   "category": "리프팅",
+   "series": {
+    "08-26": 27990,
+    "08-31": 27980,
+    "09-07": 28800,
+    "09-14": 28310
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": -1.11
+  },
+  "온다리프팅": {
+   "category": "리프팅",
+   "series": {
+    "08-26": 54240,
+    "08-31": 53370,
+    "09-07": 53480,
+    "09-14": 53620
+   },
+   "streak": "최근 2주 연속 상승",
+   "google_7day_pct": -2.63
+  },
+  "인모드": {
+   "category": "리프팅",
+   "series": {
+    "08-26": 18400,
+    "08-31": 18220,
+    "09-07": 18320,
+    "09-14": 17860
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": -4.23
+  },
+  "슈링크": {
+   "category": "리프팅",
+   "series": {
+    "08-26": 73230,
+    "08-31": 76720,
+    "09-07": 81340,
+    "09-14": 85870
+   },
+   "streak": "3주 연속 상승",
+   "google_7day_pct": -2.71
+  },
+  "볼뉴머": {
+   "category": "리프팅",
+   "series": {
+    "08-26": 64550,
+    "08-31": 67440,
+    "09-07": 69410,
+    "09-14": 71920
+   },
+   "streak": "3주 연속 상승",
+   "google_7day_pct": null
+  },
+  "덴서티": {
+   "category": "리프팅",
+   "series": {
+    "08-26": 54540,
+    "08-31": 54470,
+    "09-07": 55240,
+    "09-14": 53090
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "리니어지": {
+   "category": "리프팅",
+   "series": {
+    "08-26": 3450,
+    "08-31": 3250,
+    "09-07": 3260,
+    "09-14": 3190
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "세르프": {
+   "category": "리프팅",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 15480
+   },
+   "streak": null,
+   "google_7day_pct": 16.33
+  },
+  "올타이트": {
+   "category": "리프팅",
+   "series": {
+    "08-26": 8360,
+    "08-31": 8050,
+    "09-07": 8400,
+    "09-14": 8670
+   },
+   "streak": "최근 2주 연속 상승",
+   "google_7day_pct": null
+  },
+  "포텐자": {
+   "category": "레이저",
+   "series": {
+    "08-26": 32290,
+    "08-31": 31490,
+    "09-07": 31110,
+    "09-14": 31510
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": 0.52
+  },
+  "포트라": {
+   "category": "레이저",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 690
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "피코슈어": {
+   "category": "레이저",
+   "series": {
+    "08-26": 2270,
+    "08-31": 2200,
+    "09-07": 2210,
+    "09-14": 2120
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "CO2레이저": {
+   "category": "레이저",
+   "series": {
+    "08-26": 4310,
+    "08-31": 4220,
+    "09-07": 4260,
+    "09-14": 4310
+   },
+   "streak": "최근 2주 연속 상승",
+   "google_7day_pct": null
+  },
+  "브이레이저": {
+   "category": "레이저",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 830
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "아큐토닝": {
+   "category": "레이저",
+   "series": {
+    "08-26": 800,
+    "08-31": 780,
+    "09-07": 770,
+    "09-14": 740
+   },
+   "streak": "3주 연속 하락",
+   "google_7day_pct": null
+  },
+  "아포지엘리트": {
+   "category": "레이저",
+   "series": {
+    "08-26": 80,
+    "08-31": 80,
+    "09-07": 90,
+    "09-14": 80
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "울쎄라피프라임": {
+   "category": "모델",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 6900
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "써마지FLX": {
+   "category": "모델",
+   "series": {
+    "08-26": 2460,
+    "08-31": 2480,
+    "09-07": 2370,
+    "09-14": 2050
+   },
+   "streak": "최근 2주 연속 하락",
+   "google_7day_pct": null
+  },
+  "슈링크유니버스": {
+   "category": "모델",
+   "series": {
+    "08-26": 6460,
+    "08-31": 6490,
+    "09-07": 6690,
+    "09-14": 6720
+   },
+   "streak": "3주 연속 상승",
+   "google_7day_pct": null
+  },
+  "포트라콰트로": {
+   "category": "모델",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 120
+   },
+   "streak": null,
+   "google_7day_pct": null
+  }
+ },
+ "local_clinics": {
+  "오블리주의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 165, 상진빌딩, 11층",
+   "google_rating": 4.7,
+   "google_reviews_total": 417,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 690,
+   "naver_branch_volumes": {
+    "홍대오블리주의원": 380,
+    "오블리주의원홍대": 30,
+    "오블리주의원홍대점": 10,
+    "합정오블리주의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "뷰티라운지의원 홍대글로벌": {
+   "address": "대한민국 서울특별시 마포구 동교동 162-3, 5 층",
+   "google_rating": 4.9,
+   "google_reviews_total": 1371,
+   "google_new_reviews_0907_0913": 3,
+   "naver_brand_volume": 10670,
+   "naver_branch_volumes": {
+    "홍대뷰티라운지의원": 25,
+    "뷰티라운지의원홍대": 70,
+    "뷰티라운지의원홍대점": 10,
+    "합정뷰티라운지의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "유앤아이의원 홍대신촌점": {
+   "address": "대한민국 서울특별시 마포구 동교동 양화로 162, 좋은사람들빌딩, 5층",
+   "google_rating": 4.8,
+   "google_reviews_total": 242,
+   "google_new_reviews_0907_0913": 6,
+   "naver_brand_volume": 93610,
+   "naver_branch_volumes": {
+    "홍대유앤아이의원": 140,
+    "유앤아이의원홍대": 480,
+    "유앤아이의원홍대점": 15,
+    "합정유앤아이의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "아비쥬 의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 동교동, 아일렉스 메가박스 건물, 3층",
+   "google_rating": 4.8,
+   "google_reviews_total": 784,
+   "google_new_reviews_0907_0913": 1,
+   "naver_brand_volume": 27300,
+   "naver_branch_volumes": {
+    "홍대아비쥬의원": 470,
+    "아비쥬의원홍대": 870,
+    "아비쥬의원홍대점": 15,
+    "합정아비쥬의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "제이필의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 양화로 166, 미래프라자, 5&7층",
+   "google_rating": 4.9,
+   "google_reviews_total": 662,
+   "google_new_reviews_0907_0913": 17,
+   "naver_brand_volume": 3360,
+   "naver_branch_volumes": {
+    "홍대제이필의원": 300,
+    "제이필의원홍대": 1540,
+    "제이필의원홍대점": 15,
+    "합정제이필의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "홍대 셀레나의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 162, 9층",
+   "google_rating": 4.9,
+   "google_reviews_total": 281,
+   "google_new_reviews_0907_0913": 8,
+   "naver_brand_volume": 370,
+   "naver_branch_volumes": {
+    "홍대셀레나의원": 900,
+    "셀레나의원홍대": 25,
+    "셀레나의원홍대점": 10,
+    "합정셀레나의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "리엘르의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 162, 좋은사람들빌딩, 13층",
+   "google_rating": 4.9,
+   "google_reviews_total": 138,
+   "google_new_reviews_0907_0913": 1,
+   "naver_brand_volume": 3310,
+   "naver_branch_volumes": {
+    "홍대리엘르의원": 150,
+    "리엘르의원홍대": 410,
+    "리엘르의원홍대점": 10,
+    "합정리엘르의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "유앤미의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 양화로 165, 14층",
+   "google_rating": 4.8,
+   "google_reviews_total": 17,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 6590,
+   "naver_branch_volumes": {
+    "홍대유앤미의원": 840,
+    "유앤미의원홍대": 200,
+    "유앤미의원홍대점": 10,
+    "합정유앤미의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "닥터에버스 홍대점": {
+   "address": "대한민국 서울특별시 마포구 양화로 140, 5th floor (H Cube",
+   "google_rating": 4.7,
+   "google_reviews_total": 743,
+   "google_new_reviews_0907_0913": 27,
+   "naver_brand_volume": 25200,
+   "naver_branch_volumes": {
+    "홍대닥터에버스": 430,
+    "닥터에버스홍대": 1530,
+    "닥터에버스홍대점": 30,
+    "합정닥터에버스": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "닥터디자이너의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 동교동 양화로 162, 좋은사람들 빌딩, 8층",
+   "google_rating": 4.7,
+   "google_reviews_total": 23,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 8360,
+   "naver_branch_volumes": {
+    "홍대닥터디자이너의원": 10,
+    "닥터디자이너의원홍대": 10,
+    "닥터디자이너의원홍대점": 10,
+    "합정닥터디자이너의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "마인드피부과의원": {
+   "address": "대한민국 서울특별시 마포구 동교동 166-13, 3 층",
+   "google_rating": 4.4,
+   "google_reviews_total": 107,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 110,
+   "naver_branch_volumes": {
+    "홍대마인드피부과의원": 10,
+    "마인드피부과의원홍대": 10,
+    "마인드피부과의원홍대점": 10,
+    "합정마인드피부과의원": 10
+   },
+   "search_suggestion_hits": [
+    "구글 자동완성 「홍대 피부과 마인드」"
+   ]
+  },
+  "리엔장의원 홍대": {
+   "address": "대한민국 6F 양화로18길 ３, KR 서울특별시 마포구",
+   "google_rating": 4.9,
+   "google_reviews_total": 2799,
+   "google_new_reviews_0907_0913": 12,
+   "naver_brand_volume": 2230,
+   "naver_branch_volumes": {
+    "홍대리엔장의원": 190,
+    "리엔장의원홍대": 180,
+    "리엔장의원홍대점": 10,
+    "합정리엔장의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "나인의원 홍대입구역": {
+   "address": "대한민국 서울특별시 마포구 양화로 165",
+   "google_rating": 4.8,
+   "google_reviews_total": 423,
+   "google_new_reviews_0907_0913": 2,
+   "naver_brand_volume": 1780,
+   "naver_branch_volumes": {
+    "홍대나인의원": 1680,
+    "나인의원홍대": 330,
+    "나인의원홍대점": 2540,
+    "합정나인의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "차이의원 홍대본점": {
+   "address": "대한민국, KR 서울특별시 마포구 월드컵로3길 14 딜라이트스퀘어 2차 B동 3층",
+   "google_rating": 4.9,
+   "google_reviews_total": 36,
+   "google_new_reviews_0907_0913": 4,
+   "naver_brand_volume": 850,
+   "naver_branch_volumes": {
+    "홍대차이의원": 50,
+    "차이의원홍대": 10,
+    "차이의원홍대점": 10,
+    "합정차이의원": 330
+   },
+   "search_suggestion_hits": [
+    "구글 자동완성 「차이의원 합정 피부과」"
+   ]
+  },
+  "홍대 톡스앤필의원": {
+   "address": "대한민국, KR 서울특별시 마포구 서울특별시 마포구 양화로 162 좋은사람들빌딩, 톡스앤필 홍대점, 11층-12층",
+   "google_rating": 5,
+   "google_reviews_total": 615,
+   "google_new_reviews_0907_0913": 55,
+   "naver_brand_volume": 1170,
+   "naver_branch_volumes": {
+    "홍대톡스앤필의원": 140,
+    "톡스앤필의원홍대": 45,
+    "톡스앤필의원홍대점": 10,
+    "합정톡스앤필의원": 10
+   },
+   "search_suggestion_hits": [
+    "구글 연관검색 급상승 「톡스 앤필」 +350% · 리프팅 시드 · 브랜드명이라 지점 특정 불가"
+   ]
+  },
+  "아이디의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 140, 에이치큐브빌딩, 10층",
+   "google_rating": 4.9,
+   "google_reviews_total": 676,
+   "google_new_reviews_0907_0913": 26,
+   "naver_brand_volume": 2490,
+   "naver_branch_volumes": {
+    "홍대아이디의원": 300,
+    "아이디의원홍대": 40,
+    "아이디의원홍대점": 10,
+    "합정아이디의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "홍대 밴스피부과의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 144, 3층",
+   "google_rating": 4.7,
+   "google_reviews_total": 613,
+   "google_new_reviews_0907_0913": 59,
+   "naver_brand_volume": 250,
+   "naver_branch_volumes": {
+    "홍대밴스피부과의원": 50,
+    "밴스피부과의원홍대": 25,
+    "밴스피부과의원홍대점": 10,
+    "합정밴스피부과의원": 10
+   },
+   "search_suggestion_hits": [
+    "구글 연관검색 급상승 「밴스 의원」 +100% · 보톡스 시드 · 브랜드명이라 지점 특정 불가"
+   ]
+  },
+  "에스준의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 동교로 191",
+   "google_rating": 4.3,
+   "google_reviews_total": 13,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 1330,
+   "naver_branch_volumes": {
+    "홍대에스준의원": 60,
+    "에스준의원홍대": 110,
+    "에스준의원홍대점": 10,
+    "합정에스준의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "디온의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 양화로 156",
+   "google_rating": 4.9,
+   "google_reviews_total": 30,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 1030,
+   "naver_branch_volumes": {
+    "홍대디온의원": 1740,
+    "디온의원홍대": 120,
+    "디온의원홍대점": 15,
+    "합정디온의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "클림의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 141, 롯데호텔L7홍대점 클림의원, 3층",
+   "google_rating": 4.8,
+   "google_reviews_total": 582,
+   "google_new_reviews_0907_0913": 20,
+   "naver_brand_volume": 4400,
+   "naver_branch_volumes": {
+    "홍대클림의원": 320,
+    "클림의원홍대": 780,
+    "클림의원홍대점": 150,
+    "합정클림의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "로바에의원": {
+   "address": "대한민국 서울특별시 마포구 동교동 159-1, 7층",
+   "google_rating": 4.9,
+   "google_reviews_total": 156,
+   "google_new_reviews_0907_0913": 8,
+   "naver_brand_volume": 1470,
+   "naver_branch_volumes": {
+    "홍대로바에의원": 70,
+    "로바에의원홍대": 270,
+    "로바에의원홍대점": 10,
+    "합정로바에의원": 10
+   },
+   "search_suggestion_hits": [
+    "구글 자동완성 「홍대 피부과 로바 에」"
+   ]
+  },
+  "프로젝트유의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 162, 6th",
+   "google_rating": 5,
+   "google_reviews_total": 573,
+   "google_new_reviews_0907_0913": 8,
+   "naver_brand_volume": 1250,
+   "naver_branch_volumes": {
+    "홍대프로젝트유의원": 2670,
+    "프로젝트유의원홍대": 20,
+    "프로젝트유의원홍대점": 10,
+    "합정프로젝트유의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "제로랩의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 151 5, 6,7 층",
+   "google_rating": 4.9,
+   "google_reviews_total": 592,
+   "google_new_reviews_0907_0913": 7,
+   "naver_brand_volume": 610,
+   "naver_branch_volumes": {
+    "홍대제로랩의원": 25,
+    "제로랩의원홍대": 25,
+    "제로랩의원홍대점": 10,
+    "합정제로랩의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "쁨글로벌 의원 홍대점 신관": {
+   "address": "4th, H-Cube building, 140 양화로 floor, 마포구 서울특별시, 대한민국",
+   "google_rating": 4.8,
+   "google_reviews_total": 1149,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 1510,
+   "naver_branch_volumes": {
+    "홍대쁨글로벌의원": 25,
+    "쁨글로벌의원홍대": 20,
+    "쁨글로벌의원홍대점": 15,
+    "합정쁨글로벌의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "닥터쁘띠의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 양화로 151, 8층",
+   "google_rating": 4.9,
+   "google_reviews_total": 220,
+   "google_new_reviews_0907_0913": 5,
+   "naver_brand_volume": 1940,
+   "naver_branch_volumes": {
+    "홍대닥터쁘띠의원": 20,
+    "닥터쁘띠의원홍대": 90,
+    "닥터쁘띠의원홍대점": 10,
+    "합정닥터쁘띠의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "벨아미리노보의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 176, 와이즈파크, 5층",
+   "google_rating": 5,
+   "google_reviews_total": 42,
+   "google_new_reviews_0907_0913": 4,
+   "naver_brand_volume": 45,
+   "naver_branch_volumes": {
+    "홍대벨아미리노보": 15,
+    "벨아미리노보홍대": 10,
+    "벨아미리노보홍대점": 10,
+    "합정벨아미리노보": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "포에버의원 홍대글로벌": {
+   "address": "대한민국 서울특별시 마포구 양화로 162, 포에버의원, 10F",
+   "google_rating": 4.9,
+   "google_reviews_total": 396,
+   "google_new_reviews_0907_0913": 3,
+   "naver_brand_volume": 19950,
+   "naver_branch_volumes": {
+    "홍대포에버의원": 200,
+    "포에버의원홍대": 320,
+    "포에버의원홍대점": 1000,
+    "합정포에버의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "앤봄의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 162, 좋은사람들 빌딩, 701호",
+   "google_rating": 4.9,
+   "google_reviews_total": 1587,
+   "google_new_reviews_0907_0913": 21,
+   "naver_brand_volume": 1390,
+   "naver_branch_volumes": {
+    "홍대앤봄의원": 430,
+    "앤봄의원홍대": 140,
+    "앤봄의원홍대점": 10,
+    "합정앤봄의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "리버스클리닉 홍대점": {
+   "address": "대한민국 서울특별시 마포구 동교동 159 1번지, 상진빌딩, 13층",
+   "google_rating": 4.6,
+   "google_reviews_total": 22,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 2370,
+   "naver_branch_volumes": {
+    "홍대리버스클리닉": 180,
+    "리버스클리닉홍대": 630,
+    "리버스클리닉홍대점": 10,
+    "합정리버스클리닉": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "홍대 고운세상피부과": {
+   "address": "대한민국 서울특별시 마포구 월드컵로1길 14, A동 1차 2층 202호, 딜라이트스퀘어",
+   "google_rating": 3,
+   "google_reviews_total": 14,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 7270,
+   "naver_branch_volumes": {
+    "홍대고운세상피부과": 590,
+    "고운세상피부과홍대": 15,
+    "고운세상피부과홍대점": 10,
+    "합정고운세상피부과": 55
+   },
+   "search_suggestion_hits": [
+    "구글 자동완성 「합정 고운 세상 피부과」"
+   ]
+  },
+  "톤즈의원 홍대점": {
+   "address": "대한민국, KR 서울특별시 마포구 에이치큐브, 톤즈의원 홍대입구역, 6층",
+   "google_rating": 4.4,
+   "google_reviews_total": 47,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 66100,
+   "naver_branch_volumes": {
+    "홍대톤즈의원": 450,
+    "톤즈의원홍대": 1130,
+    "톤즈의원홍대점": 30,
+    "합정톤즈의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "홍대라인업의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 178",
+   "google_rating": 1,
+   "google_reviews_total": 1,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 430,
+   "naver_branch_volumes": {
+    "홍대라인업의원": 40,
+    "라인업의원홍대": 10,
+    "라인업의원홍대점": 10,
+    "합정라인업의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "리즈온의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 홍익로 25, 5층",
+   "google_rating": 4.7,
+   "google_reviews_total": 14,
+   "google_new_reviews_0907_0913": 1,
+   "naver_brand_volume": 5440,
+   "naver_branch_volumes": {
+    "홍대리즈온의원": 70,
+    "리즈온의원홍대": 280,
+    "리즈온의원홍대점": 30,
+    "합정리즈온의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "아르스킨의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 164, 5층",
+   "google_rating": 5,
+   "google_reviews_total": 384,
+   "google_new_reviews_0907_0913": 4,
+   "naver_brand_volume": 750,
+   "naver_branch_volumes": {
+    "홍대아르스킨의원": 110,
+    "아르스킨의원홍대": 10,
+    "아르스킨의원홍대점": 10,
+    "합정아르스킨의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "블리비의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 양화로 161, 케이빌딩, 4층",
+   "google_rating": 4.3,
+   "google_reviews_total": 82,
+   "google_new_reviews_0907_0913": 1,
+   "naver_brand_volume": 44760,
+   "naver_branch_volumes": {
+    "홍대블리비의원": 50,
+    "블리비의원홍대": 440,
+    "블리비의원홍대점": 330,
+    "합정블리비의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "닥터포유의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 서교동 양화로 64, 제일빌딩, 4층",
+   "google_rating": 5,
+   "google_reviews_total": 5,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 620,
+   "naver_branch_volumes": {
+    "홍대닥터포유의원": 10,
+    "닥터포유의원홍대": 20,
+    "닥터포유의원홍대점": 10,
+    "합정닥터포유의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "델브클리닉": {
+   "address": "대한민국 서울특별시 마포구 양화로 133, M층",
+   "google_rating": 5,
+   "google_reviews_total": 172,
+   "google_new_reviews_0907_0913": 4,
+   "naver_brand_volume": 25,
+   "naver_branch_volumes": {
+    "홍대델브클리닉": 10,
+    "델브클리닉홍대": 10,
+    "델브클리닉홍대점": 10,
+    "합정델브클리닉": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "연세피부과의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 156",
+   "google_rating": 4,
+   "google_reviews_total": 4,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 4530,
+   "naver_branch_volumes": {
+    "홍대연세피부과의원": 10,
+    "연세피부과의원홍대": 10,
+    "연세피부과의원홍대점": 10,
+    "합정연세피부과의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "뷰티스톤의원 홍대": {
+   "address": "대한민국 215, KR 서울특별시 마포구 양화로 45 몰동 133-135호, 메세나폴리스, 218호",
+   "google_rating": 4.9,
+   "google_reviews_total": 614,
+   "google_new_reviews_0907_0913": 17,
+   "naver_brand_volume": 1820,
+   "naver_branch_volumes": {
+    "홍대뷰티스톤의원": 10,
+    "뷰티스톤의원홍대": 10,
+    "뷰티스톤의원홍대점": 10,
+    "합정뷰티스톤의원": 45
+   },
+   "search_suggestion_hits": []
+  },
+  "백피부과의원": {
+   "address": "대한민국 서울특별시 마포구 동교동 147-3",
+   "google_rating": 3.8,
+   "google_reviews_total": 12,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 120,
+   "naver_branch_volumes": {
+    "홍대백피부과의원": 10,
+    "백피부과의원홍대": 10,
+    "백피부과의원홍대점": 10,
+    "합정백피부과의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "서 피부과": {
+   "address": "대한민국 서울특별시 마포구 서교동 353-5",
+   "google_rating": 4.4,
+   "google_reviews_total": 5,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 2850,
+   "naver_branch_volumes": {
+    "홍대서피부과": 700,
+    "서피부과홍대": 15,
+    "서피부과홍대점": 10,
+    "합정서피부과": 15
+   },
+   "search_suggestion_hits": []
+  },
+  "뷰티유의원": {
+   "address": "상진빌딩, 양화로165 12층 일부, 동교동, 마포구 서울특별시 대한민국",
+   "google_rating": 5,
+   "google_reviews_total": 252,
+   "google_new_reviews_0907_0913": 1,
+   "naver_brand_volume": 550,
+   "naver_branch_volumes": {
+    "홍대뷰티유의원": 40,
+    "뷰티유의원홍대": 20,
+    "뷰티유의원홍대점": 10,
+    "합정뷰티유의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "벨아미의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 176, 홍대와이즈파크관리단, 5층",
+   "google_rating": 5,
+   "google_reviews_total": 2,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 700,
+   "naver_branch_volumes": {
+    "홍대벨아미": 10,
+    "벨아미홍대": 10,
+    "벨아미홍대점": 10,
+    "합정벨아미": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "올라인의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 140",
+   "google_rating": 4.9,
+   "google_reviews_total": 1708,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 110,
+   "naver_branch_volumes": {
+    "홍대올라인의원": 20,
+    "올라인의원홍대": 10,
+    "올라인의원홍대점": 10,
+    "합정올라인의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "클레오르의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 165, 상진빌딩, 4층",
+   "google_rating": 4.7,
+   "google_reviews_total": 327,
+   "google_new_reviews_0907_0913": 2,
+   "naver_brand_volume": 2990,
+   "naver_branch_volumes": {
+    "홍대클레오르의원": 330,
+    "클레오르의원홍대": 290,
+    "클레오르의원홍대점": 10,
+    "합정클레오르의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "연세굿닥터의원": {
+   "address": "대한민국, KR 서울특별시 마포구 양화로 지하45 (지하철 합정역) 지하, 역내 상가(6호선 개찰구 바로 앞/스타 약국 옆, 1층",
+   "google_rating": 4.8,
+   "google_reviews_total": 5,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 600,
+   "naver_branch_volumes": {
+    "홍대연세굿닥터의원": 10,
+    "연세굿닥터의원홍대": 10,
+    "연세굿닥터의원홍대점": 10,
+    "합정연세굿닥터의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "다사랑의원": {
+   "address": "대한민국 서울특별시 마포구 월드컵로 80",
+   "google_rating": 3.7,
+   "google_reviews_total": 3,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 2090,
+   "naver_branch_volumes": {
+    "홍대다사랑의원": 10,
+    "다사랑의원홍대": 10,
+    "다사랑의원홍대점": 10,
+    "합정다사랑의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "연세보드미의원": {
+   "address": "대한민국 서울특별시 마포구 월드컵로3길 14",
+   "google_rating": null,
+   "google_reviews_total": null,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 3680,
+   "naver_branch_volumes": {
+    "홍대연세보드미의원": 10,
+    "연세보드미의원홍대": 10,
+    "연세보드미의원홍대점": 10,
+    "합정연세보드미의원": 910
+   },
+   "search_suggestion_hits": []
+  },
+  "메이퓨어의원 홍대입구점": {
+   "address": "대한민국 서울특별시 마포구 월드컵북로2길 57, 금화 빌딩, 5 층 501호",
+   "google_rating": 4.3,
+   "google_reviews_total": 12,
+   "google_new_reviews_0907_0913": 0,
+   "naver_brand_volume": 39300,
+   "naver_branch_volumes": {
+    "홍대메이퓨어의원": 45,
+    "메이퓨어의원홍대": 100,
+    "메이퓨어의원홍대점": 10,
+    "합정메이퓨어의원": 10
+   },
+   "search_suggestion_hits": []
+  }
+ },
+ "local_seed_volumes": {
+  "홍대피부과": 17420,
+  "합정피부과": 1330,
+  "홍대피부과추천": 180,
+  "합정피부과추천": 15
  }
 }
