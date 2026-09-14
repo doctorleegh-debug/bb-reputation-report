@@ -1,0 +1,81 @@
+{
+ "updated": "2026-09-14",
+ "rule": "주차(ISO week)마다 새 URL. 같은 주차 재발행은 같은 URL 덮어쓰기(이전 버전은 git 이력에 보존). 루트 index.html은 최신 평판 보고서 사본.",
+ "latest": "https://doctorleegh-debug.github.io/bb-reputation-report/",
+ "reports": [
+  {
+   "type": "평판",
+   "week": "2026-W38",
+   "published": "2026-09-14",
+   "url": "https://doctorleegh-debug.github.io/bb-reputation-report/w/2026-W38.html",
+   "stats": "https://doctorleegh-debug.github.io/bb-reputation-report/w/2026-W38.json"
+  },
+  {
+   "type": "검색 트렌드",
+   "round": 4,
+   "week": "2026-W38",
+   "published": "2026-09-14",
+   "url": "https://doctorleegh-debug.github.io/bb-reputation-report/trend/2026-W38.html",
+   "stats": "https://doctorleegh-debug.github.io/bb-reputation-report/trend/2026-W38.json"
+  },
+  {
+   "type": "평판",
+   "week": "2026-W37",
+   "published": "2026-09-07",
+   "url": "https://doctorleegh-debug.github.io/bb-reputation-report/w/2026-W37.html",
+   "stats": null
+  },
+  {
+   "type": "검색 트렌드",
+   "round": 3,
+   "week": "2026-W37",
+   "published": "2026-09-07",
+   "url": "https://doctorleegh-debug.github.io/bb-reputation-report/trend/2026-09-07.html",
+   "stats": null
+  },
+  {
+   "type": "평판",
+   "week": "2026-W36",
+   "published": "2026-08-31",
+   "url": "https://doctorleegh-debug.github.io/bb-reputation-report/w/2026-W36.html",
+   "stats": null
+  },
+  {
+   "type": "검색 트렌드",
+   "round": 2,
+   "week": "2026-W36",
+   "published": "2026-08-31",
+   "url": "https://doctorleegh-debug.github.io/bb-reputation-report/trend/2026-08-31.html",
+   "stats": null
+  },
+  {
+   "type": "검색 트렌드",
+   "round": 1,
+   "week": "2026-W35",
+   "published": "2026-08-26",
+   "url": "https://doctorleegh-debug.github.io/bb-reputation-report/trend/2026-07-08.html",
+   "stats": null
+  },
+  {
+   "type": "평판",
+   "week": "2026-W35",
+   "published": "2026-08-24",
+   "url": "https://doctorleegh-debug.github.io/bb-reputation-report/w/2026-W35.html",
+   "stats": null
+  },
+  {
+   "type": "평판",
+   "week": "2026-W34",
+   "published": "2026-08-18",
+   "url": "https://doctorleegh-debug.github.io/bb-reputation-report/w/2026-W34.html",
+   "stats": null
+  },
+  {
+   "type": "평판",
+   "week": "2026-W33",
+   "published": "2026-08-11",
+   "url": "https://doctorleegh-debug.github.io/bb-reputation-report/w/2026-W33.html",
+   "stats": null
+  }
+ ]
+}
