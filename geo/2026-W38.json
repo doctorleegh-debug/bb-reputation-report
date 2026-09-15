@@ -1,0 +1,4198 @@
+{
+ "week": "2026-W38",
+ "date": "2026-09-15",
+ "keywords": 531,
+ "exposure_counts": {
+  "keywords_exposed_anywhere": 277,
+  "ai_cited": 110,
+  "google_organic_ranked": 142,
+  "naver_exposed": 252
+ },
+ "engines": {
+  "google_aio": {
+   "checked": 531,
+   "ai_present": 484,
+   "ai_pct": 91.1,
+   "brand_in_ai": 107,
+   "brand_cited_link": 102,
+   "own_clinic_rank": {
+    "rank": 1,
+    "count": 96,
+    "of": 279
+   },
+   "by_category": {
+    "seed": {
+     "checked": 61,
+     "ai": 60,
+     "ai_pct": 98.4,
+     "brand_in_ai": 3,
+     "brand_in_serp": 5
+    },
+    "related": {
+     "checked": 139,
+     "ai": 132,
+     "ai_pct": 95,
+     "brand_in_ai": 1,
+     "brand_in_serp": 2
+    },
+    "local": {
+     "checked": 271,
+     "ai": 236,
+     "ai_pct": 87.1,
+     "brand_in_ai": 102,
+     "brand_in_serp": 151
+    },
+    "longtail": {
+     "checked": 60,
+     "ai": 56,
+     "ai_pct": 93.3,
+     "brand_in_ai": 1,
+     "brand_in_serp": 1
+    }
+   }
+  },
+  "google_aimode": {
+   "checked": 62,
+   "ai_present": 62,
+   "ai_pct": 100,
+   "brand_in_ai": 2,
+   "brand_cited_link": 2,
+   "own_clinic_rank": {
+    "rank": 13,
+    "count": 2,
+    "of": 65
+   },
+   "by_category": {
+    "seed": {
+     "checked": 34,
+     "ai": 34,
+     "ai_pct": 100,
+     "brand_in_ai": 1,
+     "brand_in_serp": 1
+    },
+    "related": {
+     "checked": 28,
+     "ai": 28,
+     "ai_pct": 100,
+     "brand_in_ai": 1,
+     "brand_in_serp": 1
+    },
+    "local": {
+     "checked": 0,
+     "ai": 0,
+     "ai_pct": null,
+     "brand_in_ai": 0,
+     "brand_in_serp": 0
+    },
+    "longtail": {
+     "checked": 0,
+     "ai": 0,
+     "ai_pct": null,
+     "brand_in_ai": 0,
+     "brand_in_serp": 0
+    }
+   }
+  },
+  "naver": {
+   "checked": 531,
+   "ai_present": 107,
+   "ai_pct": 20.2,
+   "brand_in_ai": 6,
+   "brand_cited_link": 6,
+   "own_clinic_rank": {
+    "rank": 3,
+    "count": 6,
+    "of": 225
+   },
+   "by_category": {
+    "seed": {
+     "checked": 61,
+     "ai": 15,
+     "ai_pct": 24.6,
+     "brand_in_ai": 0,
+     "brand_in_serp": 61
+    },
+    "related": {
+     "checked": 139,
+     "ai": 32,
+     "ai_pct": 23,
+     "brand_in_ai": 1,
+     "brand_in_serp": 139
+    },
+    "local": {
+     "checked": 271,
+     "ai": 21,
+     "ai_pct": 7.7,
+     "brand_in_ai": 5,
+     "brand_in_serp": 271
+    },
+    "longtail": {
+     "checked": 60,
+     "ai": 39,
+     "ai_pct": 65,
+     "brand_in_ai": 0,
+     "brand_in_serp": 60
+    }
+   }
+  }
+ },
+ "ai_cited": [
+  {
+   "keyword": "볼뉴머",
+   "category": "seed",
+   "naver_total": 71920,
+   "engines": [
+    "google_aio",
+    "google_aimode"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/45"
+   ]
+  },
+  {
+   "keyword": "포텐자효과",
+   "category": "related",
+   "naver_total": 17050,
+   "engines": [
+    "naver"
+   ],
+   "urls": [
+    "https://blog.naver.com/beautyblossom_clinic/224298983492"
+   ]
+  },
+  {
+   "keyword": "쥬베룩효과",
+   "category": "related",
+   "naver_total": 10680,
+   "engines": [
+    "google_aio",
+    "google_aimode"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/114"
+   ]
+  },
+  {
+   "keyword": "리니어지",
+   "category": "seed",
+   "naver_total": 3190,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/154"
+   ]
+  },
+  {
+   "keyword": "입술필러 붓기",
+   "category": "longtail",
+   "naver_total": 2990,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": []
+  },
+  {
+   "keyword": "어깨필러",
+   "category": "seed",
+   "naver_total": 2640,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/142"
+   ]
+  },
+  {
+   "keyword": "홍대 울쎄라",
+   "category": "local",
+   "naver_total": 1350,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/40"
+   ]
+  },
+  {
+   "keyword": "홍대 필러",
+   "category": "local",
+   "naver_total": 370,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/29"
+   ]
+  },
+  {
+   "keyword": "홍대입구 울쎄라",
+   "category": "local",
+   "naver_total": 335,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/40"
+   ]
+  },
+  {
+   "keyword": "홍대 온다리프팅",
+   "category": "local",
+   "naver_total": 310,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/42"
+   ]
+  },
+  {
+   "keyword": "홍대 슈링크",
+   "category": "local",
+   "naver_total": 270,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/44"
+   ]
+  },
+  {
+   "keyword": "홍대 써마지",
+   "category": "local",
+   "naver_total": 210,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/41"
+   ]
+  },
+  {
+   "keyword": "홍대 리프팅",
+   "category": "local",
+   "naver_total": 210,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/40"
+   ]
+  },
+  {
+   "keyword": "홍대 여드름",
+   "category": "local",
+   "naver_total": 200,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/69",
+    "https://beautyblossom.kr/62"
+   ]
+  },
+  {
+   "keyword": "홍대 포텐자",
+   "category": "local",
+   "naver_total": 180,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/72"
+   ]
+  },
+  {
+   "keyword": "홍대 리쥬란",
+   "category": "local",
+   "naver_total": 160,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/116"
+   ]
+  },
+  {
+   "keyword": "홍대 실리프팅",
+   "category": "local",
+   "naver_total": 150,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/thread-lifting"
+   ]
+  },
+  {
+   "keyword": "마포 리쥬란",
+   "category": "local",
+   "naver_total": 90,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/116"
+   ]
+  },
+  {
+   "keyword": "홍대 쥬베룩",
+   "category": "local",
+   "naver_total": 70,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/114"
+   ]
+  },
+  {
+   "keyword": "홍대 세르프",
+   "category": "local",
+   "naver_total": 70,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/155"
+   ]
+  },
+  {
+   "keyword": "홍대 스킨부스터",
+   "category": "local",
+   "naver_total": 60,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/34",
+    "https://beautyblossom.kr/116"
+   ]
+  },
+  {
+   "keyword": "마포 온다리프팅",
+   "category": "local",
+   "naver_total": 50,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/42"
+   ]
+  },
+  {
+   "keyword": "마포 덴서티",
+   "category": "local",
+   "naver_total": 45,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/153",
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "합정 울쎄라",
+   "category": "local",
+   "naver_total": 40,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/40"
+   ]
+  },
+  {
+   "keyword": "홍대 소프웨이브",
+   "category": "local",
+   "naver_total": 25,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/139"
+   ]
+  },
+  {
+   "keyword": "합정 슈링크",
+   "category": "local",
+   "naver_total": 25,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/44"
+   ]
+  },
+  {
+   "keyword": "홍대 물광주사",
+   "category": "local",
+   "naver_total": 25,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/121"
+   ]
+  },
+  {
+   "keyword": "합정 세르프",
+   "category": "local",
+   "naver_total": 25,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/155"
+   ]
+  },
+  {
+   "keyword": "마포 세르프",
+   "category": "local",
+   "naver_total": 25,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/155"
+   ]
+  },
+  {
+   "keyword": "마포구 울쎄라",
+   "category": "local",
+   "naver_total": 25,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/40"
+   ]
+  },
+  {
+   "keyword": "마포구 스킨부스터",
+   "category": "local",
+   "naver_total": 25,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/34"
+   ]
+  },
+  {
+   "keyword": "마포구 덴서티",
+   "category": "local",
+   "naver_total": 25,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/153"
+   ]
+  },
+  {
+   "keyword": "마포구 세르프",
+   "category": "local",
+   "naver_total": 25,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/155"
+   ]
+  },
+  {
+   "keyword": "홍대 기미",
+   "category": "local",
+   "naver_total": 15,
+   "engines": [
+    "naver"
+   ],
+   "urls": [
+    "https://blog.naver.com/beautyblossom_clinic/224306956197"
+   ]
+  },
+  {
+   "keyword": "합정 인모드",
+   "category": "local",
+   "naver_total": 15,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/43"
+   ]
+  },
+  {
+   "keyword": "합정 쥬베룩",
+   "category": "local",
+   "naver_total": 15,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/114"
+   ]
+  },
+  {
+   "keyword": "홍대입구 필러",
+   "category": "local",
+   "naver_total": 15,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/29"
+   ]
+  },
+  {
+   "keyword": "홍대입구 쥬베룩",
+   "category": "local",
+   "naver_total": 15,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/114"
+   ]
+  },
+  {
+   "keyword": "합정역 제모",
+   "category": "local",
+   "naver_total": 15,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/47",
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "합정역 세르프",
+   "category": "local",
+   "naver_total": 15,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/155"
+   ]
+  },
+  {
+   "keyword": "마포구 슈링크",
+   "category": "local",
+   "naver_total": 15,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/44"
+   ]
+  },
+  {
+   "keyword": "홍대입구 온다리프팅",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "naver"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/42"
+   ]
+  },
+  {
+   "keyword": "홍대입구 포텐자",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "naver",
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/72",
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "홍대입구 여드름",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "naver",
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/69",
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "홍대입구 기미",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "naver",
+    "google_aio"
+   ],
+   "urls": [
+    "https://blog.naver.com/beautyblossom_clinic/224306956197",
+    "https://beautyblossom.kr/71"
+   ]
+  },
+  {
+   "keyword": "합정 리쥬란",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/116"
+   ]
+  },
+  {
+   "keyword": "합정 소프웨이브",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/139",
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "합정 스킨보톡스",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "합정 포텐자",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/72",
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "합정 스킨부스터",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/116"
+   ]
+  },
+  {
+   "keyword": "합정 리프팅",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/yujiin-lifting"
+   ]
+  },
+  {
+   "keyword": "마포 소프웨이브",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/139"
+   ]
+  },
+  {
+   "keyword": "마포 인모드",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": []
+  },
+  {
+   "keyword": "마포 포텐자",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/72"
+   ]
+  },
+  {
+   "keyword": "상수 리쥬란",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/116",
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "합정 볼뉴머",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/45"
+   ]
+  },
+  {
+   "keyword": "합정 덴서티",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/149",
+    "https://beautyblossom.kr/153"
+   ]
+  },
+  {
+   "keyword": "마포 볼뉴머",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/45"
+   ]
+  },
+  {
+   "keyword": "연남동 필러",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/29"
+   ]
+  },
+  {
+   "keyword": "연남동 리쥬란",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/116"
+   ]
+  },
+  {
+   "keyword": "연남동 울쎄라",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/400"
+   ]
+  },
+  {
+   "keyword": "연남동 온다리프팅",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/42",
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/56"
+   ]
+  },
+  {
+   "keyword": "연남동 소프웨이브",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/139"
+   ]
+  },
+  {
+   "keyword": "연남동 슈링크",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/44"
+   ]
+  },
+  {
+   "keyword": "연남동 쥬베룩",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/114"
+   ]
+  },
+  {
+   "keyword": "연남동 볼뉴머",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/45"
+   ]
+  },
+  {
+   "keyword": "연남동 덴서티",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/153"
+   ]
+  },
+  {
+   "keyword": "연남동 세르프",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/155"
+   ]
+  },
+  {
+   "keyword": "홍대입구 리쥬란",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/116"
+   ]
+  },
+  {
+   "keyword": "홍대입구 소프웨이브",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/139"
+   ]
+  },
+  {
+   "keyword": "홍대입구 물광주사",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/121"
+   ]
+  },
+  {
+   "keyword": "홍대입구 모공",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/72"
+   ]
+  },
+  {
+   "keyword": "홍대입구 탄력",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/115"
+   ]
+  },
+  {
+   "keyword": "홍대입구 볼뉴머",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/45"
+   ]
+  },
+  {
+   "keyword": "홍대입구 덴서티",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/153"
+   ]
+  },
+  {
+   "keyword": "합정역 피부과 잘하는곳",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "합정역 스킨보톡스",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/28"
+   ]
+  },
+  {
+   "keyword": "합정역 필러",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/29"
+   ]
+  },
+  {
+   "keyword": "합정역 리쥬란",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/116"
+   ]
+  },
+  {
+   "keyword": "합정역 울쎄라",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/40",
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/400"
+   ]
+  },
+  {
+   "keyword": "합정역 써마지",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "합정역 온다리프팅",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/42"
+   ]
+  },
+  {
+   "keyword": "합정역 소프웨이브",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/139",
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "합정역 인모드",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/43"
+   ]
+  },
+  {
+   "keyword": "합정역 슈링크",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/44"
+   ]
+  },
+  {
+   "keyword": "합정역 쥬베룩",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/114",
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "합정역 포텐자",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/72"
+   ]
+  },
+  {
+   "keyword": "합정역 피코토닝",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": []
+  },
+  {
+   "keyword": "합정역 스킨부스터",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/116"
+   ]
+  },
+  {
+   "keyword": "합정역 실리프팅",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/thread-lifting"
+   ]
+  },
+  {
+   "keyword": "합정역 물광주사",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/121"
+   ]
+  },
+  {
+   "keyword": "합정역 여드름",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/19"
+   ]
+  },
+  {
+   "keyword": "합정역 기미",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/71"
+   ]
+  },
+  {
+   "keyword": "합정역 레이저토닝",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "합정역 볼뉴머",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/45"
+   ]
+  },
+  {
+   "keyword": "합정역 덴서티",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/153",
+    "https://beautyblossom.kr/"
+   ]
+  },
+  {
+   "keyword": "마포구 온다리프팅",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": []
+  },
+  {
+   "keyword": "마포구 소프웨이브",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/139"
+   ]
+  },
+  {
+   "keyword": "마포구 인모드",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/43"
+   ]
+  },
+  {
+   "keyword": "마포구 쥬베룩",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/114"
+   ]
+  },
+  {
+   "keyword": "마포구 포텐자",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/72"
+   ]
+  },
+  {
+   "keyword": "마포구 물광주사",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/121"
+   ]
+  },
+  {
+   "keyword": "마포구 기미",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/71"
+   ]
+  },
+  {
+   "keyword": "마포구 볼뉴머",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/45"
+   ]
+  },
+  {
+   "keyword": "망원 소프웨이브",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/139"
+   ]
+  },
+  {
+   "keyword": "망원 인모드",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/43"
+   ]
+  },
+  {
+   "keyword": "망원 포텐자",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": []
+  },
+  {
+   "keyword": "망원 볼뉴머",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/",
+    "https://beautyblossom.kr/45"
+   ]
+  },
+  {
+   "keyword": "망원 덴서티",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/153"
+   ]
+  },
+  {
+   "keyword": "망원 세르프",
+   "category": "local",
+   "naver_total": 10,
+   "engines": [
+    "google_aio"
+   ],
+   "urls": [
+    "https://beautyblossom.kr/"
+   ]
+  }
+ ],
+ "google_ranked": [
+  {
+   "keyword": "합정 피부과",
+   "naver_total": 1330,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대 온다리프팅",
+   "naver_total": 310,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대 포텐자",
+   "naver_total": 180,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대 리쥬란",
+   "naver_total": 160,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대 볼뉴머",
+   "naver_total": 80,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대 쥬베룩",
+   "naver_total": 70,
+   "rank": 1
+  },
+  {
+   "keyword": "합정 슈링크",
+   "naver_total": 25,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대 물광주사",
+   "naver_total": 25,
+   "rank": 1
+  },
+  {
+   "keyword": "마포구 덴서티",
+   "naver_total": 25,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대 기미",
+   "naver_total": 15,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대입구 포텐자",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정 리쥬란",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대 모공",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정 물광주사",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정 볼뉴머",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정 덴서티",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "연남동 스킨보톡스",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "연남동 리쥬란",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "연남동 울쎄라",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "연남동 온다리프팅",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "연남동 슈링크",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "연남동 쥬베룩",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "연남동 포텐자",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "연남동 물광주사",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "연남동 덴서티",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대입구 소프웨이브",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대입구 물광주사",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대입구 모공",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대입구 덴서티",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대입구 세르프",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정역 스킨보톡스",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정역 필러",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정역 리쥬란",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정역 울쎄라",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정역 온다리프팅",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정역 슈링크",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정역 실리프팅",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정역 물광주사",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정역 볼뉴머",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "합정역 덴서티",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "마포구 포텐자",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "망원 온다리프팅",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "망원 덴서티",
+   "naver_total": 10,
+   "rank": 1
+  },
+  {
+   "keyword": "홍대 울쎄라",
+   "naver_total": 1350,
+   "rank": 2
+  },
+  {
+   "keyword": "합정역 피부과",
+   "naver_total": 740,
+   "rank": 2
+  },
+  {
+   "keyword": "홍대 슈링크",
+   "naver_total": 270,
+   "rank": 2
+  },
+  {
+   "keyword": "홍대 스킨보톡스",
+   "naver_total": 170,
+   "rank": 2
+  },
+  {
+   "keyword": "합정 보톡스",
+   "naver_total": 140,
+   "rank": 2
+  },
+  {
+   "keyword": "홍대 덴서티",
+   "naver_total": 80,
+   "rank": 2
+  },
+  {
+   "keyword": "홍대 세르프",
+   "naver_total": 70,
+   "rank": 2
+  },
+  {
+   "keyword": "홍대 스킨부스터",
+   "naver_total": 60,
+   "rank": 2
+  },
+  {
+   "keyword": "합정역 보톡스",
+   "naver_total": 50,
+   "rank": 2
+  },
+  {
+   "keyword": "합정 울쎄라",
+   "naver_total": 40,
+   "rank": 2
+  },
+  {
+   "keyword": "마포구 리쥬란",
+   "naver_total": 25,
+   "rank": 2
+  },
+  {
+   "keyword": "합정 인모드",
+   "naver_total": 15,
+   "rank": 2
+  },
+  {
+   "keyword": "합정 여드름",
+   "naver_total": 15,
+   "rank": 2
+  },
+  {
+   "keyword": "마포구 슈링크",
+   "naver_total": 15,
+   "rank": 2
+  },
+  {
+   "keyword": "홍대입구 온다리프팅",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "홍대입구 기미",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "합정 소프웨이브",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "마포 볼뉴머",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "연남동 필러",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "연남동 써마지",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "연남동 인모드",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "연남동 볼뉴머",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "홍대입구 리쥬란",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "홍대입구 슈링크",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "합정역 소프웨이브",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "합정역 인모드",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "합정역 쥬베룩",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "합정역 리프팅",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "합정역 여드름",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "합정역 기미",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "마포구 물광주사",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "마포구 볼뉴머",
+   "naver_total": 10,
+   "rank": 2
+  },
+  {
+   "keyword": "홍대 필러",
+   "naver_total": 370,
+   "rank": 3
+  },
+  {
+   "keyword": "홍대 여드름",
+   "naver_total": 200,
+   "rank": 3
+  },
+  {
+   "keyword": "마포 덴서티",
+   "naver_total": 45,
+   "rank": 3
+  },
+  {
+   "keyword": "홍대 소프웨이브",
+   "naver_total": 25,
+   "rank": 3
+  },
+  {
+   "keyword": "합정 세르프",
+   "naver_total": 25,
+   "rank": 3
+  },
+  {
+   "keyword": "마포구 스킨부스터",
+   "naver_total": 25,
+   "rank": 3
+  },
+  {
+   "keyword": "마포구 세르프",
+   "naver_total": 25,
+   "rank": 3
+  },
+  {
+   "keyword": "합정역 세르프",
+   "naver_total": 15,
+   "rank": 3
+  },
+  {
+   "keyword": "홍대입구 여드름",
+   "naver_total": 10,
+   "rank": 3
+  },
+  {
+   "keyword": "합정 온다리프팅",
+   "naver_total": 10,
+   "rank": 3
+  },
+  {
+   "keyword": "합정 포텐자",
+   "naver_total": 10,
+   "rank": 3
+  },
+  {
+   "keyword": "연남동 소프웨이브",
+   "naver_total": 10,
+   "rank": 3
+  },
+  {
+   "keyword": "연남동 세르프",
+   "naver_total": 10,
+   "rank": 3
+  },
+  {
+   "keyword": "홍대입구 볼뉴머",
+   "naver_total": 10,
+   "rank": 3
+  },
+  {
+   "keyword": "합정역 피부과 추천",
+   "naver_total": 10,
+   "rank": 3
+  },
+  {
+   "keyword": "합정역 써마지",
+   "naver_total": 10,
+   "rank": 3
+  },
+  {
+   "keyword": "합정역 포텐자",
+   "naver_total": 10,
+   "rank": 3
+  },
+  {
+   "keyword": "합정역 스킨부스터",
+   "naver_total": 10,
+   "rank": 3
+  },
+  {
+   "keyword": "마포구 온다리프팅",
+   "naver_total": 10,
+   "rank": 3
+  },
+  {
+   "keyword": "마포구 기미",
+   "naver_total": 10,
+   "rank": 3
+  },
+  {
+   "keyword": "홍대입구 울쎄라",
+   "naver_total": 335,
+   "rank": 4
+  },
+  {
+   "keyword": "마포구 울쎄라",
+   "naver_total": 25,
+   "rank": 4
+  },
+  {
+   "keyword": "합정 쥬베룩",
+   "naver_total": 15,
+   "rank": 4
+  },
+  {
+   "keyword": "합정역 제모",
+   "naver_total": 15,
+   "rank": 4
+  },
+  {
+   "keyword": "합정 스킨부스터",
+   "naver_total": 10,
+   "rank": 4
+  },
+  {
+   "keyword": "합정 리프팅",
+   "naver_total": 10,
+   "rank": 4
+  },
+  {
+   "keyword": "마포 인모드",
+   "naver_total": 10,
+   "rank": 4
+  },
+  {
+   "keyword": "연남동 보톡스",
+   "naver_total": 10,
+   "rank": 4
+  },
+  {
+   "keyword": "연남동 제모",
+   "naver_total": 10,
+   "rank": 4
+  },
+  {
+   "keyword": "연남동 리프팅",
+   "naver_total": 10,
+   "rank": 4
+  },
+  {
+   "keyword": "홍대입구 인모드",
+   "naver_total": 10,
+   "rank": 4
+  },
+  {
+   "keyword": "합정역 피부관리",
+   "naver_total": 10,
+   "rank": 4
+  },
+  {
+   "keyword": "마포구 소프웨이브",
+   "naver_total": 10,
+   "rank": 4
+  },
+  {
+   "keyword": "마포구 인모드",
+   "naver_total": 10,
+   "rank": 4
+  },
+  {
+   "keyword": "망원 세르프",
+   "naver_total": 10,
+   "rank": 4
+  },
+  {
+   "keyword": "홍대 피부과",
+   "naver_total": 17420,
+   "rank": 5
+  },
+  {
+   "keyword": "어깨필러",
+   "naver_total": 2640,
+   "rank": 5
+  },
+  {
+   "keyword": "LDM관리",
+   "naver_total": 2610,
+   "rank": 5
+  },
+  {
+   "keyword": "합정 피부과 추천",
+   "naver_total": 15,
+   "rank": 5
+  },
+  {
+   "keyword": "마포 포텐자",
+   "naver_total": 10,
+   "rank": 5
+  },
+  {
+   "keyword": "합정 피부과 잘하는곳",
+   "naver_total": 10,
+   "rank": 5
+  },
+  {
+   "keyword": "홍대 피부관리",
+   "naver_total": 280,
+   "rank": 6
+  },
+  {
+   "keyword": "홍대 리프팅",
+   "naver_total": 210,
+   "rank": 6
+  },
+  {
+   "keyword": "마포 세르프",
+   "naver_total": 25,
+   "rank": 6
+  },
+  {
+   "keyword": "합정 스킨보톡스",
+   "naver_total": 10,
+   "rank": 6
+  },
+  {
+   "keyword": "홍대 탄력",
+   "naver_total": 10,
+   "rank": 6
+  },
+  {
+   "keyword": "연남동 스킨부스터",
+   "naver_total": 10,
+   "rank": 6
+  },
+  {
+   "keyword": "홍대입구 스킨보톡스",
+   "naver_total": 10,
+   "rank": 6
+  },
+  {
+   "keyword": "마포구 쥬베룩",
+   "naver_total": 10,
+   "rank": 6
+  },
+  {
+   "keyword": "마포 소프웨이브",
+   "naver_total": 10,
+   "rank": 7
+  },
+  {
+   "keyword": "상수 볼뉴머",
+   "naver_total": 10,
+   "rank": 7
+  },
+  {
+   "keyword": "홍대입구 탄력",
+   "naver_total": 10,
+   "rank": 7
+  },
+  {
+   "keyword": "마포구 모공",
+   "naver_total": 10,
+   "rank": 7
+  },
+  {
+   "keyword": "망원 소프웨이브",
+   "naver_total": 10,
+   "rank": 7
+  },
+  {
+   "keyword": "볼뉴머",
+   "naver_total": 71920,
+   "rank": 8
+  },
+  {
+   "keyword": "LDM",
+   "naver_total": 15300,
+   "rank": 8
+  },
+  {
+   "keyword": "홍대 써마지",
+   "naver_total": 210,
+   "rank": 8
+  },
+  {
+   "keyword": "홍대입구 쥬베룩",
+   "naver_total": 15,
+   "rank": 8
+  },
+  {
+   "keyword": "홍대입구 제모",
+   "naver_total": 10,
+   "rank": 8
+  },
+  {
+   "keyword": "쥬베룩효과",
+   "naver_total": 10680,
+   "rank": 9
+  },
+  {
+   "keyword": "홍대입구 써마지",
+   "naver_total": 285,
+   "rank": 9
+  },
+  {
+   "keyword": "홍대 실리프팅",
+   "naver_total": 150,
+   "rank": 9
+  },
+  {
+   "keyword": "홍대입구 필러",
+   "naver_total": 15,
+   "rank": 9
+  },
+  {
+   "keyword": "합정역 피부과 잘하는곳",
+   "naver_total": 10,
+   "rank": 9
+  },
+  {
+   "keyword": "마포 물광주사",
+   "naver_total": 10,
+   "rank": 11
+  },
+  {
+   "keyword": "망원 인모드",
+   "naver_total": 10,
+   "rank": 11
+  },
+  {
+   "keyword": "홍대 보톡스",
+   "naver_total": 1270,
+   "rank": 12
+  }
+ ],
+ "rank_buckets": {
+  "1~3위": 95,
+  "4~10위": 44,
+  "11~20위": 3
+ },
+ "own_pages": [
+  {
+   "url": "https://beautyblossom.kr/",
+   "count": 34,
+   "keywords": [
+    "홍대 리프팅",
+    "마포 덴서티",
+    "마포 세르프",
+    "합정역 제모",
+    "합정역 세르프",
+    "홍대입구 포텐자",
+    "홍대입구 여드름",
+    "합정 소프웨이브",
+    "합정 스킨보톡스",
+    "합정 포텐자",
+    "합정 리프팅",
+    "상수 리쥬란",
+    "마포 볼뉴머",
+    "연남동 온다리프팅",
+    "연남동 쥬베룩",
+    "홍대입구 소프웨이브",
+    "합정역 피부과 잘하는곳",
+    "합정역 스킨보톡스",
+    "합정역 필러",
+    "합정역 울쎄라",
+    "합정역 써마지",
+    "합정역 소프웨이브",
+    "합정역 슈링크",
+    "합정역 쥬베룩",
+    "합정역 여드름",
+    "합정역 기미",
+    "합정역 레이저토닝",
+    "합정역 덴서티",
+    "마포구 소프웨이브",
+    "마포구 쥬베룩",
+    "마포구 기미",
+    "망원 소프웨이브",
+    "망원 볼뉴머",
+    "망원 세르프"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/116",
+   "count": 10,
+   "keywords": [
+    "홍대 리쥬란",
+    "마포 리쥬란",
+    "홍대 스킨부스터",
+    "합정 리쥬란",
+    "합정 스킨부스터",
+    "상수 리쥬란",
+    "연남동 리쥬란",
+    "홍대입구 리쥬란",
+    "합정역 리쥬란",
+    "합정역 스킨부스터"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/45",
+   "count": 8,
+   "keywords": [
+    "볼뉴머",
+    "합정 볼뉴머",
+    "마포 볼뉴머",
+    "연남동 볼뉴머",
+    "홍대입구 볼뉴머",
+    "합정역 볼뉴머",
+    "마포구 볼뉴머",
+    "망원 볼뉴머"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/139",
+   "count": 8,
+   "keywords": [
+    "홍대 소프웨이브",
+    "합정 소프웨이브",
+    "마포 소프웨이브",
+    "연남동 소프웨이브",
+    "홍대입구 소프웨이브",
+    "합정역 소프웨이브",
+    "마포구 소프웨이브",
+    "망원 소프웨이브"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/114",
+   "count": 7,
+   "keywords": [
+    "쥬베룩효과",
+    "홍대 쥬베룩",
+    "합정 쥬베룩",
+    "홍대입구 쥬베룩",
+    "연남동 쥬베룩",
+    "합정역 쥬베룩",
+    "마포구 쥬베룩"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/72",
+   "count": 7,
+   "keywords": [
+    "홍대 포텐자",
+    "홍대입구 포텐자",
+    "합정 포텐자",
+    "마포 포텐자",
+    "홍대입구 모공",
+    "합정역 포텐자",
+    "마포구 포텐자"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/153",
+   "count": 7,
+   "keywords": [
+    "마포 덴서티",
+    "마포구 덴서티",
+    "합정 덴서티",
+    "연남동 덴서티",
+    "홍대입구 덴서티",
+    "합정역 덴서티",
+    "망원 덴서티"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/40",
+   "count": 6,
+   "keywords": [
+    "홍대 울쎄라",
+    "홍대입구 울쎄라",
+    "홍대 리프팅",
+    "합정 울쎄라",
+    "마포구 울쎄라",
+    "합정역 울쎄라"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/155",
+   "count": 6,
+   "keywords": [
+    "홍대 세르프",
+    "합정 세르프",
+    "마포 세르프",
+    "마포구 세르프",
+    "합정역 세르프",
+    "연남동 세르프"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/42",
+   "count": 5,
+   "keywords": [
+    "홍대 온다리프팅",
+    "마포 온다리프팅",
+    "홍대입구 온다리프팅",
+    "연남동 온다리프팅",
+    "합정역 온다리프팅"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/44",
+   "count": 5,
+   "keywords": [
+    "홍대 슈링크",
+    "합정 슈링크",
+    "마포구 슈링크",
+    "연남동 슈링크",
+    "합정역 슈링크"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/29",
+   "count": 4,
+   "keywords": [
+    "홍대 필러",
+    "홍대입구 필러",
+    "연남동 필러",
+    "합정역 필러"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/121",
+   "count": 4,
+   "keywords": [
+    "홍대 물광주사",
+    "홍대입구 물광주사",
+    "합정역 물광주사",
+    "마포구 물광주사"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/43",
+   "count": 4,
+   "keywords": [
+    "합정 인모드",
+    "합정역 인모드",
+    "마포구 인모드",
+    "망원 인모드"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/71",
+   "count": 3,
+   "keywords": [
+    "홍대입구 기미",
+    "합정역 기미",
+    "마포구 기미"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/69",
+   "count": 2,
+   "keywords": [
+    "홍대 여드름",
+    "홍대입구 여드름"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/thread-lifting",
+   "count": 2,
+   "keywords": [
+    "홍대 실리프팅",
+    "합정역 실리프팅"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/34",
+   "count": 2,
+   "keywords": [
+    "홍대 스킨부스터",
+    "마포구 스킨부스터"
+   ]
+  },
+  {
+   "url": "https://blog.naver.com/beautyblossom_clinic/224306956197",
+   "count": 2,
+   "keywords": [
+    "홍대 기미",
+    "홍대입구 기미"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/400",
+   "count": 2,
+   "keywords": [
+    "연남동 울쎄라",
+    "합정역 울쎄라"
+   ]
+  },
+  {
+   "url": "https://blog.naver.com/beautyblossom_clinic/224298983492",
+   "count": 1,
+   "keywords": [
+    "포텐자효과"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/154",
+   "count": 1,
+   "keywords": [
+    "리니어지"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/142",
+   "count": 1,
+   "keywords": [
+    "어깨필러"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/41",
+   "count": 1,
+   "keywords": [
+    "홍대 써마지"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/62",
+   "count": 1,
+   "keywords": [
+    "홍대 여드름"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/47",
+   "count": 1,
+   "keywords": [
+    "합정역 제모"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/yujiin-lifting",
+   "count": 1,
+   "keywords": [
+    "합정 리프팅"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/149",
+   "count": 1,
+   "keywords": [
+    "합정 덴서티"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/56",
+   "count": 1,
+   "keywords": [
+    "연남동 온다리프팅"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/115",
+   "count": 1,
+   "keywords": [
+    "홍대입구 탄력"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/28",
+   "count": 1,
+   "keywords": [
+    "합정역 스킨보톡스"
+   ]
+  },
+  {
+   "url": "https://beautyblossom.kr/19",
+   "count": 1,
+   "keywords": [
+    "합정역 여드름"
+   ]
+  }
+ ],
+ "naver_forms": {
+  "플레이스": 28,
+  "함께 많이 찾는": 197,
+  "네이버 클립": 22,
+  "자사 홈페이지(웹사이트)": 76,
+  "자사 홈페이지 링크": 79,
+  "오드의원 odeclinicseoul.": 1,
+  "새 창 열림 ㆍ피터팬의 좋은방 구하기": 1,
+  "AI 브리핑 인용": 6,
+  "포텐자 | 미세침 고주파로 탄력과 피": 1,
+  "자사 블로그 링크": 57,
+  "플랜유의원 송도피부과 planucli": 1,
+  "새 창 열림 아름다운 내집갖기 새 창": 1,
+  "지식iN": 3,
+  "홍대피부과 hongdae.doctor": 1,
+  "뷰티블라썸의원 새 창 열림": 50,
+  "새 창 열림 뷰티블라썸의원 새 창 열": 27,
+  "나만의닥터 my-doctor.io›d": 1,
+  "새 창 열림 김아롱입니다 새 창 열림": 1,
+  "새 창 열림 ohvelyjoo 새 창": 2,
+  "아비쥬의원 abijouonline.c": 1,
+  "광고": 28,
+  "유픽의원 홍대 hd.upicclini": 1,
+  "강남언니 www.gangnamunni": 8,
+  "여신티켓": 9,
+  "여신티켓 www.yeoshin.co.": 31,
+  "블로그": 4,
+  "GlowMap glowmap.kr›m": 2,
+  "YouTube www.youtube.": 1,
+  "기타 링크": 1,
+  "인스타그램": 1,
+  "새 창 열림 15년경력 피부과전문의 ": 1,
+  "새 창 열림 ✅아이디클리닉✅ 새 창 ": 1,
+  "Beautystone Clinic b": 1,
+  "LilysAI lilys.ai›not": 1,
+  "AI 브리핑": 2,
+  "온다리프팅 | 유앤아이의원 홍대신촌점": 1,
+  "포텐자 | 홍대입구역 피부과 톤즈의원": 1,
+  "홍대 여드름관리 - 아비쥬의원": 1,
+  "새 창 열림 마포척한방병원 새 창 열": 1,
+  "리베리의원 reberryclinic.": 1,
+  "볼뉴머 volnewmer.co.kr›": 2,
+  "새 창 열림 밍밍망고와 함께하는 일상": 1,
+  "새 창 열림 병의원 마케팅 새 창 열": 1,
+  "캐시닥": 1,
+  "캐시닥 cashdoc.me›마포구›피": 1,
+  "새 창 열림 왠지 모를 새 창 열림 ": 1,
+  "캐시닥 cashdoc.me›hospi": 1,
+  "모두닥 www.modoodoc.com": 1,
+  "베네핏뷰 benefitview.co.": 1,
+  "한국커뮤니티": 1,
+  "한국커뮤니티 hancome.kr›마포": 1
+ },
+ "gaps": [
+  {
+   "keyword": "마운자로",
+   "vol": 275600,
+   "clinics": [
+    "팩트클리닉",
+    "현명신경외과의원",
+    "재활의학과의원",
+    "제이엠가정의학과의원"
+   ]
+  },
+  {
+   "keyword": "마운자로 가격",
+   "vol": 205400,
+   "clinics": []
+  },
+  {
+   "keyword": "슈링크",
+   "vol": 85870,
+   "clinics": [
+    "아우베의원"
+   ]
+  },
+  {
+   "keyword": "위고비",
+   "vol": 82200,
+   "clinics": []
+  },
+  {
+   "keyword": "리쥬란",
+   "vol": 65900,
+   "clinics": []
+  },
+  {
+   "keyword": "위고비가격",
+   "vol": 57580,
+   "clinics": []
+  },
+  {
+   "keyword": "온다리프팅",
+   "vol": 53620,
+   "clinics": [
+    "유앤아이의원",
+    "지유클리닉"
+   ]
+  },
+  {
+   "keyword": "덴서티",
+   "vol": 53090,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "스킨보톡스",
+   "vol": 50860,
+   "clinics": [
+    "다시봄날의원",
+    "지유클리닉",
+    "보스피부과의원"
+   ]
+  },
+  {
+   "keyword": "마운자로 효과",
+   "vol": 48190,
+   "clinics": [
+    "현명신경외과의원",
+    "제이엠가정의학과의원"
+   ]
+  },
+  {
+   "keyword": "울쎄라",
+   "vol": 47890,
+   "clinics": []
+  },
+  {
+   "keyword": "위고비 마운자로",
+   "vol": 38170,
+   "clinics": [
+    "제이엠가정의학과의원"
+   ]
+  },
+  {
+   "keyword": "마운자로 처방",
+   "vol": 37900,
+   "clinics": [
+    "비만클리닉",
+    "제이엠가정의학과의원"
+   ]
+  },
+  {
+   "keyword": "쥬베룩",
+   "vol": 32980,
+   "clinics": [
+    "온리프의원",
+    "유앤아이의원",
+    "차앤박피부과"
+   ]
+  },
+  {
+   "keyword": "레이저제모",
+   "vol": 32910,
+   "clinics": []
+  },
+  {
+   "keyword": "포텐자",
+   "vol": 31510,
+   "clinics": [
+    "유앤아이의원",
+    "THE아름다운의원",
+    "차이의원",
+    "더아름다운의원"
+   ]
+  },
+  {
+   "keyword": "스킨보톡스효과",
+   "vol": 30040,
+   "clinics": [
+    "지유클리닉"
+   ]
+  },
+  {
+   "keyword": "마운자로 후기",
+   "vol": 29920,
+   "clinics": [
+    "제이엠가정의학과의원"
+   ]
+  },
+  {
+   "keyword": "아쿠아필",
+   "vol": 29190,
+   "clinics": [
+    "나나피부과"
+   ]
+  },
+  {
+   "keyword": "써마지",
+   "vol": 28310,
+   "clinics": []
+  },
+  {
+   "keyword": "스컬트라",
+   "vol": 27770,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "쥬베룩볼륨",
+   "vol": 27720,
+   "clinics": [
+    "힐하우스피부과의원"
+   ]
+  },
+  {
+   "keyword": "보톡스",
+   "vol": 22720,
+   "clinics": [
+    "차이의원"
+   ]
+  },
+  {
+   "keyword": "리쥬란효과",
+   "vol": 22250,
+   "clinics": [
+    "온리프의원",
+    "지유클리닉",
+    "모델로피부과"
+   ]
+  },
+  {
+   "keyword": "피코토닝",
+   "vol": 21940,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "스킨부스터",
+   "vol": 21320,
+   "clinics": [
+    "파랑새피부과"
+   ]
+  },
+  {
+   "keyword": "울쎄라효과",
+   "vol": 20750,
+   "clinics": [
+    "온리프의원"
+   ]
+  },
+  {
+   "keyword": "입술필러",
+   "vol": 19760,
+   "clinics": [
+    "모델로피부과",
+    "케이톡스의원",
+    "드레스성형외과의원"
+   ]
+  },
+  {
+   "keyword": "울쎄라가격",
+   "vol": 18940,
+   "clinics": []
+  },
+  {
+   "keyword": "슈링크효과",
+   "vol": 18650,
+   "clinics": [
+    "뷰티스톤의원"
+   ]
+  },
+  {
+   "keyword": "침샘보톡스",
+   "vol": 17890,
+   "clinics": [
+    "코코의원",
+    "리베리의원"
+   ]
+  },
+  {
+   "keyword": "인모드",
+   "vol": 17860,
+   "clinics": [
+    "나나피부과",
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "온다리프팅 후기",
+   "vol": 17840,
+   "clinics": [
+    "지유클리닉"
+   ]
+  },
+  {
+   "keyword": "포텐자효과",
+   "vol": 17050,
+   "clinics": [
+    "유앤아이의원",
+    "차이의원",
+    "THE아름다운의원"
+   ]
+  },
+  {
+   "keyword": "마운자로 술",
+   "vol": 16650,
+   "clinics": [
+    "제이엠가정의학과의원"
+   ]
+  },
+  {
+   "keyword": "마운자로 용량",
+   "vol": 16320,
+   "clinics": [
+    "강남더슬림의원"
+   ]
+  },
+  {
+   "keyword": "피코토닝효과",
+   "vol": 15980,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "브라질리언레이저제모",
+   "vol": 15960,
+   "clinics": []
+  },
+  {
+   "keyword": "입꼬리보톡스",
+   "vol": 15940,
+   "clinics": [
+    "온리프의원",
+    "BLS클리닉",
+    "톤즈의원",
+    "클린톡스의원"
+   ]
+  },
+  {
+   "keyword": "콧볼보톡스",
+   "vol": 15600,
+   "clinics": [
+    "온리프의원"
+   ]
+  },
+  {
+   "keyword": "세르프",
+   "vol": 15480,
+   "clinics": [
+    "서울예쁨의원",
+    "차이의원"
+   ]
+  },
+  {
+   "keyword": "LDM",
+   "vol": 15300,
+   "clinics": []
+  },
+  {
+   "keyword": "써마지효과",
+   "vol": 15240,
+   "clinics": [
+    "차이의원",
+    "온리프의원"
+   ]
+  },
+  {
+   "keyword": "다이어트주사",
+   "vol": 14220,
+   "clinics": []
+  },
+  {
+   "keyword": "턱보톡스",
+   "vol": 14030,
+   "clinics": [
+    "차이의원"
+   ]
+  },
+  {
+   "keyword": "필러",
+   "vol": 13760,
+   "clinics": []
+  },
+  {
+   "keyword": "마운자로 처방 병원",
+   "vol": 13550,
+   "clinics": [
+    "비만클리닉"
+   ]
+  },
+  {
+   "keyword": "모공주사",
+   "vol": 13450,
+   "clinics": [
+    "설레임의원",
+    "이즈의원",
+    "강남역피부과"
+   ]
+  },
+  {
+   "keyword": "팔자주름시술",
+   "vol": 13130,
+   "clinics": [
+    "온리프의원",
+    "파랑새피부과",
+    "미프리티의원"
+   ]
+  },
+  {
+   "keyword": "리쥬란힐러",
+   "vol": 12960,
+   "clinics": [
+    "온리프의원"
+   ]
+  },
+  {
+   "keyword": "윤곽주사",
+   "vol": 12880,
+   "clinics": [
+    "제로클리닉"
+   ]
+  },
+  {
+   "keyword": "승모근보톡스",
+   "vol": 12690,
+   "clinics": [
+    "BLS클리닉"
+   ]
+  },
+  {
+   "keyword": "지방분해주사",
+   "vol": 12560,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "인모드효과",
+   "vol": 12020,
+   "clinics": [
+    "오블리주의원",
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "세르프리프팅",
+   "vol": 11280,
+   "clinics": [
+    "차이의원"
+   ]
+  },
+  {
+   "keyword": "스킨보톡스가격",
+   "vol": 11160,
+   "clinics": [
+    "광명피부과"
+   ]
+  },
+  {
+   "keyword": "사각턱보톡스",
+   "vol": 10980,
+   "clinics": [
+    "레픽의원"
+   ]
+  },
+  {
+   "keyword": "실리프팅",
+   "vol": 10870,
+   "clinics": [
+    "온리프의원",
+    "에디션성형외과의원",
+    "BLS클리닉",
+    "비엘에스의원"
+   ]
+  },
+  {
+   "keyword": "팔뚝지방분해주사",
+   "vol": 10820,
+   "clinics": [
+    "현대미학성형외과의원",
+    "강남더슬림의원",
+    "우리성형외과"
+   ]
+  },
+  {
+   "keyword": "백옥주사",
+   "vol": 10330,
+   "clinics": []
+  },
+  {
+   "keyword": "얼굴실리프팅",
+   "vol": 10080,
+   "clinics": [
+    "온리프의원"
+   ]
+  },
+  {
+   "keyword": "인모드FX",
+   "vol": 10080,
+   "clinics": [
+    "파인드피부과"
+   ]
+  },
+  {
+   "keyword": "엑소좀",
+   "vol": 9940,
+   "clinics": [
+    "BLS클리닉"
+   ]
+  },
+  {
+   "keyword": "위고비효과",
+   "vol": 9920,
+   "clinics": []
+  },
+  {
+   "keyword": "위고비 마운자로 차이",
+   "vol": 9830,
+   "clinics": []
+  },
+  {
+   "keyword": "미간보톡스",
+   "vol": 9580,
+   "clinics": [
+    "리베리의원"
+   ]
+  },
+  {
+   "keyword": "기미잡티레이저",
+   "vol": 9310,
+   "clinics": [
+    "순수안피부과",
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "쥬베룩스킨",
+   "vol": 9010,
+   "clinics": [
+    "봄눈피우다의원",
+    "리베리의원"
+   ]
+  },
+  {
+   "keyword": "수염레이저제모",
+   "vol": 8940,
+   "clinics": [
+    "다시봄날의원"
+   ]
+  },
+  {
+   "keyword": "겨드랑이제모",
+   "vol": 8900,
+   "clinics": [
+    "유앤아이의원",
+    "다시봄날의원"
+   ]
+  },
+  {
+   "keyword": "리프팅",
+   "vol": 8860,
+   "clinics": [
+    "BLS클리닉"
+   ]
+  },
+  {
+   "keyword": "제모",
+   "vol": 8800,
+   "clinics": []
+  },
+  {
+   "keyword": "써마지가격",
+   "vol": 8280,
+   "clinics": []
+  },
+  {
+   "keyword": "위고비 마운자로 가격",
+   "vol": 8210,
+   "clinics": []
+  },
+  {
+   "keyword": "여드름압출",
+   "vol": 8180,
+   "clinics": [
+    "제너리스의원"
+   ]
+  },
+  {
+   "keyword": "온다리프팅 효과",
+   "vol": 8130,
+   "clinics": [
+    "유앤아이의원",
+    "대구성형외과"
+   ]
+  },
+  {
+   "keyword": "위고비 용량",
+   "vol": 7940,
+   "clinics": []
+  },
+  {
+   "keyword": "눈썹문신제거",
+   "vol": 7910,
+   "clinics": [
+    "유앤아이의원",
+    "라벨라의원"
+   ]
+  },
+  {
+   "keyword": "소프웨이브",
+   "vol": 7860,
+   "clinics": [
+    "유앤아이의원",
+    "온리프의원"
+   ]
+  },
+  {
+   "keyword": "크라이오",
+   "vol": 7820,
+   "clinics": [
+    "유앤아이의원",
+    "아이디의원",
+    "청담피부과"
+   ]
+  },
+  {
+   "keyword": "턱보톡스효과",
+   "vol": 7630,
+   "clinics": [
+    "차이의원",
+    "디렉터의원"
+   ]
+  },
+  {
+   "keyword": "스킨보톡스후기",
+   "vol": 7580,
+   "clinics": [
+    "보스피부과의원",
+    "지유클리닉",
+    "벨더마의원"
+   ]
+  },
+  {
+   "keyword": "이마필러",
+   "vol": 7510,
+   "clinics": [
+    "모델로피부과",
+    "더왈츠의원"
+   ]
+  },
+  {
+   "keyword": "백옥주사효과",
+   "vol": 7430,
+   "clinics": []
+  },
+  {
+   "keyword": "온다리프팅가격",
+   "vol": 7410,
+   "clinics": []
+  },
+  {
+   "keyword": "스킨보톡스 통증",
+   "vol": 7320,
+   "clinics": []
+  },
+  {
+   "keyword": "여드름피부과",
+   "vol": 7220,
+   "clinics": []
+  },
+  {
+   "keyword": "리쥬란가격",
+   "vol": 7130,
+   "clinics": [
+    "나인피부과의원"
+   ]
+  },
+  {
+   "keyword": "스컬트라효과",
+   "vol": 7060,
+   "clinics": [
+    "차앤박피부과"
+   ]
+  },
+  {
+   "keyword": "써마지600샷가격",
+   "vol": 7020,
+   "clinics": []
+  },
+  {
+   "keyword": "보톡스가격",
+   "vol": 7000,
+   "clinics": [
+    "차이의원",
+    "뷰티스톤의원"
+   ]
+  },
+  {
+   "keyword": "이마보톡스",
+   "vol": 6920,
+   "clinics": [
+    "언니네피부과",
+    "리베리의원"
+   ]
+  },
+  {
+   "keyword": "울쎄라피프라임",
+   "vol": 6900,
+   "clinics": [
+    "BLS클리닉",
+    "유앤아이의원",
+    "더왈츠의원"
+   ]
+  },
+  {
+   "keyword": "슈링크유니버스",
+   "vol": 6720,
+   "clinics": [
+    "BLS클리닉"
+   ]
+  },
+  {
+   "keyword": "면역주사",
+   "vol": 6590,
+   "clinics": [
+    "아산본내과의원",
+    "서울베스트의료의원",
+    "아산본한의원"
+   ]
+  },
+  {
+   "keyword": "팔자주름보톡스",
+   "vol": 6580,
+   "clinics": [
+    "온리프의원",
+    "뷰티스톤의원"
+   ]
+  },
+  {
+   "keyword": "싸이모신알파1",
+   "vol": 6560,
+   "clinics": []
+  },
+  {
+   "keyword": "마늘주사",
+   "vol": 6470,
+   "clinics": [
+    "거창종합내과의원"
+   ]
+  },
+  {
+   "keyword": "아쿠아필효과",
+   "vol": 6460,
+   "clinics": []
+  },
+  {
+   "keyword": "코어톡스",
+   "vol": 6440,
+   "clinics": [
+    "뷰티스톤의원"
+   ]
+  },
+  {
+   "keyword": "스킨보톡스 주기",
+   "vol": 6350,
+   "clinics": [
+    "제너리스의원"
+   ]
+  },
+  {
+   "keyword": "슈링크300샷",
+   "vol": 6340,
+   "clinics": [
+    "유앤아이의원",
+    "더나클리닉"
+   ]
+  },
+  {
+   "keyword": "레이저토닝",
+   "vol": 6260,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "자갈턱보톡스",
+   "vol": 6240,
+   "clinics": [
+    "리프트성형외과",
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "덴서티 효과",
+   "vol": 6240,
+   "clinics": [
+    "스노우의원",
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "울쎄라300샷",
+   "vol": 6230,
+   "clinics": [
+    "뷰티스톤의원",
+    "오드의원"
+   ]
+  },
+  {
+   "keyword": "모공시술",
+   "vol": 6070,
+   "clinics": [
+    "PHD피부과",
+    "유앤아이의원",
+    "피에이치디피부과의원"
+   ]
+  },
+  {
+   "keyword": "흉터레이저",
+   "vol": 6020,
+   "clinics": [
+    "연세스타피부과"
+   ]
+  },
+  {
+   "keyword": "포텐자후기",
+   "vol": 6010,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "겨드랑이레이저제모",
+   "vol": 5990,
+   "clinics": [
+    "유앤아이의원",
+    "다시봄날의원"
+   ]
+  },
+  {
+   "keyword": "스킨부스터효과",
+   "vol": 5950,
+   "clinics": [
+    "파랑새피부과",
+    "이즈의원"
+   ]
+  },
+  {
+   "keyword": "복부지방분해주사",
+   "vol": 5850,
+   "clinics": []
+  },
+  {
+   "keyword": "눈밑필러",
+   "vol": 5800,
+   "clinics": [
+    "세진성형외과",
+    "다시온의원",
+    "청담이엘피부과",
+    "리프트성형외과"
+   ]
+  },
+  {
+   "keyword": "종아리보톡스",
+   "vol": 5770,
+   "clinics": [
+    "톤즈의원",
+    "인천피부과",
+    "유앤미클리닉",
+    "쉬즈성형외과"
+   ]
+  },
+  {
+   "keyword": "얼굴리프팅",
+   "vol": 5650,
+   "clinics": [
+    "차앤박피부과",
+    "메디우먼여성의원",
+    "에이비성형외과의원"
+   ]
+  },
+  {
+   "keyword": "문신제거",
+   "vol": 5650,
+   "clinics": [
+    "클린타투의원",
+    "신촌연세스타피부과"
+   ]
+  },
+  {
+   "keyword": "브라질리언레이저",
+   "vol": 5540,
+   "clinics": [
+    "뷰티스톤의원"
+   ]
+  },
+  {
+   "keyword": "레이저제모가격",
+   "vol": 5210,
+   "clinics": []
+  },
+  {
+   "keyword": "코조각주사",
+   "vol": 5190,
+   "clinics": [
+    "와우성형외과",
+    "유앤아이의원",
+    "뮤즈클리닉",
+    "뮤즈의원"
+   ]
+  },
+  {
+   "keyword": "싸이모신 면역주사",
+   "vol": 5110,
+   "clinics": []
+  },
+  {
+   "keyword": "리쥬란후기",
+   "vol": 5020,
+   "clinics": [
+    "뷰티스톤의원",
+    "홍대피부과"
+   ]
+  },
+  {
+   "keyword": "포텐자가격",
+   "vol": 5000,
+   "clinics": [
+    "리베리의원"
+   ]
+  },
+  {
+   "keyword": "점빼기",
+   "vol": 4980,
+   "clinics": [
+    "유앤아이의원",
+    "유앤아이피부과의원",
+    "톤즈의원"
+   ]
+  },
+  {
+   "keyword": "팔자주름필러",
+   "vol": 4960,
+   "clinics": [
+    "더왈츠의원",
+    "리베리의원"
+   ]
+  },
+  {
+   "keyword": "스컬트라가격",
+   "vol": 4770,
+   "clinics": [
+    "골든발란스여성의원"
+   ]
+  },
+  {
+   "keyword": "측두근보톡스",
+   "vol": 4710,
+   "clinics": [
+    "바라봄피부과의원",
+    "광명피부과",
+    "제너리스의원",
+    "델픽의원"
+   ]
+  },
+  {
+   "keyword": "입술필러후기",
+   "vol": 4710,
+   "clinics": [
+    "삼사오피부과",
+    "강남피부과",
+    "삼성피부과",
+    "파인드피부과"
+   ]
+  },
+  {
+   "keyword": "코필러",
+   "vol": 4630,
+   "clinics": [
+    "온리프의원",
+    "드레스성형외과의원"
+   ]
+  },
+  {
+   "keyword": "스킨부스터종류",
+   "vol": 4590,
+   "clinics": [
+    "온리프의원",
+    "시아의원",
+    "유앤아이의원",
+    "마인성형외과"
+   ]
+  },
+  {
+   "keyword": "보톡스주기",
+   "vol": 4560,
+   "clinics": [
+    "제너리스의원"
+   ]
+  },
+  {
+   "keyword": "울쎄라통증",
+   "vol": 4530,
+   "clinics": [
+    "온리프의원",
+    "페슈의원"
+   ]
+  },
+  {
+   "keyword": "제네시스레이저",
+   "vol": 4470,
+   "clinics": [
+    "벨더마의원"
+   ]
+  },
+  {
+   "keyword": "남자레이저제모",
+   "vol": 4320,
+   "clinics": [
+    "리버스클리닉"
+   ]
+  },
+  {
+   "keyword": "CO2레이저",
+   "vol": 4310,
+   "clinics": [
+    "유앤아이의원",
+    "BLS클리닉"
+   ]
+  },
+  {
+   "keyword": "팔자주름리프팅",
+   "vol": 4310,
+   "clinics": [
+    "온리프의원",
+    "눈높이성형외과"
+   ]
+  },
+  {
+   "keyword": "살빼는주사",
+   "vol": 4280,
+   "clinics": []
+  },
+  {
+   "keyword": "토닝레이저",
+   "vol": 4270,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "제오민보톡스",
+   "vol": 4260,
+   "clinics": [
+    "뷰티스톤의원",
+    "더왈츠의원"
+   ]
+  },
+  {
+   "keyword": "위고비처방",
+   "vol": 4230,
+   "clinics": []
+  },
+  {
+   "keyword": "기미레이저",
+   "vol": 4230,
+   "clinics": [
+    "순수안피부과"
+   ]
+  },
+  {
+   "keyword": "모공레이저",
+   "vol": 4200,
+   "clinics": [
+    "PHD피부과"
+   ]
+  },
+  {
+   "keyword": "제네시스토닝",
+   "vol": 4190,
+   "clinics": [
+    "다시온의원",
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "볼뉴머효과",
+   "vol": 4160,
+   "clinics": [
+    "바라봄피부과"
+   ]
+  },
+  {
+   "keyword": "PDRN주사",
+   "vol": 4110,
+   "clinics": []
+  },
+  {
+   "keyword": "입꼬리필러",
+   "vol": 4060,
+   "clinics": [
+    "유앤아이의원",
+    "엘로디의원",
+    "리프트성형외과",
+    "드레스성형외과의원"
+   ]
+  },
+  {
+   "keyword": "아이리쥬란",
+   "vol": 4030,
+   "clinics": [
+    "더왈츠의원",
+    "차이의원"
+   ]
+  },
+  {
+   "keyword": "제네시스레이저효과",
+   "vol": 3980,
+   "clinics": [
+    "유앤아이의원",
+    "다시봄날의원"
+   ]
+  },
+  {
+   "keyword": "얼굴주름리프팅",
+   "vol": 3970,
+   "clinics": [
+    "새봄피부과",
+    "유앤아이의원",
+    "청담이엘피부과"
+   ]
+  },
+  {
+   "keyword": "엑소좀효과",
+   "vol": 3950,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "침샘보톡스 효과",
+   "vol": 3950,
+   "clinics": [
+    "코코의원",
+    "리베리의원"
+   ]
+  },
+  {
+   "keyword": "울써마지",
+   "vol": 3880,
+   "clinics": [
+    "리베리의원"
+   ]
+  },
+  {
+   "keyword": "래디어스",
+   "vol": 3870,
+   "clinics": [
+    "힐하우스피부과"
+   ]
+  },
+  {
+   "keyword": "면역력주사",
+   "vol": 3820,
+   "clinics": [
+    "아산본내과의원",
+    "서울베스트의료의원",
+    "아산본한의원"
+   ]
+  },
+  {
+   "keyword": "크라이오셀",
+   "vol": 3820,
+   "clinics": [
+    "뷰티온피부과의원",
+    "뷰티온의원"
+   ]
+  },
+  {
+   "keyword": "리프팅시술",
+   "vol": 3820,
+   "clinics": [
+    "리팅성형외과",
+    "제네시스성형외과",
+    "BLS클리닉"
+   ]
+  },
+  {
+   "keyword": "쥬베룩 아이",
+   "vol": 3800,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "애교살필러",
+   "vol": 3790,
+   "clinics": [
+    "비에이의원",
+    "유앤미클리닉",
+    "리베리의원",
+    "모델로피부과"
+   ]
+  },
+  {
+   "keyword": "위고비 뜻",
+   "vol": 3780,
+   "clinics": []
+  },
+  {
+   "keyword": "피코슈어토닝",
+   "vol": 3750,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "MTS시술",
+   "vol": 3750,
+   "clinics": [
+    "차앤박피부과"
+   ]
+  },
+  {
+   "keyword": "쥬베룩가격",
+   "vol": 3740,
+   "clinics": [
+    "오늘맑음의원",
+    "뷰티스톤의원"
+   ]
+  },
+  {
+   "keyword": "수염레이저제모가격",
+   "vol": 3730,
+   "clinics": [
+    "리베리의원",
+    "에비뉴의원"
+   ]
+  },
+  {
+   "keyword": "인모드가격",
+   "vol": 3670,
+   "clinics": [
+    "땡큐성형외과의원"
+   ]
+  },
+  {
+   "keyword": "눈가보톡스",
+   "vol": 3620,
+   "clinics": [
+    "유앤아이피부과의원",
+    "스타비성형외과",
+    "유앤아이피부과",
+    "오드리의원"
+   ]
+  },
+  {
+   "keyword": "울쎄라600샷가격",
+   "vol": 3580,
+   "clinics": []
+  },
+  {
+   "keyword": "주근깨레이저",
+   "vol": 3580,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "귀필러",
+   "vol": 3540,
+   "clinics": [
+    "온리프의원",
+    "유앤아이의원",
+    "하이갤러리성형외과",
+    "부산성형외과"
+   ]
+  },
+  {
+   "keyword": "광대보톡스",
+   "vol": 3480,
+   "clinics": [
+    "뷰티온의원",
+    "델픽의원",
+    "클린톡스의원",
+    "헤이데이의원"
+   ]
+  },
+  {
+   "keyword": "아쿠아필가격",
+   "vol": 3480,
+   "clinics": [
+    "부천피부과"
+   ]
+  },
+  {
+   "keyword": "울쎄라후기",
+   "vol": 3480,
+   "clinics": [
+    "뷰티스톤의원"
+   ]
+  },
+  {
+   "keyword": "쥬베룩볼륨효과",
+   "vol": 3460,
+   "clinics": []
+  },
+  {
+   "keyword": "리쥬란HB",
+   "vol": 3440,
+   "clinics": [
+    "차이의원"
+   ]
+  },
+  {
+   "keyword": "아이써마지",
+   "vol": 3440,
+   "clinics": [
+    "세예의원",
+    "유앤아이의원",
+    "스킨메디피부과의원"
+   ]
+  },
+  {
+   "keyword": "제오민",
+   "vol": 3430,
+   "clinics": [
+    "더왈츠의원"
+   ]
+  },
+  {
+   "keyword": "남자수염제모",
+   "vol": 3420,
+   "clinics": [
+    "유앤아이의원",
+    "다시봄날의원"
+   ]
+  },
+  {
+   "keyword": "크라이오 관리",
+   "vol": 3420,
+   "clinics": [
+    "유앤아이의원",
+    "청담피부과"
+   ]
+  },
+  {
+   "keyword": "인모드포마",
+   "vol": 3320,
+   "clinics": [
+    "더왈츠의원"
+   ]
+  },
+  {
+   "keyword": "울쎄라써마지",
+   "vol": 3320,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "포텐자 통증",
+   "vol": 3310,
+   "clinics": [
+    "리베리의원",
+    "에이탑뷰티클리닉",
+    "제너리스의원",
+    "천호피부과"
+   ]
+  },
+  {
+   "keyword": "팔자필러",
+   "vol": 3300,
+   "clinics": [
+    "더왈츠의원",
+    "세진성형외과"
+   ]
+  },
+  {
+   "keyword": "쥬베룩볼륨가격",
+   "vol": 3290,
+   "clinics": [
+    "오늘맑음의원"
+   ]
+  },
+  {
+   "keyword": "써마지통증",
+   "vol": 3260,
+   "clinics": [
+    "제너리스의원"
+   ]
+  },
+  {
+   "keyword": "턱끝필러",
+   "vol": 3250,
+   "clinics": [
+    "더왈츠의원",
+    "세진성형외과",
+    "데이뷰의원",
+    "강남피부과"
+   ]
+  },
+  {
+   "keyword": "세르프 효과",
+   "vol": 3250,
+   "clinics": [
+    "유앤아이의원",
+    "차이의원",
+    "부천피부과",
+    "바라봄피부과"
+   ]
+  },
+  {
+   "keyword": "인모드 멍",
+   "vol": 3230,
+   "clinics": [
+    "유앤아이의원",
+    "이지동안의원"
+   ]
+  },
+  {
+   "keyword": "이마주름보톡스",
+   "vol": 3200,
+   "clinics": [
+    "리베리의원",
+    "샤인톡스의원",
+    "제너리스의원",
+    "포에버의원"
+   ]
+  },
+  {
+   "keyword": "비타민주사",
+   "vol": 3130,
+   "clinics": []
+  },
+  {
+   "keyword": "벨로테로",
+   "vol": 3100,
+   "clinics": [
+    "뷰티스톤의원"
+   ]
+  },
+  {
+   "keyword": "온다리프팅 유지기간",
+   "vol": 3100,
+   "clinics": [
+    "유앤아이의원"
+   ]
+  },
+  {
+   "keyword": "얼굴지방분해주사",
+   "vol": 3090,
+   "clinics": [
+    "글래드성형외과",
+    "리프티크피부과의원"
+   ]
+  },
+  {
+   "keyword": "울트라콜",
+   "vol": 3080,
+   "clinics": [
+    "THE아름다운의원",
+    "오션클리닉"
+   ]
+  },
+  {
+   "keyword": "브이올렛주사",
+   "vol": 3060,
+   "clinics": [
+    "차이의원",
+    "나나피부과"
+   ]
+  },
+  {
+   "keyword": "리쥬란아이",
+   "vol": 3040,
+   "clinics": [
+    "더왈츠의원",
+    "차이의원"
+   ]
+  },
+  {
+   "keyword": "리쥬란 통증",
+   "vol": 3020,
+   "clinics": [
+    "차이의원",
+    "리움의원",
+    "유앤아이의원",
+    "스노우의원"
+   ]
+  }
+ ],
+ "exposed_keywords": [
+  "피부과",
+  "볼뉴머",
+  "덴서티",
+  "울쎄라",
+  "위고비 마운자로",
+  "포텐자",
+  "써마지",
+  "보톡스",
+  "스킨부스터",
+  "홍대 피부과",
+  "포텐자효과",
+  "세르프",
+  "LDM",
+  "다이어트주사",
+  "턱보톡스",
+  "세르프리프팅",
+  "사각턱보톡스",
+  "쥬베룩효과",
+  "리프팅",
+  "리쥬란가격",
+  "스컬트라효과",
+  "보톡스가격",
+  "면역주사",
+  "복부지방분해주사",
+  "싸이모신 면역주사",
+  "스킨부스터종류",
+  "래디어스",
+  "크라이오셀",
+  "귀필러",
+  "써마지통증",
+  "리니어지",
+  "벨로테로",
+  "울트라콜",
+  "입술필러 붓기",
+  "블랙필",
+  "피부샵",
+  "어깨필러",
+  "세르프 가격",
+  "피부관리실",
+  "LDM관리",
+  "목주름필러",
+  "위고비 회사",
+  "쥬베룩 결절",
+  "스킨부스터 추천",
+  "홍대 울쎄라",
+  "합정 피부과",
+  "홍대 보톡스",
+  "합정역 피부과",
+  "홍대 필러",
+  "홍대 인모드",
+  "홍대입구 울쎄라",
+  "홍대 제모",
+  "망원 피부과",
+  "홍대 온다리프팅",
+  "홍대입구 써마지",
+  "홍대 피부관리",
+  "홍대 슈링크",
+  "홍대 써마지",
+  "홍대 리프팅",
+  "마포 피부관리",
+  "홍대 여드름",
+  "마포 리프팅",
+  "홍대 포텐자",
+  "홍대 스킨보톡스",
+  "홍대 리쥬란",
+  "마포 울쎄라",
+  "홍대 실리프팅",
+  "합정 보톡스",
+  "마포 리쥬란",
+  "마포 써마지",
+  "홍대 볼뉴머",
+  "홍대 덴서티",
+  "홍대 쥬베룩",
+  "홍대 세르프",
+  "홍대 피코토닝",
+  "홍대 스킨부스터",
+  "마포 실리프팅",
+  "합정 피부관리",
+  "망원 스킨부스터",
+  "마포 온다리프팅",
+  "합정역 보톡스",
+  "마포 제모",
+  "마포 스킨부스터",
+  "마포 덴서티",
+  "마포구 실리프팅",
+  "합정 울쎄라",
+  "마포 피부과 추천",
+  "합정 제모",
+  "합정 써마지",
+  "마포 슈링크",
+  "홍대 소프웨이브",
+  "합정 슈링크",
+  "홍대 물광주사",
+  "합정 세르프",
+  "마포 세르프",
+  "마포구 피부과 추천",
+  "마포구 리쥬란",
+  "마포구 울쎄라",
+  "마포구 스킨부스터",
+  "마포구 덴서티",
+  "마포구 세르프",
+  "마포 필러",
+  "마포구 필러",
+  "홍대 레이저토닝",
+  "홍대 기미",
+  "합정 인모드",
+  "합정 쥬베룩",
+  "합정 피부과 추천",
+  "합정 여드름",
+  "홍대입구 필러",
+  "홍대입구 쥬베룩",
+  "합정역 제모",
+  "합정역 세르프",
+  "마포구 슈링크",
+  "마포 스킨보톡스",
+  "마포 쥬베룩",
+  "홍대입구 리프팅",
+  "마포구 써마지",
+  "마포구 리프팅",
+  "망원 보톡스",
+  "홍대입구 온다리프팅",
+  "홍대입구 포텐자",
+  "홍대입구 여드름",
+  "홍대입구 기미",
+  "합정 필러",
+  "합정 리쥬란",
+  "합정 온다리프팅",
+  "합정 소프웨이브",
+  "합정 스킨보톡스",
+  "합정 포텐자",
+  "합정 스킨부스터",
+  "합정 리프팅",
+  "마포 소프웨이브",
+  "마포 인모드",
+  "마포 포텐자",
+  "상수 리쥬란",
+  "홍대 모공",
+  "홍대 탄력",
+  "합정 피부과 잘하는곳",
+  "합정 물광주사",
+  "합정 볼뉴머",
+  "합정 덴서티",
+  "마포 물광주사",
+  "마포 볼뉴머",
+  "상수 볼뉴머",
+  "연남동 보톡스",
+  "연남동 스킨보톡스",
+  "연남동 필러",
+  "연남동 리쥬란",
+  "연남동 울쎄라",
+  "연남동 써마지",
+  "연남동 온다리프팅",
+  "연남동 소프웨이브",
+  "연남동 인모드",
+  "연남동 슈링크",
+  "연남동 쥬베룩",
+  "연남동 포텐자",
+  "연남동 제모",
+  "연남동 스킨부스터",
+  "연남동 리프팅",
+  "연남동 물광주사",
+  "연남동 볼뉴머",
+  "연남동 덴서티",
+  "연남동 세르프",
+  "홍대입구 스킨보톡스",
+  "홍대입구 리쥬란",
+  "홍대입구 소프웨이브",
+  "홍대입구 인모드",
+  "홍대입구 슈링크",
+  "홍대입구 제모",
+  "홍대입구 물광주사",
+  "홍대입구 모공",
+  "홍대입구 탄력",
+  "홍대입구 볼뉴머",
+  "홍대입구 덴서티",
+  "홍대입구 세르프",
+  "합정역 피부과 추천",
+  "합정역 피부과 잘하는곳",
+  "합정역 스킨보톡스",
+  "합정역 필러",
+  "합정역 리쥬란",
+  "합정역 울쎄라",
+  "합정역 써마지",
+  "합정역 온다리프팅",
+  "합정역 소프웨이브",
+  "합정역 인모드",
+  "합정역 슈링크",
+  "합정역 쥬베룩",
+  "합정역 포텐자",
+  "합정역 피코토닝",
+  "합정역 스킨부스터",
+  "합정역 실리프팅",
+  "합정역 리프팅",
+  "합정역 물광주사",
+  "합정역 여드름",
+  "합정역 기미",
+  "합정역 피부관리",
+  "합정역 레이저토닝",
+  "합정역 볼뉴머",
+  "합정역 덴서티",
+  "마포구 온다리프팅",
+  "마포구 소프웨이브",
+  "마포구 인모드",
+  "마포구 쥬베룩",
+  "마포구 포텐자",
+  "마포구 물광주사",
+  "마포구 기미",
+  "마포구 모공",
+  "마포구 볼뉴머",
+  "망원 온다리프팅",
+  "망원 소프웨이브",
+  "망원 인모드",
+  "망원 포텐자",
+  "망원 볼뉴머",
+  "망원 덴서티",
+  "망원 세르프",
+  "합정 피코토닝",
+  "마포 피코토닝",
+  "상수 필러",
+  "상수 울쎄라",
+  "상수 온다리프팅",
+  "상수 소프웨이브",
+  "상수 인모드",
+  "상수 스킨보톡스",
+  "상수 쥬베룩",
+  "상수 제모",
+  "상수 슈링크",
+  "합정 모공",
+  "합정 탄력",
+  "마포 피부과 잘하는곳",
+  "마포 모공",
+  "마포 탄력",
+  "상수 피부과 추천",
+  "상수 리프팅",
+  "상수 물광주사",
+  "상수 기미",
+  "상수 모공",
+  "상수 피부관리",
+  "상수 덴서티",
+  "상수 세르프",
+  "연남동 피부과 추천",
+  "연남동 피부과 잘하는곳",
+  "연남동 피코토닝",
+  "연남동 실리프팅",
+  "연남동 모공",
+  "연남동 탄력",
+  "홍대입구 피부과 추천",
+  "홍대입구 피부과 잘하는곳",
+  "홍대입구 피코토닝",
+  "홍대입구 스킨부스터",
+  "홍대입구 실리프팅",
+  "홍대입구 피부관리",
+  "홍대입구 레이저토닝",
+  "합정역 모공",
+  "합정역 탄력",
+  "마포구 피부과 잘하는곳",
+  "마포구 피코토닝",
+  "마포구 제모",
+  "마포구 탄력",
+  "마포구 레이저토닝",
+  "망원 피부과 추천",
+  "망원 피부과 잘하는곳",
+  "망원 스킨보톡스",
+  "망원 필러",
+  "망원 리쥬란",
+  "망원 울쎄라",
+  "망원 써마지",
+  "망원 슈링크",
+  "망원 쥬베룩",
+  "망원 피코토닝",
+  "망원 제모",
+  "망원 실리프팅",
+  "망원 리프팅",
+  "망원 물광주사",
+  "망원 모공",
+  "망원 탄력",
+  "망원 레이저토닝"
+ ]
+}

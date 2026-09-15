@@ -1,8 +1,15 @@
 {
- "updated": "2026-09-14",
+ "updated": "2026-09-15",
  "rule": "주차(ISO week)마다 새 URL. 같은 주차 재발행은 같은 URL 덮어쓰기(이전 버전은 git 이력에 보존). 루트 index.html은 최신 평판 보고서 사본.",
  "latest": "https://doctorleegh-debug.github.io/bb-reputation-report/",
  "reports": [
+  {
+   "type": "GEO(AI 검색 노출)",
+   "week": "2026-W38",
+   "published": "2026-09-15",
+   "url": "https://doctorleegh-debug.github.io/bb-reputation-report/geo/2026-W38.html",
+   "stats": "https://doctorleegh-debug.github.io/bb-reputation-report/geo/2026-W38.json"
+  },
   {
    "type": "평판",
    "week": "2026-W38",
