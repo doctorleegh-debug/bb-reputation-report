@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>마케팅파트 Mac Studio 도입 보고서</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F4F5; --sheet:#FFFFFF; --ink:#231C20; --muted:#6B6168;
+  --rule:#E4DBE0; --accent:#A93F62; --accent-soft:#F6E1E9; --ok:#2F7A5B; --ok-soft:#E1F1E9;
+  --warn:#9A6212; --warn-soft:#F8ECD6;
+  --font:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#18141A; --sheet:#211C23; --ink:#F1EBEF; --muted:#A99DA5;
+    --rule:#3A3139; --accent:#E48AA9; --accent-soft:#3C2430; --ok:#7CC9A5; --ok-soft:#1E3129;
+    --warn:#E3B461; --warn-soft:#3A2E18;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#18141A; --sheet:#211C23; --ink:#F1EBEF; --muted:#A99DA5;
+  --rule:#3A3139; --accent:#E48AA9; --accent-soft:#3C2430; --ok:#7CC9A5; --ok-soft:#1E3129;
+  --warn:#E3B461; --warn-soft:#3A2E18;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+img{max-width:100%}
+
+.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px;max-width:1120px;margin:0 auto;padding:48px 24px 96px}
+nav.toc{position:sticky;top:32px;align-self:start;font-size:14px}
+nav.toc p{margin:0 0 12px;color:var(--muted);font-size:13px}
+nav.toc ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--rule)}
+nav.toc a{display:block;padding:6px 0 6px 14px;margin-left:-1px;border-left:2px solid transparent;color:var(--muted);text-decoration:none}
+nav.toc a.active{color:var(--ink);border-left-color:var(--accent);font-weight:600}
+main{min-width:0;max-width:780px}
+
+header.cover{padding-bottom:40px;border-bottom:1px solid var(--rule);margin-bottom:8px}
+.doc-meta{display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--muted);font-size:14px;margin:0 0 20px}
+h1{font-size:clamp(28px,4.4vw,40px);line-height:1.3;letter-spacing:-.02em;margin:0 0 16px;font-weight:700}
+.lede{font-size:18px;margin:0;max-width:62ch}
+
+section{padding:48px 0 8px;scroll-margin-top:24px}
+h2{font-size:24px;letter-spacing:-.01em;margin:0 0 6px;font-weight:700}
+.sub{color:var(--muted);margin:0 0 24px;font-size:15px}
+h3{font-size:17px;margin:28px 0 10px}
+p{margin:0 0 14px}
+
+/* 구성 선택기: 이 문서의 핵심 요소 */
+.picker{background:var(--sheet);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.seg{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--rule)}
+.seg button{font:inherit;background:none;border:0;padding:16px 20px;text-align:left;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent}
+.seg button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent);background:var(--accent-soft)}
+.seg strong{display:block;font-size:16px}
+.seg span{font-size:13px}
+.price-block{padding:28px 24px 8px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+.price{font-size:clamp(40px,7vw,60px);font-weight:700;letter-spacing:-.03em;line-height:1}
+.price small{font-size:.4em;font-weight:600;margin-left:4px}
+.ship{font-size:15px;padding:4px 12px;border-radius:999px;font-weight:600}
+.ship.slow{background:var(--warn-soft);color:var(--warn)}
+.ship.fast{background:var(--ok-soft);color:var(--ok)}
+.chip-name{padding:0 24px;margin:10px 0 18px;color:var(--muted)}
+dl.spec{margin:0;display:grid;grid-template-columns:140px 1fr}
+dl.spec dt,dl.spec dd{margin:0;padding:12px 24px;border-top:1px solid var(--rule)}
+dl.spec dt{color:var(--muted);font-size:14px}
+dl.spec dd{padding-left:0}
+.fit{padding:18px 24px 22px;border-top:1px solid var(--rule);font-size:15px}
+.fit b{color:var(--accent)}
+
+.table-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:10px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+th,td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}
+thead th{font-size:13px;color:var(--muted);font-weight:600;background:var(--paper)}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;white-space:nowrap}
+tr.total td{font-weight:700}
+.pct{font-weight:700;color:var(--accent);white-space:nowrap}
+
+.callout{border-left:3px solid var(--accent);background:var(--sheet);padding:14px 18px;border-radius:0 10px 10px 0;margin:20px 0}
+.callout.warn{border-left-color:var(--warn)}
+.callout.alert{background:#C62828;color:#FFFFFF;border-left:6px solid #7F1414;font-size:17px;line-height:1.65;padding:18px 22px}
+.callout.alert strong{color:#FFFFFF}
+@media print{.callout.alert{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+.links{display:grid;gap:10px}
+.link-row{display:flex;justify-content:space-between;gap:16px;align-items:center;background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.link-row:hover{border-color:var(--accent)}
+.link-row span{color:var(--muted);font-size:14px}
+.link-row em{font-style:normal;color:var(--accent);font-size:14px;white-space:nowrap}
+
+.stack{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule);border-radius:12px;overflow:hidden;background:var(--sheet)}
+.stack div{padding:18px}
+.stack div+div{border-left:1px solid var(--rule)}
+.stack b{display:block;font-size:17px;margin-bottom:4px}
+.stack small{color:var(--muted);font-size:13px;display:block;margin-bottom:8px}
+.stack p{font-size:14px;margin:0}
+
+ol.timeline{list-style:none;margin:0;padding:0;counter-reset:t}
+ol.timeline li{position:relative;padding:0 0 22px 36px;counter-increment:t}
+ol.timeline li::before{content:counter(t);position:absolute;left:0;top:2px;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:700;display:grid;place-items:center}
+ol.timeline li::after{content:"";position:absolute;left:11px;top:30px;bottom:4px;width:2px;background:var(--rule)}
+ol.timeline li:last-child::after{display:none}
+ol.timeline b{display:block}
+
+.tag{display:inline-block;font-size:13px;font-weight:600;padding:2px 10px;border-radius:999px;white-space:nowrap}
+.tag.ok{background:var(--ok-soft);color:var(--ok)}
+.tag.mid{background:var(--warn-soft);color:var(--warn)}
+.tag.no{background:var(--accent-soft);color:var(--accent)}
+
+ul.plain{margin:0;padding-left:20px}
+ul.plain li{margin-bottom:8px}
+
+.checks{display:grid;gap:8px}
+.checks label{display:flex;gap:12px;align-items:flex-start;background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:12px 16px;cursor:pointer}
+.checks input{margin-top:6px;accent-color:var(--accent);width:16px;height:16px;flex:none}
+.checks label.done span{color:var(--muted);text-decoration:line-through}
+.progress{font-size:14px;color:var(--muted);margin:12px 0 0}
+
+footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--rule);color:var(--muted);font-size:13px}
+.theme-btn{font:inherit;font-size:13px;background:var(--sheet);color:var(--ink);border:1px solid var(--rule);border-radius:999px;padding:6px 14px;cursor:pointer;margin-top:18px}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding-top:28px}
+  nav.toc{display:none}
+  .stack{grid-template-columns:1fr}
+  .stack div+div{border-left:0;border-top:1px solid var(--rule)}
+  dl.spec{grid-template-columns:110px 1fr}
+  dl.spec dt{padding-left:18px}
+}
+@media print{
+  nav.toc,.theme-btn,.seg{display:none}
+  body{background:#fff}
+  .layout{display:block;padding:0}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="toc" aria-label="목차">
+    <p>보고서 목차</p>
+    <ol>
+      <li><a href="#issue">현재 문제</a></li>
+      <li><a href="#summary">결론</a></li>
+      <li><a href="#config">구매 구성</a></li>
+      <li><a href="#cost">금액 내역</a></li>
+      <li><a href="#links">구매 링크·주문 옵션</a></li>
+      <li><a href="#system">시스템 구성</a></li>
+      <li><a href="#scope">자동화 업무 범위</a></li>
+      <li><a href="#parallel">영상 작업 병행</a></li>
+      <li><a href="#effect">기대 효과</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <header class="cover">
+      <div class="doc-meta">
+        <span>뷰티블라썸의원 마케팅파트</span>
+        <span>작성 유병호 파트장</span>
+        <span>2026년 9월 16일</span>
+      </div>
+      <h1>Mac Studio 도입 및<br>로컬 AI 자동화 운영안</h1>
+      <p class="lede">영상 편집과 로컬 AI(GLM) 자동화를 한 대에서 함께 돌리는 작업 장비를 도입하고, 6개 직무의 반복 실무를 시스템으로 처리하는 계획입니다.</p>
+    </header>
+
+    <section id="issue">
+      <h2>현재 문제</h2>
+      <p class="sub">도입을 검토하게 된 직접적인 원인입니다.</p>
+      <div class="callout alert" role="alert"><strong>로컬 PC 1대의 ADE(에이전트 작업 환경) 안에서 여러 에이전트가 동시에 돌아가면서, 에이전트 간 충돌과 작업 멈춤 오류가 자주 발생하고 있습니다.</strong></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>현재</th><th>도입 후</th></tr></thead>
+          <tbody>
+            <tr><td>한 장비·한 ADE에 모든 에이전트가 몰려 자원을 두고 경쟁</td><td>Mac Studio와 기존 PC로 에이전트를 나눠 배치</td></tr>
+            <tr><td>작업이 겹치면 충돌하거나 멈춰서 수동 재시작 필요</td><td>에이전트별 작업을 대기열로 순서대로 처리</td></tr>
+            <tr><td>AI 처리와 영상·개발 작업이 같은 자원을 사용</td><td>AI 연산은 Mac Studio가 전담하고, 작업 환경은 분리 운영</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="summary">
+      <h2>결론</h2>
+      <p class="sub">추천안과 절충안 중 하나를 결정해 주시면 바로 주문합니다.</p>
+      <p><strong>추천안은 M5 Ultra·256GB·4TB, 21,050,000원입니다.</strong> 로컬 AI를 상시 켜둔 채 영상 편집을 동시에 하려면 256GB가 최소선입니다. 다만 출고까지 16~18주가 걸립니다.</p>
+      <p><strong>절충안은 M5 Max·128GB·4TB, 11,770,000원입니다.</strong> 4~5주 안에 받을 수 있지만, 로컬 AI가 메모리를 거의 다 쓰기 때문에 AI 작업과 영상 편집을 한 장비에서 동시에 하기는 어렵습니다. <strong>대안으로 Mac Studio는 AI 전용으로 두고, 영상 편집은 기존 PC에서 분리 작업하면 병행이 가능합니다.</strong></p>
+    </section>
+
+    <section id="config">
+      <h2>구매 구성</h2>
+      <p class="sub">애플 공식 온라인 스토어 맞춤 구성 화면 기준 확정가입니다.</p>
+
+      <div class="picker">
+        <div class="seg" role="tablist" aria-label="구성 선택">
+          <button role="tab" id="tab-ultra" aria-selected="true" aria-controls="panel" data-plan="ultra">
+            <strong>추천안</strong><span>M5 Ultra · 256GB</span>
+          </button>
+          <button role="tab" id="tab-max" aria-selected="false" aria-controls="panel" data-plan="max">
+            <strong>절충안</strong><span>M5 Max · 128GB</span>
+          </button>
+        </div>
+        <div id="panel" role="tabpanel" aria-live="polite">
+          <div class="price-block">
+            <div class="price" data-f="price">21,050,000<small>원</small></div>
+            <span class="ship slow" data-f="ship">출고 16~18주</span>
+          </div>
+          <p class="chip-name" data-f="eta">예상 수령 2027년 1월 중순</p>
+          <dl class="spec">
+            <dt>칩</dt><dd data-f="chip">M5 Ultra · 36코어 CPU · 80코어 GPU · 32코어 Neural Engine</dd>
+            <dt>메모리</dt><dd data-f="mem">256GB 통합 메모리</dd>
+            <dt>저장공간</dt><dd>4TB</dd>
+            <dt>전면 포트</dt><dd data-f="front">Thunderbolt 5 ×2, SDXC 카드 슬롯</dd>
+            <dt>후면 포트</dt><dd>Thunderbolt 5 ×4, USB-A ×2, HDMI, 10Gb 이더넷, 3.5mm 헤드폰 잭</dd>
+            <dt>외장 디스플레이</dt><dd data-f="disp">최대 8대</dd>
+            <dt>프로용 앱</dt><dd>선택 안 함 (Apple Creator Studio 3개월 무료 제공)</dd>
+            <dt>보상 판매</dt><dd>보상 판매 안 함 (기존 PC 계속 사용)</dd>
+          </dl>
+          <div class="fit" data-f="fit"><b>도입 목적 충족</b> GLM 상시 구동과 영상 편집을 동시에 할 수 있고, 필요하면 GLM 풀모델도 올릴 수 있습니다.</div>
+        </div>
+      </div>
+
+      <h3>로컬 AI 운용 비교</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>항목</th><th>추천안 (M5 Ultra 256GB)</th><th>절충안 (M5 Max 128GB)</th></tr></thead>
+          <tbody>
+            <tr><td>GLM-5.3-Flash 상시 구동</td><td><span class="tag ok">가능</span></td><td><span class="tag mid">가능, 메모리 거의 전부 사용</span></td></tr>
+            <tr><td>GLM 구동 중 영상 편집</td><td><span class="tag ok">가능</span></td><td><span class="tag mid">기존 PC로 분리 시 가능</span></td></tr>
+            <tr><td>GLM-5.3 풀모델</td><td><span class="tag ok">가능 (단독 구동)</span></td><td><span class="tag no">불가</span></td></tr>
+            <tr><td>토큰 생성 속도</td><td>약 2배 (메모리 대역폭 1.2TB/s)</td><td>기준 (614GB/s)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout warn"><strong>96GB 구성은 제외했습니다.</strong> GLM-5.3-Flash 저용량 빌드도 93GB 이상이라 운영체제 몫을 빼면 올라가지 않습니다. 결국 무거운 작업을 유료 클라우드 AI로 넘겨야 해서 도입 목적이 깨집니다.</div>
+    </section>
+
+    <section id="cost">
+      <h2>금액 내역</h2>
+      <p class="sub">부가세 포함 애플 공식 소비자가입니다.</p>
+      <h3>추천안 · M5 Ultra</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>항목</th><th class="num">금액</th></tr></thead>
+          <tbody>
+            <tr><td>M5 Ultra 기본형 (30코어 CPU·64코어 GPU·96GB·1TB)</td><td class="num">9,490,000원</td></tr>
+            <tr><td>36코어 CPU·80코어 GPU 업그레이드</td><td class="num">+2,210,000원</td></tr>
+            <tr><td>메모리 96GB → 256GB</td><td class="num">+6,800,000원</td></tr>
+            <tr><td>저장공간 1TB → 4TB</td><td class="num">+2,550,000원</td></tr>
+            <tr class="total"><td>합계</td><td class="num">21,050,000원</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>절충안 · M5 Max</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>항목</th><th class="num">금액</th></tr></thead>
+          <tbody>
+            <tr><td>M5 Max 40코어 GPU 기본 (18코어 CPU·48GB·512GB)</td><td class="num">5,310,000원</td></tr>
+            <tr><td>메모리 48GB → 128GB</td><td class="num">+3,400,000원</td></tr>
+            <tr><td>저장공간 512GB → 4TB</td><td class="num">+3,060,000원</td></tr>
+            <tr class="total"><td>합계</td><td class="num">11,770,000원</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:14px;color:var(--muted);font-size:14px">참고: 저장공간을 2TB로 낮추면 두 구성 모두 1,700,000원이 줄어듭니다. 4TB는 사전 컨펌 사항이라 유지했습니다.</p>
+    </section>
+
+    <section id="links">
+      <h2>구매 링크·주문 옵션</h2>
+      <p class="sub">맞춤 구성 페이지에서 위 사양대로 선택한 뒤 주문합니다.</p>
+      <div class="links">
+        <a class="link-row" href="https://www.apple.com/kr/shop/buy-mac/mac-studio" target="_blank" rel="noopener">
+          <div><strong>Mac Studio 맞춤 구성·주문</strong><br><span>apple.com/kr · 칩·메모리·저장공간 선택</span></div><em>새 창에서 열기</em>
+        </a>
+        <a class="link-row" href="https://www.apple.com/kr/retail/business/" target="_blank" rel="noopener">
+          <div><strong>법인 구매 (세금계산서 발행)</strong><br><span>Apple 비즈니스 구매 안내</span></div><em>새 창에서 열기</em>
+        </a>
+        <a class="link-row" href="https://www.apple.com/kr/apple-creator-studio/" target="_blank" rel="noopener">
+          <div><strong>Apple Creator Studio</strong><br><span>Final Cut Pro·Logic Pro 포함, 새 Mac 구입 시 3개월 무료</span></div><em>새 창에서 열기</em>
+        </a>
+      </div>
+
+      <h3>주문 화면 선택 순서</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>주문 단계</th><th>추천안</th><th>절충안</th></tr></thead>
+          <tbody>
+            <tr><td>칩</td><td>M5 Ultra</td><td>M5 Max</td></tr>
+            <tr><td>프로세싱 파워</td><td>36코어 CPU, 80코어 GPU</td><td>18코어 CPU, 40코어 GPU</td></tr>
+            <tr><td>메모리</td><td>256GB</td><td>128GB</td></tr>
+            <tr><td>저장 장치</td><td>4TB</td><td>4TB</td></tr>
+            <tr><td>Final Cut Pro / Logic Pro</td><td>선택 안 함</td><td>선택 안 함</td></tr>
+            <tr><td>Apple Trade In</td><td>보상 판매 안 함</td><td>보상 판매 안 함</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:14px;color:var(--muted);font-size:14px">구성 화면 하단의 저장·공유하기로 동일 구성 링크를 만들어 결재 문서에 첨부할 수 있습니다. 프로용 앱을 사전 설치로 따로 사면 Final Cut Pro 449,000원, Logic Pro 349,000원이 추가됩니다.</p>
+    </section>
+
+    <section id="system">
+      <h2>시스템 구성</h2>
+      <p class="sub">AI 두뇌, 실행 에이전트, 작업 환경의 세 층으로 운영합니다.</p>
+      <div class="stack">
+        <div><b>AI 두뇌</b><small>Mac Studio</small><p>GLM을 로컬에서 구동합니다. 사용량 과금이 없어 반복 생성에 제한이 없습니다.</p></div>
+        <div><b>실행 에이전트</b><small>에르메스 에이전트 중심</small><p>사람처럼 클릭·타이핑하는 컴퓨터 유즈, 브라우저 자동화, 예약 실행을 담당합니다. 필요시 오픈클로·어사이드를 병행합니다.</p></div>
+        <div><b>작업 환경</b><small>Mac + 기존 로컬 PC</small><p>모니터·키보드·마우스 1세트를 KVM 스위치로 전환하며 두 대를 함께 씁니다.</p></div>
+      </div>
+      <div class="callout">에르메스의 컴퓨터 유즈는 실제 마우스 커서와 키보드 포커스를 가져가지 않고 백그라운드에서 조작합니다. 같은 맥에서 편집과 자동화를 동시에 할 수 있고, 렌더링과 AI 작업이 겹쳐 느려질 때만 로컬 PC로 전환합니다.</div>
+    </section>
+
+    <section id="scope">
+      <h2>자동화 업무 범위</h2>
+      <p class="sub">시스템이 초안·수집·실행을 맡고, 담당자는 검수와 의사결정에 집중합니다.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>직무</th><th>시스템이 처리</th><th>담당자가 처리</th><th class="num">자동화 비중</th></tr></thead>
+          <tbody>
+            <tr><td>CS·평판 관리</td><td>강남언니·바비톡·여신티켓·구글 리뷰 수집, 답글 생성·등록, 부정 후기 알림</td><td>민감 후기 대응</td><td class="num pct">약 80%</td></tr>
+            <tr><td>콘텐츠 마케팅</td><td>네이버·병원 자체 블로그·블로그스팟·미디엄·디카드 원고 생성, 채널별 변형, 발행</td><td>주제 선정, 의료광고법 검수</td><td class="num pct">약 70%</td></tr>
+            <tr><td>번역·현지화</td><td>6개국·태국·홍콩 사이트 번역, 해외 문의 응대 초안, B/A 사진 다국어 업로드</td><td>원어민 뉘앙스 검수</td><td class="num pct">약 70%</td></tr>
+            <tr><td>퍼포먼스 광고</td><td>메타·구글·네이버 성과 수집, 입찰·예산 조정안, 카피 생성, 다국어 캠페인 복제</td><td>예산 결정, 집행 승인</td><td class="num pct">약 50%</td></tr>
+            <tr><td>웹 운영·SEO</td><td>사이트 크롤링 점검, 키워드 순위 체크, 가격·번역 반영 초안, 경쟁 병원 추적</td><td>구조 변경, 배포 승인</td><td class="num pct">약 60%</td></tr>
+            <tr><td>리포트</td><td>주간보고·업로드 일지 집계, 트렌드·평판 보고서 작성</td><td>인사이트 해석</td><td class="num pct">약 80%</td></tr>
+            <tr><td>인플루언서 운영</td><td>모집 공고 게시(카카오톡 오픈채팅 포함), 지원자 계정 분석, 일정 안내, 업로드·광고 표기 확인</td><td>섭외 결정, 원고 검수</td><td class="num pct">약 60%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:14px">영상 편집은 직무 대체가 아니라 편집·인코딩 속도 향상과 자막·대본 초안 자동화로 지원합니다.</p>
+
+      <h3>채널별 연결 방식</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>채널</th><th>연결 방식</th><th>자동화 수준</th></tr></thead>
+          <tbody>
+            <tr><td>메타·구글·네이버 검색광고</td><td>공식 API</td><td><span class="tag ok">안정적</span></td></tr>
+            <tr><td>블로그스팟</td><td>구글 공식 Blogger API</td><td><span class="tag ok">완전 자동</span></td></tr>
+            <tr><td>병원 자체 블로그</td><td>자체 CMS 직접 발행, 아임웹은 브라우저 자동화</td><td><span class="tag ok">자동</span></td></tr>
+            <tr><td>네이버 성과형 디스플레이</td><td>브라우저 자동화</td><td><span class="tag mid">화면 조작</span></td></tr>
+            <tr><td>미디엄</td><td>브라우저 자동화 (신규 API 발급 중단)</td><td><span class="tag mid">화면 조작</span></td></tr>
+            <tr><td>디카드·카카오톡</td><td>에르메스 컴퓨터 유즈 (공식 API 없음)</td><td><span class="tag no">계정 리스크 관리 필요</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="parallel">
+      <h2>영상 작업 병행</h2>
+      <p class="sub">화면은 뺏기지 않지만, AI가 생각하는 작업은 GPU를 나눠 씁니다.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>구분</th><th>해당 업무</th><th>편집 중 영향</th></tr></thead>
+          <tbody>
+            <tr><td>수집·발행</td><td>광고 성과 수집, 리뷰 수집, 순위 체크, 크롤링, 승인 글 발행, 사진 업로드, 주간보고 집계</td><td><span class="tag ok">체감 없음</span></td></tr>
+            <tr><td>AI 생성</td><td>리뷰 답글, 다채널 원고, 번역, 광고 조정안·카피, 보고서 작성</td><td><span class="tag mid">렌더링과 겹치면 둘 다 느려짐</span></td></tr>
+            <tr><td>대형 모델</td><td>GLM 풀모델 구동</td><td><span class="tag no">편집과 동시 불가</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="effect">
+      <h2>기대 효과</h2>
+      <ul class="plain">
+        <li><strong>콘텐츠 자동 발행</strong>: 원고 작성부터 이미지 생성, 채널 업로드까지 한 흐름으로 처리합니다.</li>
+        <li><strong>멈춰 있던 블로그 채널 재가동</strong>: 인원 부족으로 주춤했던 미디엄·블로그스팟 등 해외 블로그 포스팅을 루틴 업무로 자동화합니다.</li>
+        <li><strong>광고 세팅·모니터링 자동화</strong>: 메타 광고, 구글 GDN, 네이버 광고를 원활하고 최적화된 구성으로 세팅하고, 성과 모니터링을 자동으로 돌립니다.</li>
+        <li><strong>에이전트 간 충돌 최소화</strong>: 전용 장비에서 에이전트별 작업을 나누고 순서대로 처리해, 여러 자동화가 서로 부딪히는 일을 줄입니다.</li>
+        <li><strong>1인 전담 체제의 처리량 확대</strong>: 6개 직무의 반복 실무를 시스템이 처리하고, 담당자는 검수와 의사결정에 집중합니다.</li>
+        <li><strong>비용·보안</strong>: 고사양 클라우드 AI 구독(월 40만원대)을 대체하고, 고객 리뷰·문의 데이터를 사내 장비에서 처리합니다.</li>
+        <li><strong>영상 제작 주기 단축</strong>: 편집·인코딩 속도가 개선되어 쇼츠·롱폼 제작이 빨라집니다.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>가격·출고 일정은 2026년 9월 16일 애플 코리아 온라인 스토어 구성 화면 기준이며, 주문 시점에 달라질 수 있습니다.</p>
+      <button class="theme-btn" id="themeBtn" type="button">어두운 화면으로 보기</button>
+    </footer>
+  </main>
+</div>
+
+<script>
+// 구성 전환 데이터
+const PLANS = {
+  ultra: {
+    price: '21,050,000<small>원</small>', ship: '출고 16~18주', shipClass: 'slow',
+    eta: '예상 수령 2027년 1월 중순',
+    chip: 'M5 Ultra · 36코어 CPU · 80코어 GPU · 32코어 Neural Engine',
+    mem: '256GB 통합 메모리', front: 'Thunderbolt 5 ×2, SDXC 카드 슬롯', disp: '최대 8대',
+    fit: '<b>도입 목적 충족</b> GLM 상시 구동과 영상 편집을 동시에 할 수 있고, 필요하면 GLM 풀모델도 올릴 수 있습니다.'
+  },
+  max: {
+    price: '11,770,000<small>원</small>', ship: '출고 4~5주', shipClass: 'fast',
+    eta: '예상 수령 2026년 10월 중순',
+    chip: 'M5 Max · 18코어 CPU · 40코어 GPU · 16코어 Neural Engine',
+    mem: '128GB 통합 메모리', front: 'USB-C ×2, SDXC 카드 슬롯', disp: '최대 5대',
+    fit: '<b>PC 분리 시 충족</b> GLM-5.3-Flash 구동에 메모리를 거의 다 쓰므로, Mac Studio는 AI 전용으로 두고 영상 편집은 기존 PC에서 분리 작업합니다.'
+  }
+};
+
+const tabs = document.querySelectorAll('.seg button');
+function setPlan(key){
+  const p = PLANS[key];
+  const q = f => document.querySelector('[data-f="' + f + '"]');
+  q('price').innerHTML = p.price;
+  const ship = q('ship');
+  ship.textContent = p.ship;
+  ship.className = 'ship ' + p.shipClass;
+  q('eta').textContent = p.eta;
+  q('chip').textContent = p.chip;
+  q('mem').textContent = p.mem;
+  q('front').textContent = p.front;
+  q('disp').textContent = p.disp;
+  q('fit').innerHTML = p.fit;
+  tabs.forEach(t => t.setAttribute('aria-selected', String(t.dataset.plan === key)));
+}
+tabs.forEach(t => {
+  t.addEventListener('click', () => setPlan(t.dataset.plan));
+  t.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      const next = t.dataset.plan === 'ultra' ? 'max' : 'ultra';
+      setPlan(next);
+      document.querySelector('[data-plan="' + next + '"]').focus();
+    }
+  });
+});
+
+// 목차 현재 위치 표시
+const links = [...document.querySelectorAll('nav.toc a')];
+const secs = links.map(a => document.querySelector(a.getAttribute('href')));
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id));
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  secs.forEach(s => s && io.observe(s));
+}
+
+// 화면 테마 전환
+const root = document.documentElement;
+const btn = document.getElementById('themeBtn');
+function isDark(){
+  const t = root.getAttribute('data-theme');
+  if (t) return t === 'dark';
+  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+function label(){ btn.textContent = isDark() ? '밝은 화면으로 보기' : '어두운 화면으로 보기'; }
+btn.addEventListener('click', () => { root.setAttribute('data-theme', isDark() ? 'light' : 'dark'); label(); });
+label();
+</script>
+</body>
+</html>
