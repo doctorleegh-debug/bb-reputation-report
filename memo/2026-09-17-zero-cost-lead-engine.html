@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body style="margin:0">
+<title>Zero-Cost Lead Engine · 통합 기획안</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2B1E2A; --ink-soft:#5E4F5C; --rose:#C7406F; --rose-deep:#9E2C55;
+  --petal:#F7E6EC; --paper:#FDFBFC; --mist:#EEE8EE; --card:#FFFFFF;
+  --line:#06C755; --wa:#1FA855; --web:#2B1E2A;
+  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif;
+  --sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Hiragino Sans","PingFang TC","Noto Sans Thai",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#F3EAF0; --ink-soft:#C3B3BF; --rose:#EE7FA6; --rose-deep:#F4A3BF;
+    --petal:#3A2332; --paper:#1A1219; --mist:#2E2330; --card:#241A23; --web:#F3EAF0;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ink:#F3EAF0; --ink-soft:#C3B3BF; --rose:#EE7FA6; --rose-deep:#F4A3BF;
+  --petal:#3A2332; --paper:#1A1219; --mist:#2E2330; --card:#241A23; --web:#F3EAF0;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7}
+img{max-width:100%}
+a{color:var(--rose-deep)}
+:focus-visible{outline:3px solid var(--rose);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.narrow{max-width:720px}
+h1,h2,h3{font-family:var(--serif);line-height:1.3;margin:0}
+h1{font-size:clamp(1.9rem,5.2vw,3rem);letter-spacing:-.02em}
+h2{font-size:clamp(1.35rem,3.2vw,1.8rem);margin-bottom:.8rem}
+h3{font-size:1.05rem;font-family:var(--sans);font-weight:600;margin-bottom:.3rem}
+p{margin:0 0 1rem}
+section{padding:56px 0;border-top:1px solid var(--mist)}
+.muted{color:var(--ink-soft)}
+.small{font-size:.86rem}
+
+/* hero */
+.hero{padding:48px 0 56px;display:grid;gap:40px;grid-template-columns:1fr;align-items:center}
+@media(min-width:880px){.hero{grid-template-columns:1.05fr .95fr}}
+.hero .lead{font-size:1.08rem;color:var(--ink-soft);margin-top:18px;max-width:34em}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;padding:0;list-style:none}
+.facts li{background:var(--petal);border-radius:999px;padding:6px 14px;font-size:.88rem}
+
+/* phone */
+.stage{display:flex;flex-direction:column;align-items:center;gap:14px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.tabs button{font:inherit;font-size:.85rem;border:1px solid var(--mist);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.serp{width:100%;max-width:340px;background:var(--card);border:1px solid var(--mist);border-radius:12px;padding:12px 14px;font-size:.8rem;line-height:1.45}
+.serp .q{display:block;color:var(--ink-soft);margin-bottom:8px;border-bottom:1px solid var(--mist);padding-bottom:6px}
+.serp .u{color:var(--ink-soft);display:block}
+.serp .t{color:#4a63d8;font-size:.98rem;display:block;margin:2px 0}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .serp .t{color:#9db0ff}}
+:root[data-theme="dark"] .serp .t{color:#9db0ff}
+.phone{position:relative;width:300px;max-width:100%;border-radius:40px;background:#1b1419;padding:12px;box-shadow:0 30px 60px -30px rgba(80,20,50,.45)}
+.screen{border-radius:30px;overflow:hidden;background:#fff;color:#2B1E2A;height:560px;position:relative;display:flex;flex-direction:column}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:14px 18px 10px;font-size:.72rem;border-bottom:1px solid #f0e6ea}
+.bar b{font-family:var(--serif);font-size:.86rem}
+.body{padding:18px;overflow:hidden;flex:1}
+.body h4{font-family:var(--serif);font-size:1.28rem;line-height:1.35;margin:0 0 8px}
+.body .ld{font-size:.78rem;color:#6d5d69;margin:0 0 14px}
+.pcard{border:1px solid #f0dbe4;border-radius:16px;padding:14px;background:#fff7fa}
+.pcard .nm{font-size:.8rem;font-weight:600}
+.pcard .pr{font-size:1.6rem;font-weight:600;color:#9E2C55;letter-spacing:-.01em;margin:4px 0}
+.pcard dl{margin:8px 0 0;font-size:.7rem;color:#6d5d69;display:grid;grid-template-columns:auto 1fr;gap:2px 10px}
+.pcard dt{margin:0}.pcard dd{margin:0}
+.slot{background:#fff;border:1px dashed #d9a8bd;border-radius:4px;padding:0 4px}
+.btns{display:grid;gap:8px;margin-top:14px}
+.btns span{display:block;text-align:center;border-radius:12px;padding:11px;font-size:.84rem;font-weight:600}
+.b-chat{color:#fff}
+.b-form{border:1px solid #2B1E2A}
+.note{font-size:.66rem;color:#8a7a86;margin-top:10px}
+.bubble{position:absolute;right:14px;bottom:16px;left:46px;background:#2B1E2A;color:#fff;border-radius:16px 16px 4px 16px;padding:10px 12px;font-size:.74rem;line-height:1.5;transform-origin:bottom right}
+.bubble em{display:block;font-style:normal;font-size:.62rem;opacity:.7;margin-bottom:2px}
+@media (prefers-reduced-motion:no-preference){.bubble.pop{animation:pop .35s cubic-bezier(.2,.9,.3,1.2)}}
+@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
+.caption{font-size:.8rem;color:var(--ink-soft);text-align:center;max-width:320px}
+
+/* tables */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--mist);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.9rem}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--mist);vertical-align:top}
+th{font-weight:600;background:var(--petal)}
+tr:last-child td{border-bottom:0}
+td.rank{font-family:var(--serif);font-weight:700;color:var(--rose)}
+tr.hold td{color:var(--ink-soft)}
+
+/* flow */
+.flow{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.flow li{position:relative;padding:0 0 22px 36px}
+.flow li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:2px;width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--paper);font-size:.75rem;display:grid;place-items:center}
+.flow li::after{content:"";position:absolute;left:11px;top:28px;bottom:2px;width:2px;background:var(--mist)}
+.flow li:last-child::after{display:none}
+.flow{counter-reset:step}
+
+.grid2{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:720px){.grid2{grid-template-columns:1fr 1fr}}
+.panel{background:var(--card);border:1px solid var(--mist);border-radius:14px;padding:18px 20px}
+.panel ul{margin:0;padding-left:1.1em}
+.panel li{margin-bottom:6px}
+.no{border-left:4px solid var(--rose)}
+
+.check{list-style:none;padding:0;margin:0}
+.check li{padding:10px 0 10px 30px;border-bottom:1px solid var(--mist);position:relative}
+.check li::before{content:"";position:absolute;left:4px;top:15px;width:14px;height:14px;border:2px solid var(--rose);border-radius:4px}
+
+.kpi{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:12px 0 0}
+.kpi li{border:1px solid var(--mist);border-radius:8px;padding:6px 12px;font-size:.88rem;background:var(--card)}
+.decide li{margin-bottom:8px}
+.pname{font-family:var(--sans);font-weight:600;font-size:clamp(2.4rem,7.5vw,4.2rem);letter-spacing:-.035em;line-height:1.02}
+.psub{font-family:var(--serif);font-weight:700;font-size:clamp(1.25rem,3.4vw,1.7rem);color:var(--rose);margin:10px 0 0}
+.roas{display:grid;gap:14px;grid-template-columns:1fr;margin-top:18px}
+@media(min-width:720px){.roas{grid-template-columns:1fr 1fr}}
+.roas .panel .num{font-family:var(--sans);font-weight:600;font-size:2.2rem;letter-spacing:-.02em;line-height:1.1;margin:6px 0}
+.roas .after{border:2px solid var(--rose)}
+.roas .after .num{color:var(--rose)}
+.callout{background:var(--petal);border-radius:20px;padding:28px 26px;max-width:820px}
+.callout h2{font-size:clamp(1.5rem,4vw,2.2rem)}
+.callout b{color:var(--rose-deep)}
+td.ok{color:#1d7a4a;font-weight:600}
+td.warn{color:#a4660b;font-weight:600}
+td.no{color:var(--rose-deep);font-weight:600}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) td.ok{color:#6fd39e}:root:not([data-theme="light"]) td.warn{color:#f0bd66}}
+:root[data-theme="dark"] td.ok{color:#6fd39e}
+:root[data-theme="dark"] td.warn{color:#f0bd66}
+td .small{font-weight:400;color:var(--ink-soft)}
+.words td.bad{text-decoration:line-through;text-decoration-color:var(--rose);text-decoration-thickness:2px}
+.words td.good{font-weight:500}
+footer{padding:32px 0 56px;border-top:1px solid var(--mist);font-size:.8rem;color:var(--ink-soft)}
+
+.rbox{position:relative;background:var(--card);border:1px solid var(--mist);border-radius:22px;overflow:hidden;box-shadow:0 24px 50px -36px rgba(0,0,0,.6)}
+.rbox-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 20px;background:var(--petal);border-bottom:1px solid var(--mist)}
+.rbox-t{font-weight:600;font-size:.95rem;flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rbox-hint{font-size:.76rem;color:var(--ink-soft);white-space:nowrap}
+@media(max-width:640px){.rbox-hint{display:none}}
+.rbox-c{font-size:.85rem;color:var(--rose-deep);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+/* 상자 높이 고정 — 슬라이드를 넘겨도 접히거나 늘어나지 않고, 긴 슬라이드는 상자 안에서 스크롤됩니다 */
+.rbox iframe{display:block;width:100%;height:clamp(520px,78vh,780px);border:0;background:var(--paper)}
+
+/* 좌우 가장자리 화살표 — 고정된 상자의 세로 중앙 */
+.rb-arrows{position:absolute;top:57px;bottom:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
+.rb-arrow{
+  flex:0 0 auto;margin:0 10px;pointer-events:auto;
+  width:50px;height:50px;border-radius:50%;display:grid;place-items:center;cursor:pointer;
+  background:var(--card);border:1px solid var(--mist);color:var(--ink);
+  box-shadow:0 8px 22px -8px rgba(0,0,0,.7);
+  transition:background .15s,border-color .15s,color .15s,opacity .15s,transform .15s;
+}
+.rb-arrow svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+.rb-arrow:hover:not(:disabled){background:var(--rose);border-color:var(--rose);color:#1A1219;transform:scale(1.06)}
+.rb-arrow:disabled{opacity:.2;cursor:default}
+@media(max-width:820px){.rb-arrow{width:40px;height:40px;margin:0 6px}.rb-arrow svg{width:19px;height:19px}}
+.rb-mid{display:flex;flex-direction:column;align-items:center;gap:7px;min-width:0;flex:1 1 auto}
+.rbox-src{font-size:.7rem;line-height:1.5;color:var(--ink-soft);text-align:center;max-width:56ch}
+@media(max-width:640px){.rbox-src{font-size:.66rem}}
+.rb-dots{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.rb-dots button{width:9px;height:9px;padding:0;border-radius:50%;border:0;background:var(--mist);cursor:pointer}
+.rb-dots button[aria-current="true"]{background:var(--rose);width:22px;border-radius:6px}
+.tiny{font-size:.76rem}
+.rbox-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px;border-top:1px solid var(--mist)}
+.rbox-nav button{font:inherit;font-size:.9rem;font-weight:600;border:1px solid var(--mist);background:var(--paper);color:var(--ink);border-radius:999px;padding:8px 18px;cursor:pointer}
+.rbox-nav button:disabled{opacity:.35;cursor:default}
+</style>
+<script>document.documentElement.setAttribute('data-theme','dark');</script>
+
+<main class="wrap">
+
+  <div class="hero">
+    <div>
+      <p class="muted small">뷰티블라썸의원 마케팅파트 · 2026.09 기획안</p>
+      <h1 class="pname">Zero-Cost Lead Engine</h1>
+      <p class="psub">비용이 들지 않는 DB 광고</p>
+      <p class="lead">메타 광고에만 의존하던 해외 DB 수집에 광고비 0원 채널을 더해 전체 ROAS를 끌어올리는 프로젝트입니다. 해외 고객이 구글에 "한국 울쎄라 가격"을 자기 언어로 검색하면 뷰티블라썸의 모바일 미니랜딩이 뜨고, 가격을 확인한 뒤 LINE이나 WhatsApp으로 바로 상담을 남깁니다.</p>
+      <ul class="facts">
+        <li>월 광고비 0원</li>
+        <li>시술 × 국가 가격 키워드</li>
+        <li>실시간 채팅 + 예약 요청 폼</li>
+        <li>외국인환자 유치기관 등록 완료</li>
+        <li>가격 공개는 비급여 고지 의무</li>
+        <li>사전심의 대상 매체 아님</li>
+      </ul>
+    </div>
+
+    <div class="stage" aria-label="국가별 미니랜딩 예시">
+      <div class="tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-k="jp">일본</button>
+        <button role="tab" aria-selected="false" data-k="tw">대만</button>
+        <button role="tab" aria-selected="false" data-k="en">영어권</button>
+        <button role="tab" aria-selected="false" data-k="th">태국</button>
+        <button role="tab" aria-selected="false" data-k="id">인도네시아</button>
+      </div>
+      <div class="serp" aria-live="polite">
+        <span class="q" id="s-q"></span>
+        <span class="u" id="s-u"></span>
+        <span class="t" id="s-t"></span>
+        <span id="s-d"></span>
+      </div>
+      <div class="phone">
+        <div class="screen">
+          <div class="bar"><b id="p-brand"></b><span id="p-lang"></span></div>
+          <div class="body">
+            <h4 id="p-h"></h4>
+            <p class="ld" id="p-l"></p>
+            <div class="pcard">
+              <div class="nm" id="p-nm"></div>
+              <div class="pr">₩1,090,000</div>
+              <dl>
+                <dt id="p-rg-k"></dt><dd><span class="slot">₩ ———</span></dd>
+                <dt id="p-pd-k"></dt><dd><span class="slot">2026.00.00 – 00.00</span></dd>
+              </dl>
+              <div class="note" id="p-meta"></div>
+            </div>
+            <div class="btns">
+              <span class="b-chat" id="p-chat"></span>
+              <span class="b-form" id="p-form"></span>
+            </div>
+            <p class="note" id="p-note"></p>
+          </div>
+          <div class="bubble pop" id="p-bub"><em id="p-ai"></em><span id="p-bt"></span></div>
+        </div>
+      </div>
+      <p class="caption">예시 가격은 추석 이벤트 페이지의 울쎄라피 프라임 300샷 금액입니다. 점선 칸에는 정가와 이벤트 기간이 반드시 들어갑니다.</p>
+    </div>
+  </div>
+
+  <section id="legal-summary">
+    <div class="callout" style="border:2px solid var(--rose)">
+      <p class="small" style="margin:0 0 4px;color:var(--rose-deep);font-weight:600">법적 검토 결론</p>
+      <h2 style="margin-bottom:.6rem">이 구조는 의료광고법 위반이 아닙니다</h2>
+      <p>Zero-Cost Lead Engine은 광고비를 집행하지 않고, 해외 고객이 스스로 검색해 들어오는 가격 안내 웹사이트입니다. 아래 근거로 현행 의료법상 허용되는 범위 안에서 운영됩니다.</p>
+      <div class="grid2" style="margin-top:12px">
+        <div class="panel">
+          <h3>① 가격 공개는 의무입니다</h3>
+          <p class="small" style="margin:0">의료법 제45조·시행규칙 제42조의2 제4항에 따라 홈페이지를 운영하는 의료기관은 비급여 가격을 홈페이지에 표시해야 합니다.</p>
+        </div>
+        <div class="panel">
+          <h3>② 사전심의 대상이 아닙니다</h3>
+          <p class="small" style="margin:0">의료법 제57조·시행령 제24조의 심의 대상 매체(신문·방송사 홈페이지, 일 이용자 10만 명 이상 매체·SNS 등)에 자체 도메인 웹사이트는 포함되지 않습니다.</p>
+        </div>
+        <div class="panel">
+          <h3>③ 국내광고 금지 조항에 해당하지 않습니다</h3>
+          <p class="small" style="margin:0">해외 언어·해외 오가닉 검색으로만 운영하고 국내 광고를 집행하지 않으며, 뷰티블라썸의원은 외국인환자 유치기관으로 등록되어 있습니다(시행령 제23조 제1항 제12호).</p>
+        </div>
+        <div class="panel">
+          <h3>④ 같은 구조가 이미 운영 중입니다</h3>
+          <p class="small" style="margin:0">더나의원, 리베리의원, 클림의원, 원셀의원 등이 공식 홈페이지와 분리된 가격 키워드 도메인에 원화 가격과 상담 폼을 두고 구글 오가닉으로 운영하고 있습니다.</p>
+        </div>
+      </div>
+      <p class="small" style="margin:14px 0 0"><b>지켜야 할 조건:</b> 정가·이벤트가·기간·대상을 한 블록에 표기, 최상급·효과 보장·무료·신청 혜택 표현 금지, 치료경험담 금지, 부작용·개인차 고지. 세부 기준은 아래 법조항 표와 워딩 가이드에 정리했습니다.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="callout">
+      <h2>가격을 보여주는 것은 불법이 아닙니다</h2>
+      <p>오히려 법이 요구하는 일입니다. 의료법 제45조는 의료기관이 비급여 진료비용을 환자가 쉽게 알 수 있도록 고지하게 하고, 같은 법 시행규칙 제42조의2 제4항은 <b>홈페이지를 운영하는 의료기관은 비급여 항목과 가격을 홈페이지에 따로 표시하도록</b> 정하고 있습니다.</p>
+      <p>실제로 2021년 비급여 고지 의무가 의원급까지 확대된 뒤, 관할 보건소가 홈페이지에도 비급여 비용을 안내하라고 연락한 사례가 보도됐습니다.</p>
+      <p class="small">문제가 되는 것은 가격 그 자체가 아니라 <b>가격을 보여주는 방식</b>입니다. 할인 금액·대상·기간이나 할인 전 가격을 거짓 또는 불명확하게 적는 것(의료법 시행령 제23조 제1항 제13호), 무료·과도한 할인으로 환자를 끌어들이는 것(의료법 제27조 제3항)입니다.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>광고를 집행하지 않은 검색 유입 페이지의 법적 위치</h2>
+    <div class="narrow">
+      <p>이 기획은 광고비를 쓰지 않고, 소비자가 스스로 검색해서 클릭한 경우에만 페이지에 들어옵니다. 이 점이 법적으로 어떤 의미가 있는지 조항별로 정리했습니다.</p>
+      <p><b>먼저 짚을 점:</b> 의료법 제56조 제1항은 의료광고를 "신문·잡지·음성·음향·영상·<b>인터넷</b>·인쇄물·간판 그 밖의 방법으로 의료기관 정보를 소비자에게 알리는 행위"로 정의합니다. 그래서 광고비를 쓰지 않은 홈페이지도 의료광고에 해당하고, 내용 규제는 그대로 적용됩니다. 대신 자발적 검색 유입 구조는 <b>사전심의 의무</b>와 <b>국내광고 금지 조항</b>에서 벗어나는 근거가 됩니다.</p>
+    </div>
+    <div class="scroll" style="margin-top:12px">
+      <table>
+        <thead><tr><th>조항</th><th>내용</th><th>이 기획에 적용</th><th>판단</th></tr></thead>
+        <tbody>
+          <tr><td>의료법 제45조<br>시행규칙 제42조의2 ④</td><td>비급여 진료비용 고지 의무. 홈페이지 운영 기관은 홈페이지에 따로 표시</td><td>시술별 가격 공개</td><td class="ok">의무 이행</td></tr>
+          <tr><td>의료법 제57조<br>시행령 제24조</td><td>사전심의 대상 매체: 신문·인터넷신문·방송사 홈페이지, 일일 평균 이용자 10만 명 이상 인터넷 매체와 SNS 등</td><td>자체 도메인 홈페이지는 목록에 없음</td><td class="ok">사전심의 대상 아님<br><span class="small">같은 문구를 인스타·블로그에 올리면 별도로 심의 대상</span></td></tr>
+          <tr><td>시행령 제23조 ① 12호</td><td>외국인환자 유치 목적으로 국내광고 하는 것 금지</td><td>해외 언어, 해외 오가닉 검색, 국내 광고 미집행, 유치기관 등록 완료</td><td class="ok">해당 소지 낮음</td></tr>
+          <tr><td>의료법 제56조 ②<br>시행령 제23조 ①</td><td>거짓·과장, 치료경험담, 비교광고, 부작용 누락, 할인정보 불명확 등 금지</td><td>모든 문구에 적용</td><td class="warn">준수 필요<br><span class="small">아래 워딩 가이드로 대응</span></td></tr>
+          <tr><td>의료법 제27조 ③</td><td>본인부담금 면제·할인 등으로 환자를 소개·알선·유인하는 행위 금지</td><td>이벤트가, DB 신청 혜택</td><td class="warn">무료·과도 할인·신청 보상 금지</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:32px">실제 처분·적발 사례</h3>
+    <div class="grid2" style="margin-top:10px">
+      <div class="panel">
+        <p class="small"><b>병원 홈페이지 전문의약품 광고 → 약사법 벌금형 (2025.07 보도)</b><br>병원 홈페이지에 턱밑 지방 개선 주사제의 제품명과 사진, 허가 범위를 넘는 효능을 게재해 약사법 위반으로 벌금형을 받았습니다. 재판부는 마케팅 회사에 광고를 맡겼더라도 최종 책임은 병원 운영자에게 있다고 봤습니다.</p>
+      </div>
+      <div class="panel">
+        <p class="small"><b>피부과 홈페이지 "보톡스" 표기 → 보건소 제재 연락 (2025.09 보도)</b><br>홈페이지에 적힌 "보톡스"라는 단어가 전문의약품 광고에 해당한다는 이유로 보건소 연락을 받은 사례입니다. 다른 병원들도 같은 광고를 하고 있다는 사실은 방어 논리가 되지 못했습니다.</p>
+      </div>
+      <div class="panel">
+        <p class="small"><b>온라인 불법 의료광고 집중 모니터링</b><br>2023년 12월부터 2024년 2월까지 366건이 적발됐고, 이 가운데 비급여 진료비 할인·면제 광고가 135건(26.7%)으로 두 번째로 많았습니다. 적발 건은 보건소를 통해 행정처분과 형사고발로 이어졌습니다.</p>
+      </div>
+      <div class="panel">
+        <p class="small"><b>보건복지부 병원 홈페이지 조사</b><br>의료기관 홈페이지 1,011곳을 조사한 결과 121곳에서 위반이 나왔고, 전체 위반의 88.2%가 환자 유인성이 과도한 광고였습니다. 가격 게시 자체가 아니라 유인 방식이 문제였습니다.</p>
+      </div>
+    </div>
+    <p class="muted small" style="margin-top:12px">출처: 국가법령정보센터(의료법·시행령·시행규칙·약사법), 팜뉴스(2025.07.09), 메디칼타임즈(2025.09.03), 덴탈아리랑(2017.08.10, 2021.04.08), 인블로그 의료광고 심의 정리(2026.03). 본 문서는 법률 자문이 아니며, 세부 해석은 관할 보건소나 의료광고 자율심의기구 기준에 따라 달라질 수 있습니다.</p>
+  </section>
+
+  <section>
+    <h2>타 병원 해외마케팅 사례</h2>
+    <h3 style="margin-top:8px">검색 유입으로 해외 DB를 늘린 사례</h3>
+    <div class="grid2" style="margin:10px 0 28px">
+      <div class="panel">
+        <p class="small"><b>미국 타겟 영문 SEO: 구글 유기 유입 월 1,000건 이상, 예약 전환 12%</b><br>환자가 실제로 검색하는 영문 키워드에 맞춰 콘텐츠를 다국어로 만들고, 광고 없이 구글 오가닉 유입으로 예약까지 연결한 병원 사례입니다.</p>
+        <p class="small muted">병원 해외마케팅 대행사 파인더패턴 공개 사례</p>
+      </div>
+      <div class="panel">
+        <p class="small"><b>구글 프로필·다국어 정비 6개월 후 등록 DB 3배</b><br>외국어 상호가 언어마다 달랐고 구글 프로필 인증도 막혀 있던 피부과가, 다국어 세팅과 키워드 정비 후 6개월 만에 등록 DB가 3배로 늘었다고 공개했습니다.</p>
+        <p class="small muted">글로벌 의료마케팅 대행사 업코어 공개 사례</p>
+      </div>
+    </div>
+    <p class="small muted narrow">두 사례 모두 대행사가 자체적으로 공개한 수치입니다. 방향성 참고용으로 보고, 뷰티블라썸 수치는 파일럿으로 따로 검증합니다.</p>
+
+    <h3 style="margin-top:28px">메인 홈페이지와 분리된 "가격 키워드 랜딩 도메인"을 운영하는 병원</h3>
+    <p class="small muted narrow">이 기획과 가장 가까운 구조입니다. 병원 공식 홈페이지와는 <b>다른 도메인</b>에 "시술명·지역 + korea/seoul" 키워드 사이트를 따로 만들어 구글에 색인시키고, 원화 가격을 보여준 뒤 WhatsApp과 신청 폼으로 DB를 받습니다. 광고 랜딩이 아니라 오가닉 검색으로 노출되는 형태입니다. (2026년 9월 17일 직접 접속 확인)</p>
+    <div class="scroll" style="margin-top:12px">
+      <table>
+        <thead><tr><th>병원</th><th>공식 홈페이지</th><th>별도 랜딩 도메인</th><th>가격 노출</th><th>DB 수집</th></tr></thead>
+        <tbody>
+          <tr><td>더나의원<br><span class="small muted">강남 피부과</span></td><td>dernaclinic.com</td><td><a href="https://ultherapykorea.com/" target="_blank" rel="noopener">ultherapykorea.com</a><br><a href="https://thermageclinickorea.com/" target="_blank" rel="noopener">thermageclinickorea.com</a></td><td>첫 화면에 "Thermage FLX 300샷 ₩1,990,000 (VAT 포함)", 전체 가격표 페이지</td><td>모든 버튼 WhatsApp 연결. 해외 환자 전용 사이트 명시, 유치기관 등록번호 표기</td></tr>
+          <tr><td>리베리의원 강남<br><span class="small muted">피부과, 6개 지점</span></td><td>reberryclinic.com</td><td><a href="https://www.gangnamskintreatment.com/blog/ultherapy-price-in-korea" target="_blank" rel="noopener">gangnamskintreatment.com</a></td><td>부위별 울쎄라 원화 가격대, 가격표 페이지, 영문 월간 이벤트 이미지</td><td>이름·이메일·연락처·국적·관심 고민 신청 폼 + WhatsApp</td></tr>
+          <tr><td>클림의원 명동<br><span class="small muted">피부과</span></td><td>병원명(KLEAM) 브랜드</td><td><a href="https://www.myeongdongskincare.com/rejuran-seoul" target="_blank" rel="noopener">myeongdongskincare.com</a></td><td>"리쥬란 힐러 2cc 정가 350,000원 → 28% 할인 250,000원"처럼 정가·할인율·특가를 표로 노출. 시술별 가격 페이지 40여 개</td><td>이름·이메일·연락처·국가번호·선호 연락 수단 예약 폼 + WhatsApp</td></tr>
+          <tr><td>원셀의원<br><span class="small muted">강남 성형외과</span></td><td>병원명(One Cell/CDU) 브랜드</td><td><a href="https://www.gangnamplasticsurgery.clinic/blog/cost-comparison-closed-vs-open-rhinoplasty-in-korea" target="_blank" rel="noopener">gangnamplasticsurgery.clinic</a></td><td>코 성형 방식별 원화 비용 범위, 시나리오별 예상 비용</td><td>이름·연락처·국적·관심 수술 문의 폼 + WhatsApp</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid2" style="margin-top:14px">
+      <div class="panel">
+        <h3>이미 대행 상품으로 팔리고 있습니다</h3>
+        <p class="small">클림의원과 원셀의원 랜딩 사이트 하단에는 같은 구글 SEO 대행사가 제작사로 표기돼 있습니다. 병원명과 무관한 "지역·시술 키워드 도메인 + 가격 + WhatsApp·폼" 구조가 하나의 패키지로 여러 병원에 공급되고 있다는 뜻입니다.</p>
+      </div>
+      <div class="panel">
+        <h3>우리가 한 발 더 나가는 지점</h3>
+        <p class="small">네 곳 모두 상담은 WhatsApp으로 밖으로 내보냅니다. Zero-Cost Lead Engine은 랜딩 안에서 바로 대화하는 실시간 채팅과 AI 1차 응대를 붙이고, 도메인도 새로 사지 않고 beautyblossom.kr 서브도메인(1안)으로 시작합니다.</p>
+      </div>
+    </div>
+    <p class="small muted narrow" style="margin-top:12px">참고: 행사용 단일 페이지(한 장짜리 이벤트 랜딩)를 구글에 색인시킨 병원 사례는 이번 조사에서 확인하지 못했습니다. 확인된 사례는 모두 시술별 페이지 여러 장으로 구성된 별도 키워드 도메인 형태입니다.</p>
+
+    <h3 style="margin-top:28px">외국어 가격 페이지를 운영 중인 병원</h3>
+    <p class="muted narrow">구글에서 외국어 가격 키워드로 검색했을 때 노출되는 국내 병원 운영 페이지입니다. 별도 외국어 도메인, 시술별 원화 가격, 메신저 상담 연결이라는 구조가 이미 흔하게 쓰이고 있습니다. 2026년 9월 검색 기준이며, 각 페이지의 위법 여부를 판단한 것은 아닙니다.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>병원</th><th>페이지</th><th>언어</th><th>구조</th></tr></thead>
+        <tbody>
+          <tr><td>리엔장 성형외과·피부과</td><td><a href="https://jplienjang.com/price/" rel="noopener" target="_blank">jplienjang.com/price</a></td><td>일본어</td><td>일본어 전용 도메인에 울쎄라피 프라임 샷수별 원화 가격 등 전체 가격표 공개</td></tr>
+          <tr><td>닥터쁘띠의원 강남점</td><td><a href="https://doctorpetit-jp.com/" rel="noopener" target="_blank">doctorpetit-jp.com</a></td><td>일본어</td><td>일본어 전용 도메인, 이벤트 가격 안내, 공식 LINE으로 상담·예약</td></tr>
+          <tr><td>Delight 클리닉</td><td><a href="https://hifuseoul.com/ja/guides/ultherapy-price-seoul/" rel="noopener" target="_blank">hifuseoul.com/ja/…/ultherapy-price-seoul</a></td><td>일본어</td><td>키워드형 도메인에 "韓国 ウルセラ 値段" 가격 가이드 페이지. 시장 시세와 자체 가격을 구분해 안내</td></tr>
+          <tr><td>Yaan Clinic</td><td><a href="https://enyaanclinic.com/ultherapy-korea-inseoul/" rel="noopener" target="_blank">enyaanclinic.com/ultherapy-korea-inseoul</a></td><td>영어</td><td>영문 전용 도메인에 울쎄라 비용 안내 페이지, WhatsApp 상담 연결</td></tr>
+          <tr><td>뮤즈클리닉 강남</td><td><a href="https://gangnam.museclinic.co.kr/en/pages/category" rel="noopener" target="_blank">gangnam.museclinic.co.kr/en</a></td><td>영어 외</td><td>외국어 이벤트·가격 페이지</td></tr>
+          <tr><td>쁘띠엘린(쁘음)</td><td><a href="https://global.ppeum.com/mainad/lifting/ulthera?mode=mo&lan=global_thai" rel="noopener" target="_blank">global.ppeum.com (태국어)</a></td><td>태국어</td><td>글로벌 전용 사이트에 태국어 울쎄라 시술 페이지</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>피해야 할 워딩과 바꿔 쓸 표현</h2>
+    <p class="muted narrow">검색결과 제목, 설명, 본문, 채팅 자동응답에 모두 적용합니다. 외국어로 써도 번역하면 똑같이 판단됩니다.</p>
+    <div class="scroll">
+      <table class="words">
+        <thead><tr><th>피할 표현</th><th>외국어 예</th><th>걸리는 이유</th><th>바꿔 쓸 표현</th></tr></thead>
+        <tbody>
+          <tr><td class="bad">최고, 1위, 가장 잘하는</td><td>Best, No.1, 最高, 最強</td><td>최상급·객관적 근거 없는 표현 (시행령 제23조)</td><td class="good">시술 시간, 샷수, 장비명 같은 사실만 기재</td></tr>
+          <tr><td class="bad">한국 최저가, 제일 싼</td><td>Cheapest in Korea, 最安値</td><td>비교광고·과장 (제56조 ②)</td><td class="good">가격표 공개, 샷수별 가격 안내</td></tr>
+          <tr><td class="bad">50% 할인, 반값 (정가 없이)</td><td>50% OFF, 半額</td><td>할인 전 가격·기간 불명확 (시행령 제23조 ① 13호)</td><td class="good">정가 ₩○ / 이벤트가 ₩○ / 기간 ○.○–○.○ / 대상</td></tr>
+          <tr><td class="bad">무료 시술, 공짜 체험</td><td>Free treatment, 無料施術</td><td>환자 유인 (제27조 ③)</td><td class="good">표기하지 않음</td></tr>
+          <tr><td class="bad">상담 신청하면 추가 할인</td><td>Extra discount if you sign up</td><td>신청 행위에 대한 유인</td><td class="good">예약 가능 일정과 가격을 안내해 드립니다</td></tr>
+          <tr><td class="bad">오늘만, 마감 임박 (날짜 없이)</td><td>Today only, 本日限定</td><td>기간 불명확, 기만적 표시</td><td class="good">이벤트 기간 날짜로 명시</td></tr>
+          <tr><td class="bad">효과 보장, 확실한 리프팅</td><td>Guaranteed results, 必ず効果</td><td>효과 단정 (시행령 제23조)</td><td class="good">결과와 유지 기간은 개인에 따라 다를 수 있습니다</td></tr>
+          <tr><td class="bad">부작용 없음, 통증 제로</td><td>No side effects, 痛みゼロ</td><td>부작용 정보 누락·거짓</td><td class="good">붓기·붉음 등이 생길 수 있습니다</td></tr>
+          <tr><td class="bad">보톡스 ○○원, 제오민 가격</td><td>Botox price, ボトックス 値段</td><td>전문의약품 광고 (약사법 제68조 ⑥)</td><td class="good">제품명과 가격 모두 노출하지 않음. 필요하면 "주름 개선 시술은 상담 시 안내"</td></tr>
+          <tr><td class="bad">○○님 후기: 10년 젊어졌어요</td><td>Patient review: I look 10 years younger</td><td>치료경험담 (시행령 제23조)</td><td class="good">후기 인용 대신 시술 과정과 소요 시간 안내</td></tr>
+          <tr><td class="bad">실시간 신청 현황 (가상 데이터)</td><td>Live booking feed</td><td>기만적 표시 (표시광고법)</td><td class="good">표기하지 않음</td></tr>
+          <tr><td class="bad">BEST, 인기 1위 배지</td><td>BEST, 人気No.1</td><td>최상급 표현</td><td class="good">배지 없이 시술별 구성만 안내</td></tr>
+          <tr><td class="bad">사진 보내주시면 맞는 시술 알려드려요 (채팅)</td><td>Send a photo and we'll tell you what you need</td><td>진료 전 진단·처방성 안내</td><td class="good">시술 적합성은 내원 후 진료에서 결정됩니다</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>국가별 수요·진입환경 조사 보고서</h2>
+    <p class="muted narrow">조사 보고서 원본을 13장 슬라이드로 나눠 담았습니다. 상자 좌우의 화살표, 아래 점, 이전·다음 버튼으로 넘겨 보세요. 내용이 긴 장은 상자 안에서 스크롤됩니다.</p>
+    <div class="rbox">
+      <div class="rbox-head">
+        <span class="rbox-t" id="rbTitle">조사 결과 요약</span>
+        <span class="rbox-hint">좌우 화살표로 넘기기</span>
+        <span class="rbox-c" id="rbCount"></span>
+      </div>
+      <div class="rb-arrows">
+        <button type="button" class="rb-arrow" id="rbArrowPrev" aria-label="이전 슬라이드">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 L7 12 L15 20"></path></svg>
+        </button>
+        <button type="button" class="rb-arrow" id="rbArrowNext" aria-label="다음 슬라이드">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 L17 12 L9 20"></path></svg>
+        </button>
+      </div>
+      <iframe id="rbFrame" title="국가별 수요·진입환경 조사 보고서" loading="eager" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Zero-Cost Lead Engine · 국가별 수요·진입환경 조사&lt;/title&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;style&gt;
+:root{
+  --ink:#2B1E2A; --ink-soft:#6A5A67; --rose:#C7406F; --rose-deep:#9E2C55;
+  --petal:#F7E6EC; --paper:#FDFBFC; --mist:#EEE8EE; --card:#FFFFFF;
+  --c1:#C7406F; --c2:#E48AA8; --c3:#6C8EAD; --c4:#9BB7A0; --c5:#D9A860; --c6:#8E7BA8;
+  --good:#1d7a4a; --warn:#a4660b; --bad:#b0304f;
+  --serif:&quot;Noto Serif KR&quot;,&quot;Apple SD Gothic Neo&quot;,serif;
+  --sans:&quot;IBM Plex Sans KR&quot;,&quot;Apple SD Gothic Neo&quot;,&quot;Malgun Gothic&quot;,&quot;Hiragino Sans&quot;,&quot;PingFang TC&quot;,system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme=&quot;light&quot;]){
+    --ink:#F3EAF0; --ink-soft:#C3B3BF; --rose:#EE7FA6; --rose-deep:#F4A3BF;
+    --petal:#3A2332; --paper:#1A1219; --mist:#352936; --card:#241A23;
+    --c1:#EE7FA6; --c2:#F4B6CB; --c3:#8FB0CF; --c4:#A9CBB0; --c5:#E8C07F; --c6:#B3A2CC;
+    --good:#6fd39e; --warn:#f0bd66; --bad:#f28aa4;
+  }
+}
+:root[data-theme=&quot;dark&quot;]{
+  color-scheme:dark;
+  --ink:#F3EAF0; --ink-soft:#C3B3BF; --rose:#EE7FA6; --rose-deep:#F4A3BF;
+  --petal:#3A2332; --paper:#1A1219; --mist:#352936; --card:#241A23;
+  --c1:#EE7FA6; --c2:#F4B6CB; --c3:#8FB0CF; --c4:#A9CBB0; --c5:#E8C07F; --c6:#B3A2CC;
+  --good:#6fd39e; --warn:#f0bd66; --bad:#f28aa4;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.narrow{max-width:740px}
+h1,h2,h3{margin:0;line-height:1.3}
+h1{font-family:var(--sans);font-weight:600;font-size:clamp(2rem,6vw,3.4rem);letter-spacing:-.03em}
+h2{font-family:var(--serif);font-size:clamp(1.3rem,3.2vw,1.75rem);margin-bottom:.6rem}
+h3{font-size:1.02rem;font-weight:600;margin-bottom:.35rem}
+p{margin:0 0 .9rem}
+section{padding:52px 0;border-top:1px solid var(--mist)}
+.muted{color:var(--ink-soft)}
+.small{font-size:.87rem}
+.tiny{font-size:.76rem}
+.kicker{color:var(--rose);font-weight:600;font-size:.9rem;margin-bottom:8px}
+.panel{background:var(--card);border:1px solid var(--mist);border-radius:14px;padding:18px 20px}
+.grid2{display:grid;gap:18px;grid-template-columns:1fr}
+.grid3{display:grid;gap:14px;grid-template-columns:1fr}
+.grid2&gt;*,.grid3&gt;*,.podium&gt;*{min-width:0}
+@media(min-width:760px){.grid2{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:repeat(3,1fr)}}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--mist);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.87rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--mist);white-space:nowrap}
+th{background:var(--petal);font-weight:600}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+
+/* hero */
+.hero{padding:52px 0 44px}
+.hero .lead{font-size:1.06rem;color:var(--ink-soft);max-width:40em;margin-top:14px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding:0;list-style:none}
+.meta li{background:var(--petal);border-radius:999px;padding:5px 13px;font-size:.84rem}
+
+/* top5 podium */
+.podium{display:grid;gap:12px;grid-template-columns:1fr;margin-top:26px}
+@media(min-width:760px){.podium{grid-template-columns:1.25fr 1.25fr 1fr 1fr 1fr}}
+.pod{background:var(--card);border:1px solid var(--mist);border-radius:16px;padding:16px 18px;position:relative}
+.pod.lead{border:2px solid var(--rose)}
+.pod .rk{font-family:var(--serif);font-weight:700;color:var(--rose);font-size:.95rem}
+.pod .nm{font-weight:600;font-size:1.25rem;margin:2px 0}
+.pod .sc{font-size:2rem;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.pod .ds{font-size:.8rem;color:var(--ink-soft);margin-top:8px}
+.bar{height:6px;border-radius:6px;background:var(--mist);margin-top:10px;overflow:hidden}
+.bar&gt;i{display:block;height:100%;background:var(--rose)}
+.tag{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--petal);color:var(--rose-deep);margin-top:6px}
+
+.callout{background:var(--petal);border-radius:18px;padding:22px 24px}
+.callout b{color:var(--rose-deep)}
+
+.chart-box{position:relative;background:var(--card);border:1px solid var(--mist);border-radius:14px;padding:14px}
+.chart-box canvas{width:100%!important}
+.h-560{height:560px}.h-360{height:360px}.h-320{height:320px}.h-420{height:420px}
+@media(max-width:600px){.h-560{height:640px}}
+
+.keybox{display:grid;gap:10px;grid-template-columns:1fr;margin:14px 0 0;padding:0;list-style:none}
+@media(min-width:760px){.keybox{grid-template-columns:1fr 1fr}}
+.keybox li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;background:var(--card);border:1px solid var(--mist);border-radius:12px;padding:12px 14px}
+.keybox i{width:18px;height:18px;border-radius:5px;margin-top:3px}
+.keybox b{display:block;font-size:1.08rem;font-weight:600;line-height:1.35}
+.keybox span{display:block;font-size:.92rem;color:var(--ink-soft);margin-top:2px}
+.legend{display:flex;flex-wrap:wrap;gap:10px 16px;margin:10px 0 0;padding:0;list-style:none;font-size:.8rem}
+.legend li{display:flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.8rem;padding:4px 10px;border-radius:999px;border:1px solid var(--mist);background:var(--card)}
+.lv-low{border-color:transparent;background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+.lv-mid{border-color:transparent;background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
+.lv-high{border-color:transparent;background:color-mix(in srgb,var(--bad) 14%,transparent);color:var(--bad)}
+.lv-vhigh{border-color:transparent;background:var(--bad);color:var(--paper)}
+.row{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:start;padding:10px 0;border-bottom:1px solid var(--mist)}
+.row:last-child{border-bottom:0}
+.row .lb{font-weight:600;font-size:.88rem}
+
+.msg td:nth-child(2) b{color:var(--rose-deep)}
+.pill-line{background:#06C755;color:#fff}
+.pill-wa{background:#1FA855;color:#fff}
+.pill-ms{background:#0866FF;color:#fff}
+.pill-zalo{background:#0068FF;color:#fff}
+.pill-x{background:var(--mist);color:var(--ink-soft)}
+.pill{font-size:.74rem;font-weight:600;padding:2px 8px;border-radius:6px;display:inline-block}
+
+.traps li{margin-bottom:8px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{position:relative;padding:0 0 18px 38px}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:.8rem;font-weight:600}
+footer{padding:30px 0 56px;border-top:1px solid var(--mist);font-size:.8rem;color:var(--ink-soft)}
+.src li{margin-bottom:4px}
+&lt;/style&gt;
+&lt;script&gt;document.documentElement.setAttribute(&#x27;data-theme&#x27;,&#x27;dark&#x27;);&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;main class=&quot;wrap&quot;&gt;
+
+&lt;header class=&quot;hero&quot;&gt;
+  &lt;p class=&quot;kicker&quot;&gt;Zero-Cost Lead Engine · 국가별 수요·진입환경 조사&lt;/p&gt;
+  &lt;h1&gt;국가별 수요·진입환경 조사 결과&lt;/h1&gt;
+  &lt;p class=&quot;lead&quot;&gt;20개국(중국 제외)을 검색관심도, 환자규모, 구글점유, 채팅채널, SERP여유, 규제난이도 6개 항목(100점)으로 점수화했습니다. 총점 1위는 대만 85.2점, 2위는 일본 80.6점입니다. 현지어 검색 연속성 53/53주와 가격 검색 상위 10위 내 한국 병원 직영 페이지 1~2개가 함께 확인된 국가는 대만과 일본입니다.&lt;/p&gt;
+  &lt;ul class=&quot;meta&quot;&gt;
+    &lt;li&gt;조사일 2026.09.17&lt;/li&gt;
+    &lt;li&gt;대상 20개국&lt;/li&gt;
+    &lt;li&gt;구글 트렌드·SERP·StatCounter 직접 수집&lt;/li&gt;
+    &lt;li&gt;보건복지부·KHIDI 2025 실적&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;div class=&quot;podium&quot; id=&quot;podium&quot;&gt;&lt;/div&gt;
+&lt;/header&gt;
+
+&lt;section&gt;
+  &lt;div class=&quot;callout&quot;&gt;
+    &lt;h2 style=&quot;margin-bottom:.5rem&quot;&gt;보고서 실행 권고 (원문 요약)&lt;/h2&gt;
+    &lt;p&gt;1단계는 대만·일본 2개국. 두 나라만 수요(검색 연속성 53/53주)와 공백(한국 병원 직영 1~2개)이 동시에 성립한다고 보고서는 판단했습니다.&lt;/p&gt;
+    &lt;p style=&quot;margin:0&quot;&gt;3~5위는 성격이 다르다고 기술했습니다. 싱가포르·홍콩은 진입은 쉬우나 물량이 작고, 미국은 물량은 크나 경쟁이 끝난 시장입니다.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;small muted narrow&quot; style=&quot;margin-top:12px&quot;&gt;점수 해석 주의: 싱가포르의 검색 점수는 구글 트렌드 지역지수가 국가별 전체 검색량으로 정규화되는 특성 때문에 부풀려져 있습니다. 절대 수요(환자 수 + 현지어 검색 연속성)만 보면 대만 &amp;gt; 일본 &amp;gt; 미국 &amp;gt; 홍콩 &amp;gt; 태국 순입니다.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;20개국 종합 점수&lt;/h2&gt;
+  &lt;p class=&quot;muted small narrow&quot;&gt;6개 항목 합계 100점. 막대 색은 항목별 기여도입니다.&lt;/p&gt;
+  &lt;div class=&quot;chart-box h-560&quot;&gt;&lt;canvas id=&quot;scoreChart&quot; aria-label=&quot;20개국 항목별 점수 누적 막대&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+  &lt;ul class=&quot;keybox&quot; id=&quot;scoreLegend&quot;&gt;&lt;/ul&gt;
+  &lt;details style=&quot;margin-top:14px&quot;&gt;
+    &lt;summary class=&quot;small&quot; style=&quot;cursor:pointer&quot;&gt;산식 보기&lt;/summary&gt;
+    &lt;ul class=&quot;small muted&quot; style=&quot;margin-top:8px&quot;&gt;
+      &lt;li&gt;검색관심도 30 = 현지어 주간 검색 연속성 × 20 + 영문 키워드 트렌드 지수 ÷ 10 × 10&lt;/li&gt;
+      &lt;li&gt;환자규모 25 = log(2025년 실환자수) 정규화 × 20 + 전년비 증감률 정규화 × 5&lt;/li&gt;
+      &lt;li&gt;구글점유 15 = StatCounter 2026-08 모바일 구글 점유율 × 15&lt;/li&gt;
+      &lt;li&gt;채팅채널 10 = 1위 메신저 보급률 + 한국 사업자 비즈니스 계정 개설 가능 여부&lt;/li&gt;
+      &lt;li&gt;SERP여유 10 = 10 − (상위 10위 내 한국 병원 직영 페이지 수 × 1.3)&lt;/li&gt;
+      &lt;li&gt;규제난이도 10 = 국외이전·민감정보·현지대리인·의료광고 제한 종합 (쉬울수록 고점)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/details&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;환자 규모와 검색결과 속 한국 병원 직영 수&lt;/h2&gt;
+  &lt;p class=&quot;muted small narrow&quot;&gt;가로축은 2025년 방한 외국인환자 수(로그), 세로축은 가격 검색 상위 10위 안의 한국 병원 직영 페이지 평균 개수입니다.&lt;/p&gt;
+  &lt;div class=&quot;chart-box h-420&quot;&gt;&lt;canvas id=&quot;gapChart&quot; aria-label=&quot;환자 수 대비 검색결과 경쟁 산점도&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+  &lt;p class=&quot;tiny muted&quot; style=&quot;margin-top:8px&quot;&gt;홍콩은 환자 통계가 중국에 합산되어 방한객 기준 추정치(62,000명)를 사용했습니다.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;검색 수요&lt;/h2&gt;
+  &lt;div class=&quot;grid2&quot;&gt;
+    &lt;div&gt;
+      &lt;h3&gt;현지어 검색 연속성 (최근 53주 중 검색이 잡힌 주)&lt;/h3&gt;
+      &lt;p class=&quot;small muted&quot;&gt;절대 수요에 가장 가까운 지표입니다.&lt;/p&gt;
+      &lt;div class=&quot;chart-box h-360&quot;&gt;&lt;canvas id=&quot;contChart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;h3&gt;월별 검색 지수 (계절성)&lt;/h3&gt;
+      &lt;p class=&quot;small muted&quot;&gt;최고월: 일본 10월, 대만 11월, 홍콩 3월, 미국 6월, 태국 7월&lt;/p&gt;
+      &lt;div class=&quot;chart-box h-360&quot;&gt;&lt;canvas id=&quot;seasonChart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;panel&quot; style=&quot;margin-top:18px&quot;&gt;
+    &lt;h3&gt;검색 정점과 방한 정점&lt;/h3&gt;
+    &lt;p class=&quot;small&quot; style=&quot;margin:0&quot;&gt;검색 지수 정점은 일본 10월, 대만 11월입니다. 2025년 방한 실적 상위 월은 일본 3월·8월·9월, 대만 7월·8월·6월로, 검색 정점과 방한 정점이 일치하지 않습니다. 보고서는 검색 정점 1~2개월 전에 콘텐츠를 올려야 한다고 기술했습니다.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;grid2&quot; style=&quot;margin-top:18px&quot;&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;h3&gt;실측 연관검색어&lt;/h3&gt;
+      &lt;p class=&quot;small&quot;&gt;&lt;b&gt;일본&lt;/b&gt; 韓国 皮膚科 おすすめ · 韓国 美容皮膚科 おすすめ · シミ取り 皮膚科 · ほくろ除去 · 특정 한국 병원명&lt;/p&gt;
+      &lt;p class=&quot;small&quot; style=&quot;margin:0&quot;&gt;&lt;b&gt;대만&lt;/b&gt; 韓國醫美診所 · 首爾醫美 · 麗珠蘭(리쥬란) · &lt;b style=&quot;color:var(--rose-deep)&quot;&gt;onda (+130% 급상승)&lt;/b&gt; · 韓幣(환율 계산 의도)&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;h3&gt;커뮤니티·영상 신호&lt;/h3&gt;
+      &lt;p class=&quot;small&quot;&gt;Reddit에는 한국 피부과 전용 커뮤니티가 있고, 질문은 가격 가이드와 &quot;바가지 피하는 법&quot;에 집중됩니다.&lt;/p&gt;
+      &lt;p class=&quot;small&quot; style=&quot;margin:0&quot;&gt;YouTube는 번체중국어의 &quot;韓國醫美全攻略&quot;류 가이드와 일본어 클리닉 실명 브이로그가 구매 의도가 가장 뚜렷합니다. 베트남어는 조회수는 높지만 성형 비판 다큐가 중심이라 구매 신호가 아닙니다.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;방한 외국인환자 (2025년)&lt;/h2&gt;
+  &lt;p class=&quot;muted small narrow&quot;&gt;전체 2,011,822명(+71.9%), 진료과 1위는 피부과 1,312,700명(62.9%)입니다. 막대는 전체 환자, 진한 부분은 피부과 환자입니다.&lt;/p&gt;
+  &lt;ul class=&quot;keybox&quot; id=&quot;patLegend&quot;&gt;&lt;/ul&gt;
+  &lt;div class=&quot;chart-box h-560&quot; style=&quot;margin-top:14px&quot;&gt;&lt;canvas id=&quot;patChart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+  &lt;p class=&quot;tiny muted&quot; style=&quot;margin-top:8px&quot;&gt;몽골·카자흐스탄·러시아는 피부과가 1위 진료과가 아니며 내과·검진 중심입니다. 홍콩은 별도 통계가 없어 제외했습니다.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;검색결과 경쟁 구조&lt;/h2&gt;
+  &lt;p class=&quot;muted narrow&quot;&gt;국가별 &quot;한국 + 시술 + 가격&quot;으로 구글 검색했을 때 상위 10위가 어떤 유형의 사이트로 채워져 있는지 보여줍니다(18개 검색어 직접 수집). 막대 길이는 10위 중 해당 유형이 차지한 평균 개수입니다.&lt;/p&gt;
+  &lt;ul class=&quot;keybox&quot; id=&quot;serpLegend&quot;&gt;&lt;/ul&gt;
+  &lt;div class=&quot;chart-box h-560&quot; style=&quot;margin-top:14px&quot;&gt;&lt;canvas id=&quot;serpChart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+  &lt;div class=&quot;grid2&quot; style=&quot;margin-top:18px&quot;&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;h3&gt;레퍼런스: 리엔장&lt;/h3&gt;
+      &lt;p class=&quot;small&quot;&gt;언어별 별도 도메인 6개(en·jp·tw·cn·th·vn)를 운영하고, 영어·번체·러시아어 검색에서 1위를 고정 점유합니다. 모든 랜딩이 가격표 페이지이고, 채널은 일본·대만 LINE, 베트남 Zalo로 시장마다 바꿉니다.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;h3&gt;그 외 상위 노출 사례&lt;/h3&gt;
+      &lt;ul class=&quot;small&quot; style=&quot;margin:0;padding-left:1.1em&quot;&gt;
+        &lt;li&gt;onclinic.tw — 대만 도메인, &quot;韓國 皮膚科 推薦&quot; 3위&lt;/li&gt;
+        &lt;li&gt;osongspringdayclinic.com — 같은 검색어 2위&lt;/li&gt;
+        &lt;li&gt;hifuseoul.com — 베트남 울쎄라 가격 1위, 일본 6위&lt;/li&gt;
+        &lt;li&gt;jp.abplasticsurgerykorea.com 등 — 언어별 서브도메인 방식&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;실행 환경&lt;/h2&gt;
+  &lt;div class=&quot;grid2&quot;&gt;
+    &lt;div&gt;
+      &lt;h3&gt;모바일 구글 점유율 (2026년 8월)&lt;/h3&gt;
+      &lt;p class=&quot;small muted&quot;&gt;일본 82.1%, 대만 89.5%. 모바일 2위는 일본 Yahoo! 14.2%, 대만 Yahoo! 8.8%입니다. 일본 데스크톱 Bing은 40.0%입니다.&lt;/p&gt;
+      &lt;div class=&quot;chart-box h-560&quot;&gt;&lt;canvas id=&quot;googleChart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;h3&gt;국가별 1위 메신저와 개설 가능 여부&lt;/h3&gt;
+      &lt;p class=&quot;small muted&quot;&gt;보급률은 DataReportal Digital 2026 기준입니다.&lt;/p&gt;
+      &lt;div class=&quot;scroll msg&quot;&gt;
+        &lt;table&gt;
+          &lt;thead&gt;&lt;tr&gt;&lt;th&gt;국가&lt;/th&gt;&lt;th&gt;1위 메신저&lt;/th&gt;&lt;th class=&quot;num&quot;&gt;보급률&lt;/th&gt;&lt;th&gt;한국 사업자 개설&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+          &lt;tbody id=&quot;msgBody&quot;&gt;&lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;grid2&quot; style=&quot;margin-top:18px&quot;&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;h3&gt;LINE 공식계정&lt;/h3&gt;
+      &lt;p class=&quot;small&quot; style=&quot;margin:0&quot;&gt;한국 법인도 개설할 수 있지만 인증 배지는 일본·대만·태국 소재 계정만 심사받습니다. 국가마다 요금제가 달라 계정을 나눠야 하고, 대만 LINE은 의료 업종에 AI 챗봇 제공을 거부할 수 있다고 명시하고 있습니다.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;h3&gt;WhatsApp · Zalo&lt;/h3&gt;
+      &lt;p class=&quot;small&quot; style=&quot;margin:0&quot;&gt;WhatsApp은 한국 법인 개설이 가능하고 표시명 노출에 Meta 비즈니스 인증이 필요합니다. 베트남 Zalo 공식계정은 베트남 번호와 베트남 사업자·상표가 있어야 해서 한국 사업자 단독으로는 개설할 수 없습니다.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;시장마다 시술 이름이 다릅니다&lt;/h2&gt;
+  &lt;p class=&quot;muted small narrow&quot;&gt;보고서는 한국 명칭을 그대로 번역하면 검색에 잡히지 않는다고 기술했습니다.&lt;/p&gt;
+  &lt;div class=&quot;scroll&quot;&gt;
+    &lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;시술&lt;/th&gt;&lt;th&gt;일본&lt;/th&gt;&lt;th&gt;대만&lt;/th&gt;&lt;th&gt;홍콩&lt;/th&gt;&lt;th&gt;인도네시아&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;써마지&lt;/b&gt;&lt;/td&gt;&lt;td&gt;サーマクール&lt;/td&gt;&lt;td&gt;鳳凰電波&lt;/td&gt;&lt;td&gt;熱瑪吉&lt;/td&gt;&lt;td&gt;thermage&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;울쎄라&lt;/b&gt;&lt;/td&gt;&lt;td&gt;ウルセラ&lt;/td&gt;&lt;td&gt;美國音波 / 音波拉皮&lt;/td&gt;&lt;td&gt;超聲刀&lt;/td&gt;&lt;td&gt;ultherapy&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;리쥬란&lt;/b&gt;&lt;/td&gt;&lt;td&gt;リジュラン&lt;/td&gt;&lt;td&gt;麗珠蘭 / 鮭魚針&lt;/td&gt;&lt;td&gt;三文魚針&lt;/td&gt;&lt;td&gt;skin booster dna salmon&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;포텐자&lt;/b&gt;&lt;/td&gt;&lt;td&gt;ポテンツァ&lt;/td&gt;&lt;td&gt;黃金微針&lt;/td&gt;&lt;td&gt;黃金微針&lt;/td&gt;&lt;td&gt;potenza treatment&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;스킨부스터&lt;/b&gt;&lt;/td&gt;&lt;td&gt;水光注射&lt;/td&gt;&lt;td&gt;水光針&lt;/td&gt;&lt;td&gt;水光針&lt;/td&gt;&lt;td&gt;skin booster&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;b&gt;레이저토닝&lt;/b&gt;&lt;/td&gt;&lt;td&gt;ピコトーニング&lt;/td&gt;&lt;td&gt;皮秒雷射&lt;/td&gt;&lt;td&gt;皮秒&lt;/td&gt;&lt;td&gt;laser toning&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;grid2&quot; style=&quot;margin-top:18px&quot;&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;h3&gt;놓치기 쉬운 함정&lt;/h3&gt;
+      &lt;ul class=&quot;small traps&quot; style=&quot;margin:0;padding-left:1.1em&quot;&gt;
+        &lt;li&gt;일본에서 써마지는 반드시 「サーマクール」. 「サーマージ」는 거의 쓰이지 않습니다.&lt;/li&gt;
+        &lt;li&gt;대만은 「美國音波」(울쎄라)와 「韓國音波」(슈링크류)를 구분합니다.&lt;/li&gt;
+        &lt;li&gt;인도네시아 &quot;potenza harga&quot;는 담배 브랜드가 점령해 treatment·RF를 붙여야 합니다.&lt;/li&gt;
+        &lt;li&gt;동남아·걸프권은 브랜드명보다 &quot;hifu&quot;가 상위 검색어입니다.&lt;/li&gt;
+        &lt;li&gt;베트남·필리핀·말레이시아는 &quot;한국+시술+가격&quot; 수요가 아직 형성되지 않았습니다.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;h3&gt;일본·대만 시드 키워드 (자동완성 실측)&lt;/h3&gt;
+      &lt;p class=&quot;small&quot;&gt;&lt;b&gt;일본&lt;/b&gt; 韓国 ウルセラ 値段 · 韓国 ウルセラ 相場 · 韓国 サーマクール 料金 · 韓国 リジュラン 価格 · 韓国 ジュベルック 値段 · 韓国 ポテンツァ 相場 · 韓国 水光注射 値段 · 韓国 ハイフ 値段 · 韓国 美容皮膚科 料金&lt;/p&gt;
+      &lt;p class=&quot;small&quot; style=&quot;margin:0&quot;&gt;&lt;b&gt;대만&lt;/b&gt; 韓國 音波拉皮 價格 · 韓國 鳳凰電波 價格 · 韓國 熱瑪吉 價格 · 韓國 醫美 麗珠蘭 · 鮭魚針 韓國 · 韓國 juvelook 價格 · potenza 黃金微針 韓國 · 韓國 水光針 價格 · onda 韓國 · 韓國 醫美 價格&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;규제 난이도&lt;/h2&gt;
+  &lt;p class=&quot;muted small narrow&quot;&gt;보고서의 개인정보법 난이도 구분입니다. 대만은 醫療法 제84조 광고 리스크가 별도로 표기되어 있습니다.&lt;/p&gt;
+  &lt;div class=&quot;panel&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;lb&quot;&gt;낮음&lt;/div&gt;&lt;div class=&quot;chips&quot;&gt;&lt;span class=&quot;chip lv-low&quot;&gt;홍콩&lt;/span&gt;&lt;span class=&quot;chip lv-low&quot;&gt;싱가포르&lt;/span&gt;&lt;span class=&quot;chip lv-low&quot;&gt;필리핀&lt;/span&gt;&lt;span class=&quot;chip lv-low&quot;&gt;말레이시아&lt;/span&gt;&lt;span class=&quot;chip lv-low&quot;&gt;대만 (광고 리스크 별도)&lt;/span&gt;&lt;span class=&quot;chip lv-low&quot;&gt;몽골&lt;/span&gt;&lt;span class=&quot;chip lv-low&quot;&gt;캐나다&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;lb&quot;&gt;중간&lt;/div&gt;&lt;div class=&quot;chips&quot;&gt;&lt;span class=&quot;chip lv-mid&quot;&gt;일본&lt;/span&gt;&lt;span class=&quot;chip lv-mid&quot;&gt;인도네시아&lt;/span&gt;&lt;span class=&quot;chip lv-mid&quot;&gt;영국&lt;/span&gt;&lt;span class=&quot;chip lv-mid&quot;&gt;프랑스&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;lb&quot;&gt;높음&lt;/div&gt;&lt;div class=&quot;chips&quot;&gt;&lt;span class=&quot;chip lv-high&quot;&gt;독일&lt;/span&gt;&lt;span class=&quot;chip lv-high&quot;&gt;미국&lt;/span&gt;&lt;span class=&quot;chip lv-high&quot;&gt;호주&lt;/span&gt;&lt;span class=&quot;chip lv-high&quot;&gt;태국&lt;/span&gt;&lt;span class=&quot;chip lv-high&quot;&gt;베트남&lt;/span&gt;&lt;span class=&quot;chip lv-high&quot;&gt;사우디&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;lb&quot;&gt;매우 높음&lt;/div&gt;&lt;div class=&quot;chips&quot;&gt;&lt;span class=&quot;chip lv-vhigh&quot;&gt;UAE&lt;/span&gt;&lt;span class=&quot;chip lv-vhigh&quot;&gt;카자흐스탄&lt;/span&gt;&lt;span class=&quot;chip lv-vhigh&quot;&gt;러시아&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;grid3&quot; style=&quot;margin-top:18px&quot;&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;h3&gt;일본: 한정해제 요건&lt;/h3&gt;
+      &lt;p class=&quot;small&quot; style=&quot;margin:0&quot;&gt;일본 가이드라인은 일본을 향한 광고라면 해외 사업자도 규제하지만, 환자가 스스로 찾아 들어오는 웹사이트는 한정해제 대상입니다. 보고서는 오가닉 검색으로 도달한 자사 사이트는 한정해제 대상이고, 배너·유료 검색광고는 대상이 아니라고 기술했습니다.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;h3&gt;대만: 광고 리스크 확인 필요&lt;/h3&gt;
+      &lt;p class=&quot;small&quot; style=&quot;margin:0&quot;&gt;醫療法 제84조가 비의료기관의 의료광고를 금지합니다. 외국 의료기관에 대한 집행 실무는 확인되지 않았습니다. 개인정보는 병력 수집 시 서면 동의가 필요합니다.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;h3&gt;태국: 현지대리인·DPO 필요&lt;/h3&gt;
+      &lt;p class=&quot;small&quot; style=&quot;margin:0&quot;&gt;태국 PDPA는 현지대리인과 DPO를 요구하고, 한국에 대한 적정성 결정이 없어 부적정 고지 후 동의를 받아야 합니다.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h2&gt;방한 편의와 결제&lt;/h2&gt;
+  &lt;div class=&quot;grid2&quot;&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;h3&gt;입국 난이도&lt;/h3&gt;
+      &lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;lb&quot;&gt;K-ETA 면제&lt;/div&gt;&lt;div class=&quot;chips&quot;&gt;&lt;span class=&quot;chip lv-low&quot;&gt;일본 2:35&lt;/span&gt;&lt;span class=&quot;chip lv-low&quot;&gt;대만 2:30&lt;/span&gt;&lt;span class=&quot;chip lv-low&quot;&gt;홍콩 3:35&lt;/span&gt;&lt;span class=&quot;chip lv-low&quot;&gt;싱가포르 6:50&lt;/span&gt;&lt;span class=&quot;chip lv-low&quot;&gt;미국&lt;/span&gt;&lt;span class=&quot;chip lv-low&quot;&gt;캐나다&lt;/span&gt;&lt;span class=&quot;chip lv-low&quot;&gt;호주&lt;/span&gt;&lt;span class=&quot;chip lv-low&quot;&gt;영국·독일·프랑스&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;lb&quot;&gt;K-ETA 필요&lt;/div&gt;&lt;div class=&quot;chips&quot;&gt;&lt;span class=&quot;chip lv-mid&quot;&gt;태국 5:20&lt;/span&gt;&lt;span class=&quot;chip lv-mid&quot;&gt;말레이시아 6:30&lt;/span&gt;&lt;span class=&quot;chip lv-mid&quot;&gt;UAE&lt;/span&gt;&lt;span class=&quot;chip lv-mid&quot;&gt;카자흐스탄&lt;/span&gt;&lt;span class=&quot;chip lv-mid&quot;&gt;사우디&lt;/span&gt;&lt;span class=&quot;chip lv-mid&quot;&gt;러시아 (직항 없음)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;lb&quot;&gt;비자 필요&lt;/div&gt;&lt;div class=&quot;chips&quot;&gt;&lt;span class=&quot;chip lv-high&quot;&gt;인도네시아&lt;/span&gt;&lt;span class=&quot;chip lv-high&quot;&gt;베트남&lt;/span&gt;&lt;span class=&quot;chip lv-high&quot;&gt;필리핀&lt;/span&gt;&lt;span class=&quot;chip lv-high&quot;&gt;몽골&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;p class=&quot;tiny muted&quot; style=&quot;margin:8px 0 0&quot;&gt;시간은 인천 직항 기준. K-ETA 한시 면제는 2026년 12월 31일까지입니다.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;h3&gt;한국 측 실무 사항&lt;/h3&gt;
+      &lt;ul class=&quot;small&quot; style=&quot;margin:0;padding-left:1.1em&quot;&gt;
+        &lt;li&gt;&lt;b&gt;해외원화결제(DCC) 수수료 3~8%&lt;/b&gt; (금융감독원 기준). 현지 통화 환산액과 실제 청구액이 벌어질 수 있습니다.&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;외국인환자 미용성형 부가세 환급 특례&lt;/b&gt;(조세특례제한법 제107조의3)가 2025년 12월 31일로 일몰 종료됐습니다. 숙박 특례(제107조의2)는 2028년 12월 31일까지 유효합니다.&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p class=&quot;small muted&quot; style=&quot;margin:12px 0 0&quot;&gt;주요 결제 수단: 일본 Visa·Master·JCB, PayPay / 대만 Visa·Master·JCB, UnionPay / 홍콩 Visa·Master, UnionPay, AlipayHK&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+
+
+&lt;section&gt;
+  &lt;h2&gt;미수집 항목&lt;/h2&gt;
+  &lt;div class=&quot;scroll&quot;&gt;
+    &lt;table&gt;
+      &lt;thead&gt;&lt;tr&gt;&lt;th&gt;항목&lt;/th&gt;&lt;th&gt;사유&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;국가별 월간 절대 검색량&lt;/td&gt;&lt;td&gt;로그인 없이 제공하는 도구 없음 → 트렌드 상대지수·연속성으로 대체&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;홍콩 외국인환자 수&lt;/td&gt;&lt;td&gt;2019년부터 중국에 합산 집계&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;UAE 방한객&lt;/td&gt;&lt;td&gt;관광공사 분류에 단독 항목 없음&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;7개국 현지어 트렌드&lt;/td&gt;&lt;td&gt;구글 트렌드가 데이터 부족으로 반환하지 않음 (수요가 낮다는 신호)&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;대만 醫療法 제84조 집행 실무&lt;/td&gt;&lt;td&gt;위생복리부 유권해석 미확인&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;인도네시아·사우디·몽골 의료광고 규제&lt;/td&gt;&lt;td&gt;정부 법령포털 접근 실패&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;footer&gt;
+  &lt;p style=&quot;margin:0 0 6px&quot;&gt;&lt;b&gt;출처&lt;/b&gt;&lt;/p&gt;
+  &lt;ul class=&quot;src&quot; style=&quot;margin:0 0 12px;padding-left:1.1em&quot;&gt;
+    &lt;li&gt;직접 수집(2026.09.17): 구글 트렌드, 국가별 구글 검색결과 상위 10위, 구글 자동완성, StatCounter 2026년 8월, Reddit·YouTube 반응, 경쟁 병원 사이트 조회&lt;/li&gt;
+    &lt;li&gt;공식 통계: 보건복지부 2025 외국인환자 유치실적(2026.04.24), 한국보건산업진흥원 통계분석 보고서(2026.09.04), 관광지식정보시스템 입국통계, 법무부·하이코리아 사증·K-ETA 공지, 각국 법령 원문&lt;/li&gt;
+    &lt;li&gt;참고: DataReportal Digital 2026, 각 메신저 사업자 공식 문서, 금융감독원 DCC 안내, 조세특례제한법&lt;/li&gt;
+  &lt;/ul&gt;
+  뷰티블라썸의원 마케팅파트 · Zero-Cost Lead Engine 내부 검토용
+&lt;/footer&gt;
+&lt;/main&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+const S=[
+[&quot;대만&quot;,85.2,24.5,23.2,13.4,9,8.1,7],[&quot;일본&quot;,80.6,23.5,21.5,12.3,9,8.3,6],[&quot;싱가포르&quot;,68.7,11.9,18.6,14.4,9,6.8,8],
+[&quot;홍콩&quot;,67.6,11.7,17.0,14.1,9,6.8,9],[&quot;미국&quot;,65.6,19.4,21.0,14.0,5,2.2,4],[&quot;태국&quot;,59.2,6.2,18.6,15.0,9,7.4,3],
+[&quot;호주&quot;,58.7,11.9,16.7,14.6,6,5.5,4],[&quot;말레이시아&quot;,56.6,3.0,18.5,14.6,9,3.5,8],[&quot;인도네시아&quot;,52.9,1.6,19.2,14.3,9,2.8,6],
+[&quot;사우디&quot;,52.9,1.8,15.4,14.7,9,10.0,2],[&quot;캐나다&quot;,51.1,4.1,17.5,14.3,6,2.2,7],[&quot;몽골&quot;,50.9,0.0,17.3,14.5,6,6.1,7],
+[&quot;영국&quot;,50.8,2.9,17.1,14.6,9,2.2,5],[&quot;프랑스&quot;,47.9,1.6,16.7,14.4,8,2.2,5],[&quot;카자흐스탄&quot;,47.7,5.7,14.7,10.9,8,7.4,1],
+[&quot;독일&quot;,47.5,1.8,16.1,14.4,9,2.2,4],[&quot;필리핀&quot;,47.3,1.8,15.0,14.6,7,0.9,8],[&quot;베트남&quot;,44.8,3.6,15.7,14.4,3,6.1,2],
+[&quot;UAE&quot;,43.2,4.3,13.3,14.7,9,0.9,1],[&quot;러시아&quot;,30.8,0.4,15.8,4.5,1,8.1,1]];
+const TOP=[
+ {n:&quot;대만&quot;,d:&quot;현지어 검색 53/53주 · 가격 검색 상위 10위 내 한국 병원 직영 1.5개 · 2025 환자 185,715명&quot;},
+ {n:&quot;일본&quot;,d:&quot;현지어 검색 53/53주 · 한국 병원 직영 1.3개 · 2025 환자 600,009명(피부과 399,964명)&quot;},
+ {n:&quot;싱가포르&quot;,d:&quot;모바일 구글 95.7% · WhatsApp 81.3% · 현지어 검색 5/53주&quot;},
+ {n:&quot;홍콩&quot;,d:&quot;규제난이도 점수 9/10(20개국 최고) · 현지어 검색 22/53주 · 환자 수 별도 통계 없음&quot;},
+ {n:&quot;미국&quot;,d:&quot;검색 43/53주 · 2025 환자 173,363명 · 한국 병원 직영 6.0개&quot;}];
+const pod=document.getElementById(&#x27;podium&#x27;);
+TOP.forEach((t,i)=&gt;{const r=S.find(x=&gt;x[0]===t.n);const el=document.createElement(&#x27;div&#x27;);el.className=&#x27;pod&#x27;+(i&lt;2?&#x27; lead&#x27;:&#x27;&#x27;);
+el.innerHTML=`&lt;div class=&quot;rk&quot;&gt;${i+1}위&lt;/div&gt;&lt;div class=&quot;nm&quot;&gt;${t.n}&lt;/div&gt;&lt;div class=&quot;sc&quot;&gt;${r[1]}&lt;/div&gt;&lt;div class=&quot;bar&quot;&gt;&lt;i style=&quot;width:${r[1]}%&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class=&quot;ds&quot;&gt;${t.d}&lt;/div&gt;`;pod.appendChild(el)});
+
+const MSG=[[&quot;일본&quot;,&quot;LINE&quot;,79.2,&quot;가능 (인증배지 불가)&quot;,&quot;line&quot;],[&quot;대만&quot;,&quot;LINE&quot;,90.2,&quot;가능 (인증배지 불가)&quot;,&quot;line&quot;],[&quot;태국&quot;,&quot;LINE&quot;,84.4,&quot;가능 (인증배지 불가)&quot;,&quot;line&quot;],
+[&quot;홍콩&quot;,&quot;WhatsApp&quot;,74.7,&quot;가능&quot;,&quot;wa&quot;],[&quot;싱가포르&quot;,&quot;WhatsApp&quot;,81.3,&quot;가능&quot;,&quot;wa&quot;],[&quot;말레이시아&quot;,&quot;WhatsApp&quot;,91.2,&quot;가능&quot;,&quot;wa&quot;],[&quot;인도네시아&quot;,&quot;WhatsApp&quot;,90.8,&quot;가능&quot;,&quot;wa&quot;],
+[&quot;영국&quot;,&quot;WhatsApp&quot;,82.6,&quot;가능&quot;,&quot;wa&quot;],[&quot;미국&quot;,&quot;Messenger&quot;,57.6,&quot;가능 (메신저 CRM 약함)&quot;,&quot;ms&quot;],[&quot;호주&quot;,&quot;Messenger&quot;,68.0,&quot;가능&quot;,&quot;ms&quot;],[&quot;필리핀&quot;,&quot;Messenger&quot;,90.6,&quot;가능&quot;,&quot;ms&quot;],
+[&quot;베트남&quot;,&quot;Zalo&quot;,86.2,&quot;불가&quot;,&quot;zalo&quot;],[&quot;러시아&quot;,&quot;MAX&quot;,70.0,&quot;사실상 불가&quot;,&quot;x&quot;]];
+document.getElementById(&#x27;msgBody&#x27;).innerHTML=MSG.map(m=&gt;`&lt;tr&gt;&lt;td&gt;${m[0]}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;pill pill-${m[4]}&quot;&gt;${m[1]}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;${m[2].toFixed(1)}%&lt;/td&gt;&lt;td&gt;${/^(불가|사실상)/.test(m[3])?&#x27;&lt;b&gt;&#x27;+m[3]+&#x27;&lt;/b&gt;&#x27;:m[3]}&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;);
+
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+const charts=[];
+function build(){
+  charts.forEach(c=&gt;c.destroy());charts.length=0;
+  const ink=css(&#x27;--ink&#x27;),soft=css(&#x27;--ink-soft&#x27;),grid=css(&#x27;--mist&#x27;),rose=css(&#x27;--rose&#x27;);
+  const C=[css(&#x27;--c1&#x27;),css(&#x27;--c2&#x27;),css(&#x27;--c3&#x27;),css(&#x27;--c4&#x27;),css(&#x27;--c5&#x27;),css(&#x27;--c6&#x27;)];
+  Chart.defaults.font.family=css(&#x27;--sans&#x27;);Chart.defaults.font.size=13;Chart.defaults.color=soft;Chart.defaults.borderColor=grid;
+  const base={responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:ink,boxWidth:12}}}};
+
+  const labels=[&quot;검색관심도 30&quot;,&quot;환자규모 25&quot;,&quot;구글점유 15&quot;,&quot;채팅채널 10&quot;,&quot;SERP여유 10&quot;,&quot;규제난이도 10&quot;];
+  charts.push(new Chart(document.getElementById(&#x27;scoreChart&#x27;),{type:&#x27;bar&#x27;,data:{labels:S.map(r=&gt;r[0]+&#x27;  &#x27;+r[1]),datasets:labels.map((l,k)=&gt;({label:l,data:S.map(r=&gt;r[k+2]),backgroundColor:C[k],borderWidth:0}))},
+   options:{...base,indexAxis:&#x27;y&#x27;,plugins:{legend:{display:false},tooltip:{mode:&#x27;index&#x27;,intersect:false}},scales:{x:{stacked:true,max:100,grid:{color:grid}},y:{stacked:true,grid:{display:false},ticks:{color:ink,font:{weight:500}}}}}}));
+  const SD=[&quot;그 나라 사람들이 한국 피부과·미용시술을 구글에서 얼마나 꾸준히 검색하는지 (현지어 검색이 잡힌 주 수 + 영문 키워드 트렌드 지수)&quot;,&quot;2025년 실제로 한국에 와서 진료받은 외국인환자 수와 전년 대비 증가율&quot;,&quot;스마트폰 검색에서 구글이 차지하는 비율 (높을수록 구글 노출만으로 도달 가능)&quot;,&quot;그 나라 1위 메신저의 보급률과, 한국 사업자가 그 메신저의 비즈니스 계정을 만들 수 있는지&quot;,&quot;가격 검색 상위 10위 안에 한국 병원 직영 페이지가 적을수록 높은 점수 (경쟁이 비어 있는 정도)&quot;,&quot;리드폼 개인정보법과 의료광고 규제가 쉬울수록 높은 점수&quot;];
+  document.getElementById(&#x27;scoreLegend&#x27;).innerHTML=labels.map((l,k)=&gt;`&lt;li&gt;&lt;i style=&quot;background:${C[k]}&quot;&gt;&lt;/i&gt;&lt;div&gt;&lt;b&gt;${l}&lt;/b&gt;&lt;span&gt;${SD[k]}&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;`).join(&#x27;&#x27;);
+
+  const GAP=[[&quot;일본&quot;,600009,1.3],[&quot;대만&quot;,185715,1.5],[&quot;미국&quot;,173363,6],[&quot;태국&quot;,58124,2],[&quot;싱가포르&quot;,43222,2.5],[&quot;몽골&quot;,35586,3],[&quot;캐나다&quot;,23624,6],[&quot;베트남&quot;,23133,3],[&quot;인도네시아&quot;,21257,5.5],[&quot;러시아&quot;,20262,1.5],[&quot;호주&quot;,20006,3.5],[&quot;카자흐스탄&quot;,15188,2],[&quot;말레이시아&quot;,12086,5],[&quot;사우디&quot;,3102,0],[&quot;UAE&quot;,2443,7],[&quot;필리핀&quot;,8846,7],[&quot;홍콩&quot;,62000,2.5]];
+  const lead=[&quot;일본&quot;,&quot;대만&quot;];
+  charts.push(new Chart(document.getElementById(&#x27;gapChart&#x27;),{type:&#x27;scatter&#x27;,data:{datasets:[{data:GAP.map(g=&gt;({x:g[1],y:g[2],n:g[0]})),pointRadius:GAP.map(g=&gt;lead.includes(g[0])?11:6),pointBackgroundColor:GAP.map(g=&gt;lead.includes(g[0])?rose:C[2]),pointBorderColor:&#x27;transparent&#x27;}]},
+   options:{...base,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=&gt;`${c.raw.n}: 환자 ${c.raw.x.toLocaleString()}명 · 직영 ${c.raw.y}개`}}},
+   scales:{x:{type:&#x27;logarithmic&#x27;,min:1500,max:2000000,title:{display:true,text:&#x27;2025 방한 외국인환자 수 (로그)&#x27;,color:soft},grid:{color:grid},ticks:{callback:v=&gt;[1000,10000,100000,1000000].includes(v)?v.toLocaleString():&#x27;&#x27;}},
+           y:{reverse:false,min:-0.5,max:8,title:{display:true,text:&#x27;상위 10위 내 한국 병원 직영 페이지 수&#x27;,color:soft},grid:{color:grid}}}},
+   plugins:[{id:&#x27;lbl&#x27;,afterDatasetsDraw(ch){const{ctx}=ch;const m=ch.getDatasetMeta(0);ctx.save();ctx.font=&#x27;600 12px &#x27;+css(&#x27;--sans&#x27;);m.data.forEach((p,i)=&gt;{const n=GAP[i][0];ctx.fillStyle=lead.includes(n)?rose:ink;ctx.fillText(n,p.x+10,p.y+4)});ctx.restore()}}]}));
+
+  const CONT=[[&quot;일본&quot;,53],[&quot;대만&quot;,53],[&quot;미국&quot;,43],[&quot;홍콩&quot;,22],[&quot;호주&quot;,15],[&quot;태국&quot;,11],[&quot;베트남&quot;,5],[&quot;싱가포르&quot;,5],[&quot;영국&quot;,3],[&quot;캐나다&quot;,3],[&quot;인도네시아&quot;,1],[&quot;카자흐·러시아&quot;,1]];
+  charts.push(new Chart(document.getElementById(&#x27;contChart&#x27;),{type:&#x27;bar&#x27;,data:{labels:CONT.map(c=&gt;c[0]),datasets:[{data:CONT.map(c=&gt;c[1]),backgroundColor:CONT.map(c=&gt;c[1]&gt;=50?rose:C[2]),borderRadius:4}]},
+   options:{...base,indexAxis:&#x27;y&#x27;,plugins:{legend:{display:false}},scales:{x:{max:53,grid:{color:grid}},y:{grid:{display:false},ticks:{color:ink}}}}}));
+
+  const SEA={일본:[58,65,68,63,66,55,50,52,67,79,67,55],대만:[48,50,70,58,55,55,52,55,62,73,92,60],홍콩:[15,34,68,36,12,0,17,4,19,58,25,50],미국:[29,17,50,44,56,76,14,6,5,3,22,32],태국:[0,0,20,0,13,0,34,19,13,23,32,0]};
+  const sc={일본:rose,대만:C[0]===rose?C[1]:C[1],홍콩:C[2],미국:C[4],태국:C[3]};
+  charts.push(new Chart(document.getElementById(&#x27;seasonChart&#x27;),{type:&#x27;line&#x27;,data:{labels:[&#x27;1월&#x27;,&#x27;2월&#x27;,&#x27;3월&#x27;,&#x27;4월&#x27;,&#x27;5월&#x27;,&#x27;6월&#x27;,&#x27;7월&#x27;,&#x27;8월&#x27;,&#x27;9월&#x27;,&#x27;10월&#x27;,&#x27;11월&#x27;,&#x27;12월&#x27;],datasets:Object.entries(SEA).map(([k,v])=&gt;({label:k,data:v,borderColor:sc[k],backgroundColor:sc[k],tension:.3,borderWidth:k===&#x27;일본&#x27;||k===&#x27;대만&#x27;?3:1.5,pointRadius:0}))},
+   options:{...base,plugins:{...base.plugins,legend:{position:&#x27;bottom&#x27;,labels:{color:ink,boxWidth:12}}},scales:{y:{min:0,max:100,grid:{color:grid}},x:{grid:{display:false}}}}}));
+
+  const PAT=[[&quot;일본&quot;,600009,399964],[&quot;대만&quot;,185715,149126],[&quot;미국&quot;,173363,85493],[&quot;태국&quot;,58124,39667],[&quot;싱가포르&quot;,43222,33402],[&quot;몽골&quot;,35586,6160],[&quot;캐나다&quot;,23624,13246],[&quot;베트남&quot;,23133,5224],[&quot;인도네시아&quot;,21257,13528],[&quot;러시아&quot;,20262,5641],[&quot;호주&quot;,20006,12533],[&quot;카자흐스탄&quot;,15188,1736],[&quot;말레이시아&quot;,12086,8958],[&quot;영국&quot;,10092,5973],[&quot;프랑스&quot;,9276,6125],[&quot;필리핀&quot;,8846,4797],[&quot;독일&quot;,8102,5440],[&quot;사우디&quot;,3102,1861],[&quot;UAE&quot;,2443,1188]];
+  const GR={일본:&quot;+36.0%&quot;,대만:&quot;+122.5%&quot;,미국:&quot;+70.4%&quot;,태국:&quot;+52.3%&quot;,싱가포르:&quot;+62.1%&quot;,몽골:&quot;+38.3%&quot;,캐나다:&quot;+59.1%&quot;,베트남:&quot;+13.5%&quot;,인도네시아:&quot;+104.6%&quot;,러시아:&quot;+21.9%&quot;,호주:&quot;+45.1%&quot;,카자흐스탄:&quot;+4.9%&quot;,말레이시아:&quot;+106.8%&quot;,영국:&quot;+78.4%&quot;,프랑스:&quot;+73.5%&quot;,필리핀:&quot;+33.8%&quot;,독일:&quot;+62.9%&quot;,사우디:&quot;+81.6%&quot;,UAE:&quot;+39.0%&quot;};
+  document.getElementById(&#x27;patLegend&#x27;).innerHTML=`&lt;li&gt;&lt;i style=&quot;background:${rose}&quot;&gt;&lt;/i&gt;&lt;div&gt;&lt;b&gt;피부과 환자&lt;/b&gt;&lt;span&gt;2025년 한국에서 피부과 진료를 받은 해당 국가 외국인환자 수&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;i style=&quot;background:${C[1]}66&quot;&gt;&lt;/i&gt;&lt;div&gt;&lt;b&gt;그 외 진료과&lt;/b&gt;&lt;span&gt;같은 국가 환자 중 피부과 이외 진료(내과·성형외과·검진 등)를 받은 인원. 막대 전체 길이가 전체 환자 수입니다.&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;`;
+  charts.push(new Chart(document.getElementById(&#x27;patChart&#x27;),{type:&#x27;bar&#x27;,data:{labels:PAT.map(p=&gt;`${p[0]}  ${GR[p[0]]}`),datasets:[
+    {label:&#x27;피부과 환자&#x27;,data:PAT.map(p=&gt;p[2]),backgroundColor:rose,borderRadius:3},
+    {label:&#x27;그 외 진료과&#x27;,data:PAT.map(p=&gt;p[1]-p[2]),backgroundColor:C[1]+&#x27;66&#x27;,borderRadius:3}]},
+   options:{...base,indexAxis:&#x27;y&#x27;,plugins:{...base.plugins,legend:{display:false},tooltip:{mode:&#x27;index&#x27;,intersect:false,callbacks:{footer:it=&gt;&#x27;전체 &#x27;+PAT[it[0].dataIndex][1].toLocaleString()+&#x27;명&#x27;}}},
+   scales:{x:{stacked:true,grid:{color:grid},ticks:{callback:v=&gt;(v/10000)+&#x27;만&#x27;}},y:{stacked:true,grid:{display:false},ticks:{color:ink}}}}}));
+
+  const SERP=[[&quot;일본&quot;,1.3,1.7,0,7.0],[&quot;대만&quot;,1.5,1.0,2.5,5.0],[&quot;홍콩&quot;,2.5,2.0,1.0,4.5],[&quot;태국&quot;,2.0,1.0,4.0,3.0],[&quot;싱가포르&quot;,2.5,3.0,1.0,3.5],[&quot;베트남&quot;,3.0,0,0.5,6.5],[&quot;호주&quot;,3.5,3.0,1.0,2.5],[&quot;말레이시아&quot;,5.0,2.0,0,3.0],[&quot;인도네시아&quot;,5.5,1.5,1.0,2.0],[&quot;미국&quot;,6.0,2.0,2.0,0],[&quot;캐나다&quot;,6.0,2.0,2.0,0],[&quot;UAE&quot;,7.0,1.0,2.0,0],[&quot;필리핀&quot;,7.0,1.0,2.0,0],[&quot;몽골&quot;,3.0,3.0,2.0,0],[&quot;러시아&quot;,1.5,7.0,0,1.5],[&quot;카자흐스탄&quot;,2.0,6.0,1.0,1.0],[&quot;사우디&quot;,0,2.0,8.0,0]];
+  const SL=[&quot;한국 병원 직영&quot;,&quot;플랫폼&quot;,&quot;커뮤니티·SNS&quot;,&quot;현지 업체·기타&quot;],SC=[rose,C[2],C[4],C[3]];
+  const SLD=[&quot;한국 병의원이 직접 운영하는 사이트 페이지 (예: enlienjang.com, hifuseoul.com). 뷰티블라썸 랜딩도 이 유형에 해당&quot;,&quot;여러 병원을 모아 비교·예약을 중개하는 서비스 (예: 강남언니, Creatrip, Bookimed, 코네스트)&quot;,&quot;이용자가 쓴 게시글·후기·영상 (예: 대만 Dcard·PTT, Reddit, YouTube)&quot;,&quot;검색한 나라의 현지 클리닉 페이지, 여행·뉴스 사이트 등 (예: 일본 현지 클리닉의 한일 가격 비교 글)&quot;];
+  document.getElementById(&#x27;serpLegend&#x27;).innerHTML=SL.map((l,k)=&gt;`&lt;li&gt;&lt;i style=&quot;background:${SC[k]}&quot;&gt;&lt;/i&gt;&lt;div&gt;&lt;b&gt;${l}&lt;/b&gt;&lt;span&gt;${SLD[k]}&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;`).join(&#x27;&#x27;);
+  charts.push(new Chart(document.getElementById(&#x27;serpChart&#x27;),{type:&#x27;bar&#x27;,data:{labels:SERP.map(s=&gt;s[0]),datasets:SL.map((l,k)=&gt;({label:l,data:SERP.map(s=&gt;s[k+1]),backgroundColor:SC[k]}))},
+   options:{...base,indexAxis:&#x27;y&#x27;,plugins:{...base.plugins,legend:{display:false},tooltip:{mode:&#x27;index&#x27;,intersect:false}},scales:{x:{stacked:true,max:10,title:{display:true,text:&#x27;상위 10위 구성 (평균 개수)&#x27;,color:soft},grid:{color:grid}},y:{stacked:true,grid:{display:false},ticks:{color:ink}}}}}));
+
+  const GG=[[&quot;태국&quot;,99.89],[&quot;사우디&quot;,98.08],[&quot;UAE&quot;,98.04],[&quot;필리핀&quot;,97.66],[&quot;영국&quot;,97.60],[&quot;말레이시아&quot;,97.59],[&quot;호주&quot;,97.38],[&quot;몽골&quot;,96.81],[&quot;베트남&quot;,96.30],[&quot;독일&quot;,95.89],[&quot;프랑스&quot;,95.80],[&quot;싱가포르&quot;,95.67],[&quot;캐나다&quot;,95.54],[&quot;인도네시아&quot;,95.46],[&quot;홍콩&quot;,94.13],[&quot;미국&quot;,93.51],[&quot;대만&quot;,89.46],[&quot;일본&quot;,82.09],[&quot;카자흐스탄&quot;,72.45],[&quot;러시아&quot;,30.12]];
+  charts.push(new Chart(document.getElementById(&#x27;googleChart&#x27;),{type:&#x27;bar&#x27;,data:{labels:GG.map(g=&gt;g[0]),datasets:[{data:GG.map(g=&gt;g[1]),backgroundColor:GG.map(g=&gt;[&quot;대만&quot;,&quot;일본&quot;].includes(g[0])?rose:C[2]),borderRadius:3}]},
+   options:{...base,indexAxis:&#x27;y&#x27;,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=&gt;c.raw+&#x27;%&#x27;}}},scales:{x:{min:0,max:100,grid:{color:grid},ticks:{callback:v=&gt;v+&#x27;%&#x27;}},y:{grid:{display:false},ticks:{color:ink}}}}}));
+}
+function start(){ if(window.Chart){build();} else {document.querySelectorAll(&#x27;.chart-box&#x27;).forEach(b=&gt;b.innerHTML=&#x27;&lt;p class=&quot;small muted&quot; style=&quot;padding:20px&quot;&gt;차트를 불러오지 못했습니다.&lt;/p&gt;&#x27;);}}
+window.addEventListener(&#x27;load&#x27;,start);
+try{const mq=window.matchMedia(&#x27;(prefers-color-scheme: dark)&#x27;);mq.addEventListener(&#x27;change&#x27;,()=&gt;window.Chart&amp;&amp;build());}catch(e){}
+new MutationObserver(()=&gt;window.Chart&amp;&amp;build()).observe(document.documentElement,{attributes:true,attributeFilter:[&#x27;data-theme&#x27;]});
+&lt;/script&gt;
+&lt;script&gt;
+(function(){
+  function boot(){
+    var items=[].slice.call(document.querySelectorAll(&#x27;main &gt; header, main &gt; section, main &gt; footer&#x27;));
+    if(!items.length)return;
+    function ttl(el){
+      if(el.tagName===&#x27;HEADER&#x27;)return &#x27;조사 결과 요약&#x27;;
+      if(el.tagName===&#x27;FOOTER&#x27;)return &#x27;출처&#x27;;
+      var h=el.querySelector(&#x27;h1,h2&#x27;);
+      return h?h.textContent.trim():&#x27;&#x27;;
+    }
+    var titles=items.map(ttl);
+    var st=document.createElement(&#x27;style&#x27;);
+    st.textContent=&#x27;html{scrollbar-width:thin;scrollbar-color:var(--mist) transparent}body{overflow-x:hidden}main{padding-bottom:30px}main &gt; header,main &gt; section,main &gt; footer{display:none}main &gt; .is-on{display:block;border-top:0;animation:rbIn .35s ease}main &gt; section.is-on{padding-top:26px}main &gt; header.is-on{padding-top:26px}main &gt; footer.is-on{padding-top:26px;border-top:0}@keyframes rbIn{from{opacity:0;transform:translateX(var(--rbx,24px))}to{opacity:1;transform:none}}@media (prefers-reduced-motion: reduce){main &gt; .is-on{animation:none}}&#x27;;
+    document.head.appendChild(st);
+    var cur=0;
+    function send(kind){
+      try{parent.postMessage({rb:kind,index:cur,count:items.length,title:titles[cur],titles:titles,height:document.body.offsetHeight+8},&#x27;*&#x27;)}catch(e){}
+    }
+    function show(i,dir){
+      i=Math.max(0,Math.min(items.length-1,i));
+      items.forEach(function(el){el.classList.remove(&#x27;is-on&#x27;)});
+      var el=items[i];
+      el.style.setProperty(&#x27;--rbx&#x27;,(dir&lt;0?-24:24)+&#x27;px&#x27;);
+      el.classList.add(&#x27;is-on&#x27;);
+      cur=i;
+      window.scrollTo(0,0);
+      window.dispatchEvent(new Event(&#x27;resize&#x27;));
+      requestAnimationFrame(function(){send(&#x27;state&#x27;)});
+      setTimeout(function(){send(&#x27;state&#x27;)},420);
+    }
+    window.addEventListener(&#x27;message&#x27;,function(e){
+      var m=e.data;if(!m||typeof m!==&#x27;object&#x27;)return;
+      if(typeof m.rbGo===&#x27;number&#x27;)show(m.rbGo,m.rbGo&gt;cur?1:-1);
+      else if(typeof m.rbStep===&#x27;number&#x27;)show(cur+m.rbStep,m.rbStep);
+    });
+    var sx=null;
+    document.addEventListener(&#x27;touchstart&#x27;,function(e){sx=e.touches[0].clientX},{passive:true});
+    document.addEventListener(&#x27;touchend&#x27;,function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)&gt;50)show(cur+(dx&lt;0?1:-1),dx&lt;0?1:-1);sx=null},{passive:true});
+    document.addEventListener(&#x27;keydown&#x27;,function(e){if(e.key===&#x27;ArrowRight&#x27;){show(cur+1,1)}else if(e.key===&#x27;ArrowLeft&#x27;){show(cur-1,-1)}});
+    try{new ResizeObserver(function(){send(&#x27;size&#x27;)}).observe(document.body)}catch(e){}
+    show(0,1);
+    send(&#x27;init&#x27;);
+    setTimeout(function(){send(&#x27;init&#x27;)},600);
+  }
+  if(document.readyState===&#x27;complete&#x27;)boot();else window.addEventListener(&#x27;load&#x27;,boot);
+})();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+      <div class="rbox-nav">
+        <button type="button" id="rbPrev">이전</button>
+        <div class="rb-mid"><div class="rb-dots" id="rbDots"></div><span class="rbox-src">출처 · 구글 트렌드 · 구글 검색결과 상위 10위 · 구글 자동완성 · StatCounter 2026-08 · 보건복지부·KHIDI 2025 외국인환자 실적 (2026.09.17 직접 수집)</span></div>
+        <button type="button" id="rbNext">다음</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>도메인 선택안과 발생 비용</h2>
+    <p class="muted narrow">시술마다 서브도메인 하나를 "독립된 가격 홈페이지"처럼 운영합니다. 이벤트가 바뀌어도 주소는 그대로 두고 가격만 교체해, 같은 주소에 검색 순위가 쌓이게 합니다.</p>
+    <div class="grid2" style="margin-top:12px">
+      <div class="panel">
+        <h3>1안: 신규 .com 1개 + 시술별 서브도메인</h3>
+        <ul class="small">
+          <li>예: 대표 도메인 <b>blossomskinclinic.com</b> 아래 ultherapy.blossomskinclinic.com, thermage.blossomskinclinic.com (시술 이름은 도메인이 아니라 서브도메인에만 들어갑니다)</li>
+          <li>문제가 생겨도 beautyblossom.kr과 기존 en·jp·tw 사이트가 영향을 받지 않음</li>
+          <li>.kr의 "한국 대상" 신호가 없어 해외 노출에 중립적</li>
+          <li>확인된 경쟁 병원 4곳 모두 공식 사이트와 분리된 별도 도메인 사용</li>
+          <li>가비아에서 구매 후 네임서버만 Cloudflare로 변경 (새 도메인이라 옮길 기존 레코드 없음)</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>2안 (비용 0원 대안): beautyblossom.kr 서브도메인</h3>
+        <ul class="small">
+          <li>예: ultherapy.beautyblossom.kr</li>
+          <li>가비아 DNS에서 레코드만 추가, 추가 비용 없음</li>
+          <li>기존 도메인 권위를 활용해 초기 노출이 빠를 수 있음</li>
+          <li>.kr은 구글에서 한국 대상 신호라 해외 노출에 다소 불리할 수 있음 (hreflang·현지화로 보완)</li>
+          <li>스팸 판정 시 공식 사이트까지 영향 가능 → 소수 파일럿에 적합</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:28px">1안 발생 비용 (가비아 .com 구매 기준)</h3>
+    <div class="scroll" style="margin-top:10px">
+      <table>
+        <thead><tr><th>항목</th><th>내용</th><th>금액</th></tr></thead>
+        <tbody>
+          <tr><td>도메인 등록</td><td>가비아 .com 신규 1년 (이벤트가, VAT 포함)</td><td><b>약 19,800원</b></td></tr>
+          <tr><td>도메인 연장</td><td>2년차부터 정가 (VAT 포함)</td><td><b>연 약 26,400원</b></td></tr>
+          <tr><td>DNS·배포</td><td>Cloudflare 무료 플랜 (Pages, Workers)</td><td>0원</td></tr>
+          <tr><td>SSL</td><td>Cloudflare 무료 인증서 (1단계 서브도메인 자동 적용)</td><td>0원</td></tr>
+          <tr><td>DB 저장</td><td>신청 폼 → 구글시트 또는 Cloudflare D1</td><td>0원</td></tr>
+          <tr><td>실시간 채팅</td><td>tawk.to 무료 플랜으로 오픈 → Chatwoot 셀프호스팅(사내 PC)으로 전환 가능, 메신저는 링크 버튼</td><td>0원</td></tr>
+          <tr><td>색인</td><td>구글 서치콘솔, 네이버 서치어드바이저</td><td>0원</td></tr>
+          <tr><td><b>합계</b></td><td></td><td><b>1년차 약 19,800원 · 2년차부터 연 약 26,400원</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="small muted narrow" style="margin-top:12px;padding-left:1.1em">
+      <li>가비아 이벤트가는 1년 등록에만 적용됩니다. 2년 이상 등록 시 다른 할인율이 적용됩니다.</li>
+      <li>.com 레지스트리 도매가가 11월 1일 인상됩니다. 2년차 연장가는 가비아 정책에 따라 달라질 수 있습니다.</li>
+      <li>선택 비용: 채팅창의 무료 플랜 표시("Powered by") 제거 시 월 약 $29. AI 자동응답은 2차 단계에서 별도 판단합니다.</li>
+      <li>금액 외 투입: 제작 인력(마케팅파트), 언어별 번역 검수, 채팅 응대 인력(해외마케팅 팀원)</li>
+    </ul>
+
+    <h3 style="margin-top:28px">대표 도메인명: 신뢰형 키워드 기반</h3>
+    <p class="small muted narrow">대표 도메인은 시술명이 아니라 병원 신뢰도를 주는 이름으로 정하고, 시술은 그 아래 서브도메인으로 붙입니다. 해외 사용자의 구글 자동완성에서 반복 확인된 검색어를 기준으로 골랐습니다. (2026년 9월 17일 조회)</p>
+    <div class="grid2" style="margin-top:10px">
+      <div class="panel">
+        <h3>해외 사용자가 실제로 쓰는 신뢰형 검색어</h3>
+        <ul class="small">
+          <li><b>korea skin clinic</b> → seoul, gangnam, myeongdong, recommendations, reddit 등으로 확장</li>
+          <li><b>seoul skin clinic</b> → for foreigners, reviews, appointments</li>
+          <li><b>korean aesthetic clinic</b> → seoul, singapore, london</li>
+          <li><b>korea clinic</b> → aesthetic, beauty, skin, rejuran</li>
+        </ul>
+        <p class="small muted">공통 핵심어는 "skin clinic", "korea/seoul"입니다.</p>
+      </div>
+      <div class="panel">
+        <h3>등록 가능한 후보</h3>
+        <ul class="small">
+          <li><b>blossomskinclinic.com (추천)</b> — 병원명 + 핵심어. 실제 운영 병원이 드러나 신뢰도와 광고 투명성을 동시에 확보</li>
+          <li><b>koreabeautyclinic.com (차선)</b> — "korea clinic beauty" 검색어와 일치하는 일반 명칭</li>
+          <li>seoulkskinclinic.com, kskinclinicseoul.com — 짧은 K-스킨 계열</li>
+          <li>koreaskinclinicseoul.com — 최다 검색어 "korea skin clinic" 포함 (다소 김)</li>
+          <li>koreanaestheticclinic.com — "korean aesthetic clinic" 검색어와 일치</li>
+          <li>hapjeongskinclinic.com — 지역형</li>
+        </ul>
+        <p class="small muted">이미 등록된 이름: koreaskinclinic.com, seoulskinclinic.com, koreanskinclinic.com, seoulaestheticclinic.com, koreahospital.com, koreaclinic.com 등</p>
+      </div>
+    </div>
+    <div class="panel no" style="margin-top:12px">
+      <h3>도메인명에 넣지 않을 단어</h3>
+      <ul class="small">
+        <li><b>hospital:</b> 뷰티블라썸은 의원이라 "병원"으로 읽히는 이름은 사실과 다르게 보일 수 있음</li>
+        <li><b>dermatology:</b> 피부과 전문의원으로 오인될 수 있음. "skin clinic"이 검색어로도 더 많이 쓰임</li>
+        <li><b>guide·foreigners·official 계열:</b> 중립 안내 사이트나 공공기관처럼 보일 수 있음</li>
+        <li><b>시술명·price:</b> 대표 도메인이 특정 시술 판매 사이트처럼 보이고 스팸처럼 인식될 수 있음</li>
+      </ul>
+      <p class="small muted">.clinic 같은 신규 도메인(예: beautyblossom.clinic)도 등록 가능하지만 연장비가 .com보다 크게 높아 1안에서는 .com을 유지합니다.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>페이지 구조</h2>
+    <div class="grid2">
+      <div class="panel">
+        <h3>URL 설계</h3>
+        <p class="small muted">시술 1개 = 서브도메인 1개. 그 안에 언어 폴더를 둡니다. 같은 시술로 서브도메인을 여러 개 만들지 않습니다.</p>
+        <ul class="small">
+          <li>ultherapy.도메인.com/ja/</li>
+          <li>ultherapy.도메인.com/zh-tw/</li>
+          <li>ultherapy.도메인.com/en/</li>
+          <li>ultherapy.도메인.com/th/</li>
+          <li>루트 도메인: 시술별 대표 가격 카드 허브 → 각 서브도메인으로 연결</li>
+        </ul>
+        <p class="small muted">1차 시술 후보: 울쎄라피 프라임, 써마지 FLX, 리쥬란, 쥬베룩, 포텐자 등 10개</p>
+      </div>
+      <div class="panel">
+        <h3>한 페이지의 구성</h3>
+        <p class="small"><b>핵심: 들어오자마자 첫 화면에 가격이 바로 보입니다.</b></p>
+        <ul class="small">
+          <li><b>첫 화면(스크롤 없이):</b> 제목 → 샷수·용량별 가격표(정가 → 이벤트가, 기간, 대상, VAT를 한 블록에) → 채팅·상담 신청 버튼</li>
+          <li>질문형 제목: "한국에서 ○○ 받으면 얼마?"</li>
+          <li>현지 통화 참고 환산 (KRW 기준)</li>
+          <li>시술 설명, 회차, 소요 시간, 자주 묻는 질문</li>
+          <li>채팅 버튼과 예약 요청 폼</li>
+          <li>병원 정보: 주소, 대표자, 사업자번호, 지도</li>
+          <li>부작용과 개인차 고지</li>
+        </ul>
+      </div>
+    </div>
+    <p class="small muted" style="margin-top:16px">시술명만 바꾼 똑같은 페이지를 여러 개 만들면 구글이 도어웨이·대량 콘텐츠 남용으로 판단할 수 있습니다. 시술별 설명과 FAQ는 반드시 따로 작성하고, 10개씩 단계적으로 늘리며 서치콘솔로 상태를 확인합니다. 도메인을 여러 개로 쪼개는 것도 같은 정책에 해당하므로 도메인은 1개로 운영합니다.</p>
+  </section>
+
+  <section>
+    <h2>고객이 들어와서 예약되기까지</h2>
+    <ol class="flow narrow">
+      <li><h3>검색</h3><p class="small muted">자국어로 "한국 울쎄라 가격"을 검색하고, 가격이 드러난 제목을 보고 클릭합니다.</p></li>
+      <li><h3>가격 확인</h3><p class="small muted">첫 화면에서 정가, 이벤트가, 기간을 바로 봅니다.</p></li>
+      <li><h3>채팅 시작</h3><p class="small muted">페이지 안 채팅창을 열면 이름과 답변 받을 곳(WhatsApp·LINE·이메일)을 먼저 남기고 상담원과 대화합니다. 창을 닫거나 한국 시간 밖이어도 고객이 고른 수단으로 답변이 이어집니다.</p></li>
+      <li><h3>DB 저장</h3><p class="small muted">이름, 국가, 답변 받을 곳(WhatsApp·LINE·이메일), 메신저 ID, 관심 시술, 희망 날짜, 방문 유형, 유입 페이지, 이관 채널이 구글시트 한 곳에 쌓입니다.</p>
+        <div class="panel" style="margin-top:10px">
+          <p class="small"><b>신청 폼의 방문 유형 선택</b></p>
+          <ul class="small" style="margin:0;padding-left:1.1em">
+            <li><b>시술 예약 방문</b> — 진료 후 바로 시술 진행 (대기 시간이 짧아요)</li>
+            <li><b>상담 후 결정</b> — 진료·상담을 받고 시술 여부 결정 (대기 시간이 생길 수 있어요)</li>
+          </ul>
+          <p class="small muted" style="margin:8px 0 0">두 유형 모두 시술 전 원장 진료를 거치며, 시술 가능 여부는 진료 결과에 따라 달라질 수 있다는 문구를 선택란 아래에 함께 표기합니다. 유형 선택에 따른 가격 혜택은 두지 않습니다.</p>
+        </div></li>
+      <li><h3>담당자 배정</h3><p class="small muted">국가별로 해외마케팅 팀원에게 자동 배정되고, 영업시간 안에 사람이 이어받습니다.</p></li>
+      <li><h3>예약 확정</h3><p class="small muted">방문 유형에 맞춰 일정을 확정합니다. "시술 예약 방문"은 시술 시간까지 함께 잡아 대기를 줄이고, "상담 후 결정"은 진료·상담 시간을 먼저 잡습니다.</p></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>실시간 채팅 설계</h2>
+    <div class="roas" style="margin-bottom:16px">
+      <div class="panel after">
+        <p class="small muted">1차 (구축 시점)</p>
+        <h3>사람이 응대하는 실시간 채팅 + DB 즉시 수집</h3>
+        <p class="small">무료 채팅 위젯과 신청 폼으로 오픈 첫날부터 DB가 들어오게 합니다. 해외마케팅 팀원이 국가별로 응대합니다.</p>
+      </div>
+      <div class="panel">
+        <p class="small muted">2차 (DB 전환 데이터 확인 후)</p>
+        <h3>AI 자동응답 추가 여부 판단</h3>
+        <p class="small">맥스튜디오 로컬 LLM은 테스트·개발 기간이 필요합니다. 채팅 유입량과 시간 외 문의 비중을 보고 도입을 결정합니다. 맥이 멈출 때는 Cloudflare Workers AI 무료 할당량(일 10,000 Neurons)으로 전환하는 구조를 검토합니다.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:8px">채팅 도구 선택안 (모두 비용 0원 구성)</h3>
+    <div class="scroll" style="margin-top:10px">
+      <table>
+        <thead><tr><th>구분</th><th>A. tawk.to (1차 오픈용)</th><th>B. Chatwoot 셀프호스팅 (안정화 후)</th><th>C. 메신저 링크 버튼 (병행)</th></tr></thead>
+        <tbody>
+          <tr><td>형태</td><td>설치 없는 무료 호스팅 채팅</td><td>오픈소스(MIT)를 사내 PC에 Docker로 설치</td><td>WhatsApp·LINE으로 넘어가는 링크</td></tr>
+          <tr><td>비용</td><td>0원 (채팅·상담원 수 무제한)</td><td>0원 (상담원 수 제한·인당 요금 없음)</td><td>0원 (API 미사용)</td></tr>
+          <tr><td>도입 방법</td><td>가입 후 스크립트 한 줄을 랜딩에 삽입</td><td>Docker Compose로 설치 → Cloudflare Tunnel로 외부 연결 → 위젯 스크립트 삽입 (반나절 작업)</td><td>버튼에 링크만 연결</td></tr>
+          <tr><td>장점</td><td>당일 오픈 가능, 서버 관리 없음, 상담원용 모바일·PC 앱 제공</td><td>로고 표시 없음, 대화 데이터를 사내에 보관, 2차 단계에서 로컬 LLM 자동응답 연결이 쉬움</td><td>고객이 익숙한 앱으로 상담</td></tr>
+          <tr><td>제약</td><td>채팅창에 "Powered by tawk.to" 표시 (제거 시 월 약 $29)</td><td>PC가 24시간 켜져 있어야 함, 재부팅·업데이트·백업을 직접 관리</td><td>어느 랜딩에서 왔는지 자동 기록이 약함</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted narrow" style="margin-top:10px">운영 순서: A로 오픈하고, 그동안 B를 사내에서 테스트한 뒤 안정성이 확인되면 위젯 스크립트만 교체합니다. C는 A·B와 항상 함께 둡니다. 채팅 서버가 멈춰도 고객이 메신저와 신청 폼으로 연락할 수 있게 하기 위해서입니다.</p>
+
+    <div class="grid2" style="margin-top:16px">
+      <div class="panel">
+        <h3>고객은 이렇게 채팅합니다</h3>
+        <ol class="small" style="padding-left:1.2em;margin:0">
+          <li>랜딩 첫 화면에서 가격 확인</li>
+          <li>오른쪽 아래 채팅 버튼 클릭 → 페이지 위에 채팅창이 열림 (앱 설치·회원가입 없음)</li>
+          <li>메시지 입력 (필요하면 이름·이메일을 먼저 받도록 설정)</li>
+          <li>상담원이 답하면 같은 창에서 실시간 대화</li>
+          <li>창을 닫았다 다시 열어도 같은 브라우저면 대화가 이어짐</li>
+          <li>상담원이 없을 때 남긴 메시지는 인박스에 쌓이고, 이메일을 받아둔 경우 답변이 이메일로도 전달됨</li>
+        </ol>
+      </div>
+      <div class="panel">
+        <h3>상담원은 이렇게 응대합니다</h3>
+        <ul class="small">
+          <li>관리 화면(웹) 또는 모바일 앱에서 모든 랜딩의 대화를 한 곳에서 받음</li>
+          <li>대화마다 유입 URL이 표시되어 시술·언어를 바로 파악 (예: 일본어 울쎄라 페이지)</li>
+          <li>언어·국가별로 해외마케팅 팀원에게 배정</li>
+          <li>대화 중 받은 연락처는 통합 DB 시트에 기록하고 연락완료 체크</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:16px;border:2px solid var(--rose)">
+      <h3>고객이 채팅창을 닫아도 놓치지 않는 구조</h3>
+      <p class="small">웹 채팅은 고객이 창을 닫으면 같은 브라우저로 다시 들어오기 전까지 답변을 볼 수 없습니다. 그래서 대화를 시작하기 전에 <b>"답변 받을 곳"</b>을 먼저 받고, WhatsApp·LINE으로 상담을 이어갑니다.</p>
+      <div class="grid2" style="margin-top:10px">
+        <div>
+          <p class="small"><b>① 채팅 시작 전 입력창</b></p>
+          <ul class="small">
+            <li>이름</li>
+            <li>답변 받을 곳 선택: WhatsApp 번호 / LINE / 이메일</li>
+            <li>개인정보 수집·이용 동의</li>
+          </ul>
+          <p class="small muted">입력과 동시에 통합 DB 시트에 한 줄이 추가됩니다 (유입 URL, 선택한 연락 수단 포함). 창을 닫아도 DB는 이미 확보된 상태입니다.</p>
+        </div>
+        <div>
+          <p class="small"><b>② 창을 닫았을 때 답변 경로</b></p>
+          <ul class="small">
+            <li><b>이메일:</b> 상담원 답변이 이메일로 자동 전달되고, 고객이 메일로 답장하면 채팅 인박스로 다시 들어옵니다.</li>
+            <li><b>WhatsApp:</b> 담당자가 무료 WhatsApp Business 앱에서 해당 번호로 직접 이어서 상담합니다. (API 미사용, 0원)</li>
+            <li><b>LINE:</b> 공식계정은 친구 추가한 고객에게만 메시지를 보낼 수 있어, LINE 선택 시 채팅창에 "친구 추가하고 답변 받기" 버튼을 바로 띄웁니다. 친구 추가 후 1:1 채팅 답장은 무료입니다.</li>
+            <li><b>같은 브라우저로 재방문:</b> 대화가 남아 있어 채팅창에서 그대로 이어집니다.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="small muted" style="margin-top:6px">운영 규칙: 대화가 끊기면 담당자가 고객이 고른 수단으로 이어받고, DB 시트에 "이관 채널"을 기록합니다.</p>
+      <div class="panel" style="margin-top:12px;background:var(--petal);border:0">
+        <p class="small"><b>③ 실시간 채팅 가능 시간 안내</b> <span class="small muted">(추후 구현 · 1차 오픈 범위 제외)</span></p>
+        <ul class="small" style="margin:0;padding-left:1.1em">
+          <li><b>채팅 버튼과 채팅창 상단에 표시:</b> "실시간 채팅 상담 ○○:○○~○○:○○ (한국 시간)"</li>
+          <li><b>고객 현지 시간 병기:</b> 방문자 기기 시간대를 읽어 "현지 시간 ○○:○○~○○:○○"을 함께 보여줍니다. (예: 일본은 한국과 같은 시각, 대만·홍콩·말레이시아는 1시간 이른 시각, 태국·베트남은 2시간 이른 시각. 한국 10:00 = 태국 08:00)</li>
+          <li><b>운영 시간 안:</b> "지금 상담 가능합니다" 표시 후 바로 대화</li>
+          <li><b>운영 시간 밖:</b> "지금은 상담 시간이 아닙니다. 연락처를 남겨주시면 ○○시 이후 순서대로 답변드립니다" 안내와 함께 ① 입력창으로 연결</li>
+          <li><b>표기 언어:</b> 각 랜딩 언어로 번역해 표시하고, 운영 시간은 진료 시간·팀원 근무 시간에 맞춰 확정합니다.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel no" style="margin-top:16px">
+      <h3>비용이 생기는 경우 (2차 단계에서 검토)</h3>
+      <ul class="small">
+        <li><b>WhatsApp API 연동:</b> 메시지를 채팅 인박스에 모으거나 자동 발송하려면 WhatsApp Business Platform(API)을 써야 하며, 2026년 10월 1일부터는 고객 문의에 답하는 메시지도 번호당 월 1,000건을 넘으면 과금됩니다. 링크 버튼 + 무료 WhatsApp Business 앱 직접 응대는 비용이 없습니다.</li>
+        <li><b>LINE 단체 발송:</b> 1:1 채팅 답장은 무료 발송 건수에 포함되지 않지만, 친구 대상 일괄 메시지는 무료 플랜 기준 월 200건까지입니다.</li>
+        <li><b>Chatwoot 안에 메신저 연결:</b> 결국 각 메신저 API를 쓰는 구조라 위 과금이 그대로 적용됩니다.</li>
+      </ul>
+    </div>
+    <div class="grid2">
+      <div class="panel">
+        <h3>채널 선택</h3>
+        <ul class="small">
+          <li><b>메신저 연결형:</b> LINE·WhatsApp 버튼. 가장 빠르게 시작할 수 있고 이탈이 적음</li>
+          <li><b>웹 채팅 위젯형:</b> 페이지 안에서 대화. 어떤 시술 페이지에서 들어왔는지 기록됨</li>
+          <li><b>통합 인박스:</b> LINE, WhatsApp, 웹 채팅을 한 화면에서 응대. 도입 전에 채널 연동 범위 확인</li>
+          <li><b>AI 1차 응대 (2차 단계):</b> 가격, 예약 가능일, 위치 안내까지만. 강남언니 자동응대 로직 재활용</li>
+        </ul>
+      </div>
+      <div class="panel no">
+        <h3>채팅에서 하지 않는 것</h3>
+        <ul class="small">
+          <li>사진을 보고 시술을 추천하는 등 진단·처방성 답변</li>
+          <li>"결과 보장", "가장 저렴" 같은 표현</li>
+          <li>"오늘 채팅하면 추가 할인" 같은 신청 혜택</li>
+          <li>AI 응대라는 사실을 숨기는 것</li>
+          <li>받은 얼굴 사진을 기한 없이 보관하는 것</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>광고비 없이 트래픽을 만드는 방법</h2>
+    <div class="grid2">
+      <div class="panel">
+        <h3>검색</h3>
+        <ul class="small">
+          <li>시술 × 국가 가격 롱테일 키워드로 페이지 확장</li>
+          <li>서치콘솔 등록, sitemap, hreflang(언어 간 연결)</li>
+          <li>MedicalClinic + Offer 구조화 데이터</li>
+          <li>기존 en·jp·tw·th 사이트의 시술 페이지에서 가격 페이지로 내부 링크</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>이미 가진 채널</h3>
+        <ul class="small">
+          <li>국가별 인스타·유튜브 쇼츠 프로필 링크와 영상 설명란</li>
+          <li>LINE 공식계정 리치메뉴에 가격 페이지 연결</li>
+          <li>구글 비즈니스 프로필 웹사이트 링크</li>
+          <li>리뷰 답글과 해외 커뮤니티 답변에서 자연스럽게 연결</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="narrow">
+      <h2>오픈 전 확인 목록</h2>
+      <ul class="check">
+        <li>정가, 이벤트가, 기간, 대상을 한 블록에 같이 표기</li>
+        <li>검색결과 제목과 설명에는 할인율을 넣지 않음</li>
+        <li>"BEST", "최고" 같은 최상급 표현은 쓰지 않음</li>
+        <li>가짜 신청 현황 롤링은 넣지 않음</li>
+        <li>국내 대상 광고는 집행하지 않고 해외 오가닉으로만 운영<br><span class="small muted">국내 광고 자체가 불법은 아닙니다. 다만 해외 환자용 랜딩을 국내에 광고하면 "외국인환자 유치 목적 국내광고 금지"(의료법 시행령 제23조 제1항 제12호)에 해당한다는 주장이 나올 수 있어, 경쟁 병원의 무분별한 신고나 네거티브 공세에 빌미를 주지 않기 위한 사전 방어 조치입니다.</span></li>
+        <li>폼: 필수 동의와 마케팅 동의 분리, 기본값은 체크 해제</li>
+        <li>개인정보처리방침에 채팅 솔루션과 해외 서버를 위탁·국외이전으로 명시</li>
+        <li>채팅창에 한국 기준 응대 시간 표시 (AI 도입 시 AI 응대 표시 추가)</li>
+        <li>부작용·개인차 고지, 병원 사업자 정보 표기</li>
+        <li>첫 화면에 "뷰티블라썸의원 운영 사이트" 표기</li>
+        <li>vercel.app 등 임시 주소는 최종 도메인으로 리다이렉트</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>진행 순서</h2>
+    <ol class="flow narrow">
+      <li><h3>1~2주차: 대표 도메인 등록 + 첫 시술 페이지 파일럿</h3><p class="small muted">가비아 .com 등록, 네임서버 Cloudflare 변경, 첫 시술(울쎄라)을 대표 도메인의 서브도메인으로 만들어 일본어·번체중국어(대만) 페이지 오픈, 채팅·폼·시트 저장 흐름 검증, 색인 요청</p></li>
+      <li><h3>1개월차: 시술 10개로 확장</h3><p class="small muted">시술별 고유 콘텐츠 작성, 워딩 검수, 공식 사이트에서 내부 링크, 쇼츠 설명란 연결</p></li>
+      <li><h3>2개월차: 언어 확장</h3><p class="small muted">조사 결과 기준 2단계 홍콩(번체 콘텐츠 공유, 홍콩식 표기로 교체)·싱가포르(영어) 추가</p></li>
+      <li><h3>3개월차: 성과 판단</h3><p class="small muted">노출·DB·예약 전환 확인 → 서브도메인 10개씩 추가 여부, AI 자동응답 도입 여부, 채팅 가능 시간 안내(현지 시간 병기) 구현 시점 결정</p></li>
+    </ol>
+    <p class="narrow" style="margin-top:8px"><b>보는 숫자</b></p>
+    <ul class="kpi">
+      <li>색인된 페이지 수</li>
+      <li>검색 노출과 클릭률</li>
+      <li>채팅 시작률</li>
+      <li>월 DB 건수</li>
+      <li>DB 대비 예약 확정률</li>
+      <li>국가별 내원 수</li>
+      <li>오가닉 DB 비중</li>
+      <li>메타 포함 통합 ROAS</li>
+      <li>메타 DB 대비 예약 전환율 차이</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="narrow">
+      <h2>회의에서 정할 것</h2>
+      <ol class="decide">
+        <li>도메인 선택안(1안 신규 .com / 2안 .kr 서브도메인)과 최종 도메인명</li>
+        <li>채팅 도구 운영 순서 확정 (tawk.to 오픈 → Chatwoot 전환 시점), Chatwoot를 올릴 PC와 관리 담당</li>
+        <li>2차 AI 자동응답 도입 판단 기준 (DB 유입량, 시간 외 문의 비중)</li>
+        <li>국가별 담당 팀원과 응대 시간</li>
+        <li>외국인 대상 가격 정책(국내 이벤트가와 동일하게 갈지)과 가격이 바뀔 때 수정하는 사람</li>
+        <li>1차로 올릴 시술 10개</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    뷰티블라썸의원 · 서울특별시 마포구 양화로66 · 대표 이건호 · Zero-Cost Lead Engine 내부 검토용 기획안
+  </footer>
+</main>
+
+<script>
+const D={
+  jp:{q:'韓国 ウルセラ 値段',u:'○○○.com › ja › ultherapy-price',t:'韓国ウルセラの値段｜合井駅 Beauty Blossom Clinic',d:'ウルセラピー プライムの料金、施術時間、予約方法をまとめました。LINEですぐ相談できます。',brand:'Beauty Blossom',lang:'日本語',h:'韓国でウルセラを受けると、いくら？',l:'ソウル・合井駅すぐのクリニックの料金表です。',nm:'ウルセラピー プライム 300ショット',rg:'通常価格',pd:'期間',meta:'税別（VAT10%）。円表示は参考換算です。',chat:'LINEで相談する',cc:'var(--line)',form:'予約リクエストを送る',note:'施術の可否は来院時の医師の診察で決まります。',ai:'AI自動応答',bt:'こんにちは。ご希望の来院日を教えてください。料金と空き状況をご案内します。'},
+  tw:{q:'韓國 Ulthera 價格',u:'○○○.com › zh-tw › ultherapy-price',t:'韓國 Ulthera 價格｜合井站 麗朵皮膚科',d:'整理 Ulthera Prime 的價格、療程時間與預約方式，可直接用 LINE 諮詢。',brand:'麗朵皮膚科',lang:'繁體中文',h:'在韓國做 Ulthera，要多少錢？',l:'首爾合井站旁診所的價目表。',nm:'Ulthera Prime 300發',rg:'原價',pd:'活動期間',meta:'未稅（VAT 10%）。台幣金額僅供參考。',chat:'用 LINE 諮詢',cc:'var(--line)',form:'送出預約需求',note:'是否適合療程，將於到院後由醫師看診決定。',ai:'AI 自動回覆',bt:'您好！請告訴我們希望的到院日期，我們會說明價格與可預約時段。'},
+  en:{q:'ultherapy price korea',u:'○○○.com › en › ultherapy-price-korea',t:'Ultherapy Price in Korea | Beauty Blossom Clinic, Hapjeong',d:'Ultherapy Prime pricing, treatment time and how to book. Chat with us directly.',brand:'Beauty Blossom',lang:'English',h:'How much is Ultherapy in Korea?',l:'Price list from a clinic next to Hapjeong Station, Seoul.',nm:'Ultherapy Prime, 300 shots',rg:'Regular price',pd:'Offer period',meta:'Excl. 10% VAT. USD shown for reference only.',chat:'Chat on WhatsApp',cc:'var(--wa)',form:'Send a booking request',note:'Whether the treatment suits you is decided by the doctor at your visit.',ai:'AI auto-reply',bt:'Hi! Tell us the date you’d like to visit and we’ll share prices and open slots.'},
+  th:{q:'ราคา อัลเทอร่า เกาหลี',u:'○○○.com › th › ultherapy-price',t:'ราคาอัลเทอร่าที่เกาหลี | Beauty Blossom Clinic ฮับจอง',d:'สรุปราคา Ultherapy Prime ระยะเวลาทำ และวิธีจองคิว ปรึกษาทาง LINE ได้ทันที',brand:'Beauty Blossom',lang:'ภาษาไทย',h:'ทำอัลเทอร่าที่เกาหลี ราคาเท่าไร?',l:'ตารางราคาจากคลินิกใกล้สถานีฮับจอง กรุงโซล',nm:'Ultherapy Prime 300 ช็อต',rg:'ราคาปกติ',pd:'ระยะเวลาโปรโมชั่น',meta:'ไม่รวม VAT 10% ราคาเงินบาทเป็นการประมาณ',chat:'ปรึกษาทาง LINE',cc:'var(--line)',form:'ส่งคำขอจองคิว',note:'ความเหมาะสมของหัตถการจะประเมินโดยแพทย์เมื่อมาที่คลินิก',ai:'ตอบกลับอัตโนมัติด้วย AI',bt:'สวัสดีค่ะ แจ้งวันที่ต้องการมาคลินิกได้เลย เราจะแจ้งราคาและคิวว่างให้ค่ะ'},
+  id:{q:'harga ulthera korea',u:'○○○.com › id › harga-ulthera-korea',t:'Harga Ulthera di Korea | Beauty Blossom Clinic, Hapjeong',d:'Harga Ultherapy Prime, durasi perawatan, dan cara booking. Chat langsung via WhatsApp.',brand:'Beauty Blossom',lang:'Bahasa Indonesia',h:'Berapa harga Ulthera di Korea?',l:'Daftar harga dari klinik dekat Stasiun Hapjeong, Seoul.',nm:'Ultherapy Prime 300 shot',rg:'Harga normal',pd:'Periode promo',meta:'Belum termasuk PPN 10%. Rupiah hanya perkiraan.',chat:'Chat via WhatsApp',cc:'var(--wa)',form:'Kirim permintaan booking',note:'Kecocokan perawatan ditentukan dokter saat kunjungan.',ai:'Balasan otomatis AI',bt:'Halo! Beri tahu tanggal kunjungan yang diinginkan, kami kirimkan harga dan jadwal kosong.'}
+};
+const $=id=>document.getElementById(id);
+function show(k){
+  const x=D[k];
+  $('s-q').textContent='🔍 '+x.q; $('s-u').textContent=x.u; $('s-t').textContent=x.t; $('s-d').textContent=x.d;
+  $('p-brand').textContent=x.brand; $('p-lang').textContent=x.lang; $('p-h').textContent=x.h; $('p-l').textContent=x.l;
+  $('p-nm').textContent=x.nm; $('p-rg-k').textContent=x.rg; $('p-pd-k').textContent=x.pd; $('p-meta').textContent=x.meta;
+  const c=$('p-chat'); c.textContent=x.chat; c.style.background=x.cc;
+  $('p-form').textContent=x.form; $('p-note').textContent=x.note; $('p-ai').textContent=x.ai; $('p-bt').textContent=x.bt;
+  const b=$('p-bub'); b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop');
+  document.querySelectorAll('.tabs button').forEach(t=>t.setAttribute('aria-selected',t.dataset.k===k));
+}
+document.querySelectorAll('.tabs button').forEach(t=>t.addEventListener('click',()=>show(t.dataset.k)));
+show('jp');
+</script>
+
+<script>
+(function(){
+  const f=document.getElementById('rbFrame');
+  const box=document.querySelector('.rbox');
+  const prev=document.getElementById('rbPrev'),next=document.getElementById('rbNext'),dots=document.getElementById('rbDots');
+  const aPrev=document.getElementById('rbArrowPrev'),aNext=document.getElementById('rbArrowNext');
+  const titleEl=document.getElementById('rbTitle'),countEl=document.getElementById('rbCount');
+  let cur=0,count=0,ready=false;
+
+  // 보고서는 iframe 안에서 스스로 슬라이드를 나눕니다.
+  // 부모는 contentDocument를 건드리지 않고 postMessage로만 주고받으므로
+  // iframe이 샌드박스·교차출처여도 그대로 동작합니다.
+  function post(msg){try{f.contentWindow.postMessage(msg,'*')}catch(e){}}
+
+  function buildDots(titles){
+    dots.innerHTML='';
+    titles.forEach((t,i)=>{
+      const b=document.createElement('button');
+      b.type='button';
+      b.setAttribute('aria-label',(i+1)+'번: '+t);
+      b.addEventListener('click',()=>post({rbGo:i}));
+      dots.appendChild(b);
+    });
+  }
+
+  window.addEventListener('message',e=>{
+    if(e.source!==f.contentWindow)return;
+    const m=e.data;
+    if(!m||typeof m!=='object'||!m.rb)return;
+    ready=true;
+    if(Array.isArray(m.titles)&&m.titles.length!==count){count=m.titles.length;buildDots(m.titles)}
+    if(typeof m.index==='number'){
+      cur=m.index;
+      if(m.count)count=m.count;
+      titleEl.textContent=m.title||'';
+      countEl.textContent=(cur+1)+' / '+count;
+      prev.disabled=aPrev.disabled=cur===0;
+      next.disabled=aNext.disabled=cur===count-1;
+      [...dots.children].forEach((b,k)=>b.setAttribute('aria-current',k===cur?'true':'false'));
+    }
+  });
+
+  // 상자 높이가 고정이라 페이지를 다시 스크롤할 필요가 없습니다 — 제자리에서 넘어갑니다.
+  function step(d){post({rbStep:d})}
+  prev.addEventListener('click',()=>step(-1));
+  next.addEventListener('click',()=>step(1));
+  aPrev.addEventListener('click',()=>step(-1));
+  aNext.addEventListener('click',()=>step(1));
+  box.setAttribute('tabindex','0');
+  box.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'){e.preventDefault();post({rbStep:1})}
+    else if(e.key==='ArrowLeft'){e.preventDefault();post({rbStep:-1})}
+  });
+
+  // iframe 스크립트가 막힌 환경에서는 슬라이드 대신 보고서 전체를 스크롤로 보여줍니다.
+  setTimeout(()=>{
+    if(ready)return;
+    titleEl.textContent='국가별 수요·진입환경 조사 보고서';
+    countEl.textContent='전체 보기';
+    prev.disabled=next.disabled=aPrev.disabled=aNext.disabled=true;
+    dots.innerHTML='';
+  },3000);
+})();
+</script>
+
+</body>
+</html>
