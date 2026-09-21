@@ -1,0 +1,2362 @@
+{
+ "issue": "2026-W39",
+ "round": 5,
+ "published": "2026-09-21",
+ "window_kst": [
+  "2026-09-14",
+  "2026-09-20"
+ ],
+ "naver": {
+  "requested": 74,
+  "returned": 73,
+  "total_prev": 1134550,
+  "total_now": 1146390,
+  "up": 41,
+  "down": 27,
+  "flat": 5,
+  "themes": {
+   "리프팅·타이트닝": {
+    "prev": 429970,
+    "now": 432650,
+    "pct": 0.62
+   },
+   "스킨부스터·주사": {
+    "prev": 259860,
+    "now": 270560,
+    "pct": 4.12
+   },
+   "보톡스": {
+    "prev": 101440,
+    "now": 103480,
+    "pct": 2.01
+   },
+   "필러": {
+    "prev": 29080,
+    "now": 29830,
+    "pct": 2.58
+   },
+   "레이저·관리": {
+    "prev": 129090,
+    "now": 126940,
+    "pct": -1.67
+   },
+   "색소·홍조": {
+    "prev": 26270,
+    "now": 25780,
+    "pct": -1.87
+   },
+   "여드름·흉터·모공": {
+    "prev": 36600,
+    "now": 34730,
+    "pct": -5.11
+   },
+   "고민 부위": {
+    "prev": 80020,
+    "now": 80710,
+    "pct": 0.86
+   },
+   "상황·연령형": {
+    "prev": 1380,
+    "now": 1390,
+    "pct": 0.72
+   },
+   "가격·비교형": {
+    "prev": 40840,
+    "now": 40320,
+    "pct": -1.27
+   }
+  },
+  "keywords": {
+   "20대피부과시술": {
+    "prev": 140,
+    "now": 100
+   },
+   "50대피부시술": {
+    "prev": 100,
+    "now": 70
+   },
+   "LDM": {
+    "prev": 15300,
+    "now": 15480
+   },
+   "검버섯": {
+    "prev": 6880,
+    "now": 6790
+   },
+   "결혼전피부과시술": {
+    "prev": 160,
+    "now": 200
+   },
+   "고우리": {
+    "prev": 22610,
+    "now": 25260
+   },
+   "골반필러": {
+    "prev": 4690,
+    "now": 4890
+   },
+   "기미제거": {
+    "prev": 3390,
+    "now": 3340
+   },
+   "남자피부과시술": {
+    "prev": 540,
+    "now": 550
+   },
+   "눈밑지방재배치": {
+    "prev": 58380,
+    "now": 58810
+   },
+   "다크서클": {
+    "prev": 9150,
+    "now": 9090
+   },
+   "덴서티": {
+    "prev": 53090,
+    "now": 51470
+   },
+   "레이저제모": {
+    "prev": 32910,
+    "now": 30950
+   },
+   "리쥬란": {
+    "prev": 65900,
+    "now": 69200
+   },
+   "리쥬란쥬베룩차이": {
+    "prev": 1000,
+    "now": 1040
+   },
+   "리투오": {
+    "prev": 59300,
+    "now": 62500
+   },
+   "리프팅가격": {
+    "prev": 1290,
+    "now": 1170
+   },
+   "모공각화증": {
+    "prev": 27790,
+    "now": 25980
+   },
+   "모공축소": {
+    "prev": 1630,
+    "now": 1580
+   },
+   "목주름": {
+    "prev": 6150,
+    "now": 6160
+   },
+   "물광주사": {
+    "prev": 7070,
+    "now": 7450
+   },
+   "바디인모드": {
+    "prev": 1310,
+    "now": 1300
+   },
+   "보톡스가격": {
+    "prev": 7000,
+    "now": 7130
+   },
+   "볼뉴머": {
+    "prev": 71920,
+    "now": 69650
+   },
+   "블랙헤드": {
+    "prev": 4880,
+    "now": 4610
+   },
+   "사각턱보톡스": {
+    "prev": 10980,
+    "now": 10760
+   },
+   "셀라필": {
+    "prev": 10,
+    "now": 10
+   },
+   "셀르디엠": {
+    "prev": 8850,
+    "now": 9360
+   },
+   "소프웨이브": {
+    "prev": 7860,
+    "now": 8360
+   },
+   "슈링크": {
+    "prev": 85870,
+    "now": 87130
+   },
+   "스컬트라": {
+    "prev": 27770,
+    "now": 27410
+   },
+   "스킨보톡스": {
+    "prev": 50860,
+    "now": 52310
+   },
+   "스킨부스터종류": {
+    "prev": 4590,
+    "now": 4630
+   },
+   "실리프팅": {
+    "prev": 10870,
+    "now": 10950
+   },
+   "써마지": {
+    "prev": 28310,
+    "now": 29020
+   },
+   "아쿠아필": {
+    "prev": 29190,
+    "now": 27600
+   },
+   "안면홍조치료": {
+    "prev": 300,
+    "now": 300
+   },
+   "얼굴홍조": {
+    "prev": 850,
+    "now": 850
+   },
+   "엑소좀": {
+    "prev": 9940,
+    "now": 10120
+   },
+   "여드름자국": {
+    "prev": 890,
+    "now": 890
+   },
+   "여드름흉터레이저": {
+    "prev": 2580,
+    "now": 2520
+   },
+   "여드름흉터치료": {
+    "prev": 2970,
+    "now": 3010
+   },
+   "온다리프팅": {
+    "prev": 53620,
+    "now": 56250
+   },
+   "올리지오": {
+    "prev": 11870,
+    "now": 13050
+   },
+   "올타이트": {
+    "prev": 8670,
+    "now": 9090
+   },
+   "울쎄라": {
+    "prev": 47890,
+    "now": 47810
+   },
+   "울쎄라가격": {
+    "prev": 18940,
+    "now": 18330
+   },
+   "울쎄라써마지차이": {
+    "prev": 2180,
+    "now": 2200
+   },
+   "윤곽주사": {
+    "prev": 12880,
+    "now": 12990
+   },
+   "이중턱": {
+    "prev": 2140,
+    "now": 2060
+   },
+   "인모드": {
+    "prev": 17860,
+    "now": 17480
+   },
+   "임산부피부과시술": {
+    "prev": 220,
+    "now": 240
+   },
+   "입꼬리보톡스": {
+    "prev": 15940,
+    "now": 16520
+   },
+   "입술필러": {
+    "prev": 19760,
+    "now": 20390
+   },
+   "잡티제거": {
+    "prev": 820,
+    "now": 800
+   },
+   "종아리보톡스": {
+    "prev": 5770,
+    "now": 5480
+   },
+   "쥬베룩": {
+    "prev": 32980,
+    "now": 33920
+   },
+   "지방분해주사": {
+    "prev": 12560,
+    "now": 12350
+   },
+   "침샘보톡스": {
+    "prev": 17890,
+    "now": 18410
+   },
+   "코필러": {
+    "prev": 4630,
+    "now": 4550
+   },
+   "티타늄리프팅": {
+    "prev": 16840,
+    "now": 16910
+   },
+   "팔자주름시술": {
+    "prev": 13130,
+    "now": 13450
+   },
+   "패인흉터": {
+    "prev": 740,
+    "now": 750
+   },
+   "포텐자": {
+    "prev": 31510,
+    "now": 31760
+   },
+   "프락셀": {
+    "prev": 12220,
+    "now": 12550
+   },
+   "피부과가격비교": {
+    "prev": 80,
+    "now": 70
+   },
+   "피부과시술종류": {
+    "prev": 2700,
+    "now": 2550
+   },
+   "피부과시술추천": {
+    "prev": 580,
+    "now": 690
+   },
+   "피부과시술후운동": {
+    "prev": 80,
+    "now": 90
+   },
+   "피부과시술후음주": {
+    "prev": 140,
+    "now": 140
+   },
+   "피부처짐": {
+    "prev": 220,
+    "now": 230
+   },
+   "피코토닝": {
+    "prev": 21940,
+    "now": 22770
+   },
+   "필러가격": {
+    "prev": 2480,
+    "now": 2510
+   }
+  }
+ },
+ "google_7day": {
+  "리쥬란": {
+   "pct": 25.09,
+   "eligible": true
+  },
+  "울쎄라": {
+   "pct": 18.75,
+   "eligible": true
+  },
+  "써마지": {
+   "pct": 20.57,
+   "eligible": true
+  },
+  "쥬베룩": {
+   "pct": 16.04,
+   "eligible": true
+  },
+  "포텐자": {
+   "pct": null,
+   "eligible": false
+  },
+  "아쿠아필": {
+   "pct": null,
+   "eligible": false
+  },
+  "인모드": {
+   "pct": 24.54,
+   "eligible": true
+  },
+  "온다 리프팅": {
+   "pct": null,
+   "eligible": false
+  },
+  "스킨보톡스": {
+   "pct": 42.0,
+   "eligible": true
+  },
+  "리투오": {
+   "pct": 15.7,
+   "eligible": true
+  },
+  "엑소좀": {
+   "pct": 16.47,
+   "eligible": true
+  },
+  "소프웨이브": {
+   "pct": null,
+   "eligible": false
+  },
+  "슈링크": {
+   "pct": 33.17,
+   "eligible": true
+  }
+ },
+ "layout_version": 5,
+ "headline": "슈링크·리투오·스킨보톡스 검색은 4주 연속 올랐고, 레이저제모·아쿠아필은 4주 연속 줄었습니다.",
+ "signals": [
+  {
+   "type": "abs",
+   "keyword": "리쥬란"
+  },
+  {
+   "type": "pct",
+   "keyword": "주름보톡스"
+  },
+  {
+   "type": "cross",
+   "keyword": "인모드"
+  }
+ ],
+ "anomalies": [
+  {
+   "keyword": "주름보톡스",
+   "pct": 21.46,
+   "delta": 440
+  },
+  {
+   "keyword": "어깨필러",
+   "pct": 17.8,
+   "delta": 470
+  },
+  {
+   "keyword": "고우리",
+   "pct": 11.72,
+   "delta": 2650
+  }
+ ],
+ "trend4": {
+  "슈링크": {
+   "values": [
+    73230,
+    76720,
+    81340,
+    85870,
+    87130
+   ],
+   "streak": "4주 연속 상승"
+  },
+  "볼뉴머": {
+   "values": [
+    64550,
+    67440,
+    69410,
+    71920,
+    69650
+   ],
+   "streak": "오르내림 반복"
+  },
+  "리쥬란": {
+   "values": [
+    63500,
+    62900,
+    66000,
+    65900,
+    69200
+   ],
+   "streak": "오르내림 반복"
+  },
+  "리투오": {
+   "values": [
+    56100,
+    56600,
+    58400,
+    59300,
+    62500
+   ],
+   "streak": "4주 연속 상승"
+  },
+  "눈밑지방재배치": {
+   "values": [
+    60010,
+    60120,
+    60270,
+    58380,
+    58810
+   ],
+   "streak": "오르내림 반복"
+  },
+  "온다리프팅": {
+   "values": [
+    54240,
+    53370,
+    53480,
+    53620,
+    56250
+   ],
+   "streak": "최근 3주 연속 상승"
+  },
+  "스킨보톡스": {
+   "values": [
+    47080,
+    47840,
+    49630,
+    50860,
+    52310
+   ],
+   "streak": "4주 연속 상승"
+  },
+  "덴서티": {
+   "values": [
+    54540,
+    54470,
+    55240,
+    53090,
+    51470
+   ],
+   "streak": "최근 2주 연속 하락"
+  },
+  "울쎄라": {
+   "values": [
+    43860,
+    45100,
+    47130,
+    47890,
+    47810
+   ],
+   "streak": "오르내림 반복"
+  },
+  "쥬베룩": {
+   "values": [
+    33050,
+    32350,
+    32730,
+    32980,
+    33920
+   ],
+   "streak": "최근 3주 연속 상승"
+  },
+  "포텐자": {
+   "values": [
+    32290,
+    31490,
+    31110,
+    31510,
+    31760
+   ],
+   "streak": "최근 2주 연속 상승"
+  },
+  "레이저제모": {
+   "values": [
+    39820,
+    38390,
+    35220,
+    32910,
+    30950
+   ],
+   "streak": "4주 연속 하락"
+  },
+  "써마지": {
+   "values": [
+    27990,
+    27980,
+    28800,
+    28310,
+    29020
+   ],
+   "streak": "오르내림 반복"
+  },
+  "아쿠아필": {
+   "values": [
+    33430,
+    32580,
+    31840,
+    29190,
+    27600
+   ],
+   "streak": "4주 연속 하락"
+  },
+  "스컬트라": {
+   "values": [
+    27360,
+    27720,
+    28410,
+    27770,
+    27410
+   ],
+   "streak": "최근 2주 연속 하락"
+  }
+ },
+ "homepage_keywords": {
+  "울쎄라": {
+   "menu": "리프팅",
+   "path": "/400",
+   "series": {
+    "08-26": 43860,
+    "08-31": 45100,
+    "09-07": 47130,
+    "09-14": 47890,
+    "09-21": 47810
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": 18.75
+  },
+  "울쎄라피프라임": {
+   "menu": "리프팅",
+   "path": "/40",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 6900,
+    "09-21": 7120
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "써마지": {
+   "menu": "리프팅",
+   "path": "/41",
+   "series": {
+    "08-26": 27990,
+    "08-31": 27980,
+    "09-07": 28800,
+    "09-14": 28310,
+    "09-21": 29020
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": 20.57
+  },
+  "써마지FLX": {
+   "menu": "리프팅",
+   "path": "/41",
+   "series": {
+    "08-26": 2460,
+    "08-31": 2480,
+    "09-07": 2370,
+    "09-14": 2050,
+    "09-21": 2220
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "소프웨이브": {
+   "menu": "리프팅",
+   "path": "/139",
+   "series": {
+    "08-26": 6310,
+    "08-31": 6830,
+    "09-07": 7320,
+    "09-14": 7860,
+    "09-21": 8360
+   },
+   "streak": "4주 연속 상승",
+   "google_7day_pct": null
+  },
+  "온다리프팅": {
+   "menu": "리프팅",
+   "path": "/42",
+   "series": {
+    "08-26": 54240,
+    "08-31": 53370,
+    "09-07": 53480,
+    "09-14": 53620,
+    "09-21": 56250
+   },
+   "streak": "최근 3주 연속 상승",
+   "google_7day_pct": null
+  },
+  "인모드": {
+   "menu": "리프팅",
+   "path": "/43",
+   "series": {
+    "08-26": 18400,
+    "08-31": 18220,
+    "09-07": 18320,
+    "09-14": 17860,
+    "09-21": 17480
+   },
+   "streak": "최근 2주 연속 하락",
+   "google_7day_pct": 24.54
+  },
+  "슈링크": {
+   "menu": "리프팅",
+   "path": "/44",
+   "series": {
+    "08-26": 73230,
+    "08-31": 76720,
+    "09-07": 81340,
+    "09-14": 85870,
+    "09-21": 87130
+   },
+   "streak": "4주 연속 상승",
+   "google_7day_pct": 33.17
+  },
+  "슈링크유니버스": {
+   "menu": "리프팅",
+   "path": "/44",
+   "series": {
+    "08-26": 6460,
+    "08-31": 6490,
+    "09-07": 6690,
+    "09-14": 6720,
+    "09-21": 6720
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "볼뉴머": {
+   "menu": "리프팅",
+   "path": "/45",
+   "series": {
+    "08-26": 64550,
+    "08-31": 67440,
+    "09-07": 69410,
+    "09-14": 71920,
+    "09-21": 69650
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "덴서티": {
+   "menu": "리프팅",
+   "path": "/153",
+   "series": {
+    "08-26": 54540,
+    "08-31": 54470,
+    "09-07": 55240,
+    "09-14": 53090,
+    "09-21": 51470
+   },
+   "streak": "최근 2주 연속 하락",
+   "google_7day_pct": null
+  },
+  "리니어지": {
+   "menu": "리프팅",
+   "path": "/154",
+   "series": {
+    "08-26": 3450,
+    "08-31": 3250,
+    "09-07": 3260,
+    "09-14": 3190,
+    "09-21": 3410
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "세르프": {
+   "menu": "리프팅",
+   "path": "/155",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 15480,
+    "09-21": 15850
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "올타이트": {
+   "menu": "리프팅",
+   "path": "/alltite-lifting",
+   "series": {
+    "08-26": 8360,
+    "08-31": 8050,
+    "09-07": 8400,
+    "09-14": 8670,
+    "09-21": 9090
+   },
+   "streak": "최근 3주 연속 상승",
+   "google_7day_pct": null
+  },
+  "포트라": {
+   "menu": "리프팅",
+   "path": "/titanium-fortra-quattro",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 690,
+    "09-21": 740
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "포트라콰트로": {
+   "menu": "리프팅",
+   "path": "/titanium-fortra-quattro",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 120,
+    "09-21": 120
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "실리프팅": {
+   "menu": "리프팅",
+   "path": "/thread-lifting",
+   "series": {
+    "08-26": 11550,
+    "08-31": 11380,
+    "09-07": 11260,
+    "09-14": 10870,
+    "09-21": 10950
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "민트리프트": {
+   "menu": "리프팅",
+   "path": "/thread-lifting",
+   "series": {
+    "08-26": 80,
+    "08-31": 60,
+    "09-07": 60,
+    "09-14": 70,
+    "09-21": 80
+   },
+   "streak": "최근 2주 연속 상승",
+   "google_7day_pct": null
+  },
+  "에피티콘": {
+   "menu": "리프팅",
+   "path": "/thread-lifting",
+   "series": {
+    "08-26": 120,
+    "08-31": 120,
+    "09-07": 110,
+    "09-14": 110,
+    "09-21": 110
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "포텐자": {
+   "menu": "레이저",
+   "path": "/72",
+   "series": {
+    "08-26": 32290,
+    "08-31": 31490,
+    "09-07": 31110,
+    "09-14": 31510,
+    "09-21": 31760
+   },
+   "streak": "최근 2주 연속 상승",
+   "google_7day_pct": null
+  },
+  "피코슈어": {
+   "menu": "레이저",
+   "path": "/73",
+   "series": {
+    "08-26": 2270,
+    "08-31": 2200,
+    "09-07": 2210,
+    "09-14": 2120,
+    "09-21": 2100
+   },
+   "streak": "최근 2주 연속 하락",
+   "google_7day_pct": null
+  },
+  "아큐토닝": {
+   "menu": "레이저",
+   "path": "/75",
+   "series": {
+    "08-26": 800,
+    "08-31": 780,
+    "09-07": 770,
+    "09-14": 740,
+    "09-21": 660
+   },
+   "streak": "4주 연속 하락",
+   "google_7day_pct": null
+  },
+  "브이레이저": {
+   "menu": "레이저",
+   "path": "/76",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 830,
+    "09-21": 860
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "CO2레이저": {
+   "menu": "레이저",
+   "path": "/124",
+   "series": {
+    "08-26": 4310,
+    "08-31": 4220,
+    "09-07": 4260,
+    "09-14": 4310,
+    "09-21": 4490
+   },
+   "streak": "최근 3주 연속 상승",
+   "google_7day_pct": null
+  },
+  "아포지": {
+   "menu": "레이저",
+   "path": "/47",
+   "series": {
+    "08-26": 820,
+    "08-31": 810,
+    "09-07": 790,
+    "09-14": 800,
+    "09-21": 800
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "아포지엘리트": {
+   "menu": "레이저",
+   "path": "/152",
+   "series": {
+    "08-26": 80,
+    "08-31": 80,
+    "09-07": 90,
+    "09-14": 80,
+    "09-21": 90
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "아포지플러스": {
+   "menu": "레이저",
+   "path": "/47",
+   "series": {
+    "08-26": 2470,
+    "08-31": 2390,
+    "09-07": 2320,
+    "09-14": 2230,
+    "09-21": 2120
+   },
+   "streak": "4주 연속 하락",
+   "google_7day_pct": null
+  },
+  "LDM": {
+   "menu": "스킨케어",
+   "path": "/141",
+   "series": {
+    "08-26": 14170,
+    "08-31": 14430,
+    "09-07": 15140,
+    "09-14": 15300,
+    "09-21": 15480
+   },
+   "streak": "4주 연속 상승",
+   "google_7day_pct": 1.32
+  },
+  "울디엠": {
+   "menu": "스킨케어",
+   "path": "/61",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 150,
+    "09-21": 150
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "오투덤": {
+   "menu": "스킨케어",
+   "path": "/61",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 630,
+    "09-21": 640
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "아쿠아필": {
+   "menu": "스킨케어",
+   "path": "/65",
+   "series": {
+    "08-26": 33430,
+    "08-31": 32580,
+    "09-07": 31840,
+    "09-14": 29190,
+    "09-21": 27600
+   },
+   "streak": "4주 연속 하락",
+   "google_7day_pct": null
+  },
+  "큐페이셜": {
+   "menu": "스킨케어",
+   "path": "/60",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 80,
+    "09-21": 80
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "골드PTT": {
+   "menu": "스킨케어",
+   "path": "/62",
+   "series": {
+    "08-26": 7340,
+    "08-31": 6930,
+    "09-07": 6920,
+    "09-14": 6940,
+    "09-21": 6800
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "라라필": {
+   "menu": "스킨케어",
+   "path": "/110",
+   "series": {
+    "08-26": 15740,
+    "08-31": 16170,
+    "09-07": 16570,
+    "09-14": 15120,
+    "09-21": 14870
+   },
+   "streak": "최근 2주 연속 하락",
+   "google_7day_pct": null
+  },
+  "블랙필": {
+   "menu": "스킨케어",
+   "path": "/64",
+   "series": {
+    "08-26": 3090,
+    "08-31": 3020,
+    "09-07": 2950,
+    "09-14": 2780,
+    "09-21": 2740
+   },
+   "streak": "4주 연속 하락",
+   "google_7day_pct": null
+  },
+  "예스필": {
+   "menu": "스킨케어",
+   "path": "/111",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 390,
+    "09-21": 380
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "물톡스": {
+   "menu": "스킨케어",
+   "path": "/129",
+   "series": {
+    "08-26": 1810,
+    "08-31": 1780,
+    "09-07": 1840,
+    "09-14": 1860,
+    "09-21": 1880
+   },
+   "streak": "최근 3주 연속 상승",
+   "google_7day_pct": null
+  },
+  "연예인필": {
+   "menu": "스킨케어",
+   "path": "/130",
+   "series": {
+    "08-26": 60,
+    "08-31": 70,
+    "09-07": 70,
+    "09-14": 60,
+    "09-21": 50
+   },
+   "streak": "최근 2주 연속 하락",
+   "google_7day_pct": null
+  },
+  "더마샤인": {
+   "menu": "스킨케어",
+   "path": "/152",
+   "series": {
+    "08-26": 2970,
+    "08-31": 2960,
+    "09-07": 3000,
+    "09-14": 3000,
+    "09-21": 3230
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "스킨블리": {
+   "menu": "스킨케어",
+   "path": "/152",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 50,
+    "09-21": 40
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "쥬베룩": {
+   "menu": "스킨부스터",
+   "path": "/114",
+   "series": {
+    "08-26": 33050,
+    "08-31": 32350,
+    "09-07": 32730,
+    "09-14": 32980,
+    "09-21": 33920
+   },
+   "streak": "최근 3주 연속 상승",
+   "google_7day_pct": 16.04
+  },
+  "스컬트라": {
+   "menu": "스킨부스터",
+   "path": "/140",
+   "series": {
+    "08-26": 27360,
+    "08-31": 27720,
+    "09-07": 28410,
+    "09-14": 27770,
+    "09-21": 27410
+   },
+   "streak": "최근 2주 연속 하락",
+   "google_7day_pct": 16.35
+  },
+  "울트라콜": {
+   "menu": "스킨부스터",
+   "path": "/115",
+   "series": {
+    "08-26": 3200,
+    "08-31": 2970,
+    "09-07": 3050,
+    "09-14": 3080,
+    "09-21": 3150
+   },
+   "streak": "최근 3주 연속 상승",
+   "google_7day_pct": null
+  },
+  "리쥬란": {
+   "menu": "스킨부스터",
+   "path": "/116",
+   "series": {
+    "08-26": 63500,
+    "08-31": 62900,
+    "09-07": 66000,
+    "09-14": 65900,
+    "09-21": 69200
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": 25.09
+  },
+  "릴리이드": {
+   "menu": "스킨부스터",
+   "path": "/117",
+   "series": {
+    "08-26": 1890,
+    "08-31": 1850,
+    "09-07": 1850,
+    "09-14": 1790,
+    "09-21": 1850
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "엑소힐러": {
+   "menu": "스킨부스터",
+   "path": "/118",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 300,
+    "09-21": 320
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "연어주사": {
+   "menu": "스킨부스터",
+   "path": "/119",
+   "series": {
+    "08-26": 1680,
+    "08-31": 1670,
+    "09-07": 1660,
+    "09-14": 1630,
+    "09-21": 1650
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "리즈네": {
+   "menu": "스킨부스터",
+   "path": "/120",
+   "series": {
+    "08-26": 1020,
+    "08-31": 1020,
+    "09-07": 1030,
+    "09-14": 1060,
+    "09-21": 1080
+   },
+   "streak": "최근 3주 연속 상승",
+   "google_7day_pct": null
+  },
+  "물광주사": {
+   "menu": "스킨부스터",
+   "path": "/121",
+   "series": {
+    "08-26": 6590,
+    "08-31": 6600,
+    "09-07": 6810,
+    "09-14": 7070,
+    "09-21": 7450
+   },
+   "streak": "4주 연속 상승",
+   "google_7day_pct": null
+  },
+  "레디어스": {
+   "menu": "스킨부스터",
+   "path": "/122",
+   "series": {
+    "08-26": 13960,
+    "08-31": 13680,
+    "09-07": 13660,
+    "09-14": 14040,
+    "09-21": 14950
+   },
+   "streak": "최근 2주 연속 상승",
+   "google_7day_pct": null
+  },
+  "필로가": {
+   "menu": "스킨부스터",
+   "path": "/123",
+   "series": {
+    "08-26": 100,
+    "08-31": 100,
+    "09-07": 90,
+    "09-14": 90,
+    "09-21": 80
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "리투오": {
+   "menu": "스킨부스터",
+   "path": "/re2o",
+   "series": {
+    "08-26": 56100,
+    "08-31": 56600,
+    "09-07": 58400,
+    "09-14": 59300,
+    "09-21": 62500
+   },
+   "streak": "4주 연속 상승",
+   "google_7day_pct": 15.7
+  },
+  "힐로웨이브": {
+   "menu": "스킨부스터",
+   "path": "/hilo-wave",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 21950,
+    "09-21": 23240
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "스킨바이브": {
+   "menu": "스킨부스터",
+   "path": "/skinvive",
+   "series": {
+    "08-26": 3410,
+    "08-31": 3350,
+    "09-07": 3530,
+    "09-14": 3300,
+    "09-21": 3470
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "보톡스": {
+   "menu": "쁘띠",
+   "path": "/28",
+   "series": {
+    "08-26": 22470,
+    "08-31": 22480,
+    "09-07": 22510,
+    "09-14": 22720,
+    "09-21": 23230
+   },
+   "streak": "4주 연속 상승",
+   "google_7day_pct": null
+  },
+  "코어톡스": {
+   "menu": "쁘띠",
+   "path": "/28",
+   "series": {
+    "08-26": 6230,
+    "08-31": 6120,
+    "09-07": 6240,
+    "09-14": 6440,
+    "09-21": 6710
+   },
+   "streak": "최근 3주 연속 상승",
+   "google_7day_pct": null
+  },
+  "제오민": {
+   "menu": "쁘띠",
+   "path": "/28",
+   "series": {
+    "08-26": 3400,
+    "08-31": 3350,
+    "09-07": 3390,
+    "09-14": 3430,
+    "09-21": 3590
+   },
+   "streak": "최근 3주 연속 상승",
+   "google_7day_pct": null
+  },
+  "필러": {
+   "menu": "쁘띠",
+   "path": "/29",
+   "series": {
+    "08-26": 8850,
+    "08-31": 9910,
+    "09-07": 12390,
+    "09-14": 13760,
+    "09-21": 15440
+   },
+   "streak": "4주 연속 상승",
+   "google_7day_pct": null
+  },
+  "벨로테로": {
+   "menu": "쁘띠",
+   "path": "/29",
+   "series": {
+    "08-26": 3220,
+    "08-31": 3100,
+    "09-07": 3150,
+    "09-14": 3100,
+    "09-21": 3210
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "레스틸렌": {
+   "menu": "쁘띠",
+   "path": "/29",
+   "series": {
+    "08-26": 1620,
+    "08-31": 1750,
+    "09-07": 2110,
+    "09-14": 2300,
+    "09-21": 2420
+   },
+   "streak": "4주 연속 상승",
+   "google_7day_pct": null
+  },
+  "쥬비덤": {
+   "menu": "쁘띠",
+   "path": "/29",
+   "series": {
+    "08-26": 1710,
+    "08-31": 1640,
+    "09-07": 1740,
+    "09-14": 1850,
+    "09-21": 1930
+   },
+   "streak": "최근 3주 연속 상승",
+   "google_7day_pct": null
+  },
+  "어깨필러": {
+   "menu": "쁘띠",
+   "path": "/142",
+   "series": {
+    "08-26": 2670,
+    "08-31": 2720,
+    "09-07": 2620,
+    "09-14": 2640,
+    "09-21": 3110
+   },
+   "streak": "최근 2주 연속 상승",
+   "google_7day_pct": null
+  },
+  "주름지우개": {
+   "menu": "쁘띠",
+   "path": "/32",
+   "series": {
+    "08-26": null,
+    "08-31": null,
+    "09-07": null,
+    "09-14": 120,
+    "09-21": 120
+   },
+   "streak": null,
+   "google_7day_pct": null
+  },
+  "미쥬코": {
+   "menu": "쁘띠",
+   "path": "/33",
+   "series": {
+    "08-26": 210,
+    "08-31": 180,
+    "09-07": 220,
+    "09-14": 210,
+    "09-21": 210
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "조각주사": {
+   "menu": "쁘띠",
+   "path": "/36",
+   "series": {
+    "08-26": 960,
+    "08-31": 930,
+    "09-07": 980,
+    "09-14": 970,
+    "09-21": 1120
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  },
+  "필러녹이는주사": {
+   "menu": "쁘띠",
+   "path": "/37",
+   "series": {
+    "08-26": 910,
+    "08-31": 900,
+    "09-07": 940,
+    "09-14": 960,
+    "09-21": 900
+   },
+   "streak": "오르내림 반복",
+   "google_7day_pct": null
+  }
+ },
+ "local_clinics": {
+  "오블리주의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 165, 상진빌딩, 11층",
+   "google_rating": 4.7,
+   "google_reviews_total": 417,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 790,
+   "naver_branch_volumes": {
+    "홍대오블리주의원": 290,
+    "오블리주의원홍대": 30,
+    "오블리주의원홍대점": 10,
+    "합정오블리주의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "제이필의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 양화로 166, 미래프라자, 5&7층",
+   "google_rating": 4.9,
+   "google_reviews_total": 681,
+   "google_reviews_delta_0914_0921": 19,
+   "naver_brand_volume": 3430,
+   "naver_branch_volumes": {
+    "홍대제이필의원": 260,
+    "제이필의원홍대": 1520,
+    "제이필의원홍대점": 10,
+    "합정제이필의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "뷰티라운지의원 홍대글로벌": {
+   "address": "대한민국 서울특별시 마포구 동교동 162-3, 5 층",
+   "google_rating": 4.9,
+   "google_reviews_total": 1372,
+   "google_reviews_delta_0914_0921": 1,
+   "naver_brand_volume": 10410,
+   "naver_branch_volumes": {
+    "홍대뷰티라운지의원": 25,
+    "뷰티라운지의원홍대": 70,
+    "뷰티라운지의원홍대점": 10,
+    "합정뷰티라운지의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "아비쥬 의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 동교동, 아일렉스 메가박스 건물, 3층",
+   "google_rating": 4.8,
+   "google_reviews_total": 784,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 27340,
+   "naver_branch_volumes": {
+    "홍대아비쥬의원": 460,
+    "아비쥬의원홍대": 800,
+    "아비쥬의원홍대점": 15,
+    "합정아비쥬의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "유앤아이의원 홍대신촌점": {
+   "address": "대한민국 서울특별시 마포구 동교동 양화로 162, 좋은사람들빌딩, 5층",
+   "google_rating": 4.8,
+   "google_reviews_total": 253,
+   "google_reviews_delta_0914_0921": 11,
+   "naver_brand_volume": 93140,
+   "naver_branch_volumes": {
+    "홍대유앤아이의원": 110,
+    "유앤아이의원홍대": 450,
+    "유앤아이의원홍대점": 15,
+    "합정유앤아이의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "마인드피부과의원": {
+   "address": "대한민국 서울특별시 마포구 동교동 166-13, 3 층",
+   "google_rating": 4.4,
+   "google_reviews_total": 107,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 130,
+   "naver_branch_volumes": {
+    "홍대마인드피부과의원": 10,
+    "마인드피부과의원홍대": 10,
+    "마인드피부과의원홍대점": 10,
+    "합정마인드피부과의원": 10
+   },
+   "search_suggestion_hits": [
+    "구글 자동완성 「홍대 피부과 마인드」"
+   ]
+  },
+  "홍대 셀레나의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 162, 9층",
+   "google_rating": 4.9,
+   "google_reviews_total": 285,
+   "google_reviews_delta_0914_0921": 4,
+   "naver_brand_volume": 380,
+   "naver_branch_volumes": {
+    "홍대셀레나의원": 870,
+    "셀레나의원홍대": 25,
+    "셀레나의원홍대점": 10,
+    "합정셀레나의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "리엘르의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 162, 좋은사람들빌딩, 13층",
+   "google_rating": 4.9,
+   "google_reviews_total": 138,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 3320,
+   "naver_branch_volumes": {
+    "홍대리엘르의원": 130,
+    "리엘르의원홍대": 460,
+    "리엘르의원홍대점": 10,
+    "합정리엘르의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "나인의원 홍대입구역": {
+   "address": "대한민국 서울특별시 마포구 양화로 165",
+   "google_rating": 4.8,
+   "google_reviews_total": 424,
+   "google_reviews_delta_0914_0921": 1,
+   "naver_brand_volume": 1740,
+   "naver_branch_volumes": {
+    "홍대나인의원": 1720,
+    "나인의원홍대": 390,
+    "나인의원홍대점": 2590,
+    "합정나인의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "유앤미의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 양화로 165, 14층",
+   "google_rating": 4.8,
+   "google_reviews_total": 17,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 6830,
+   "naver_branch_volumes": {
+    "홍대유앤미의원": 810,
+    "유앤미의원홍대": 200,
+    "유앤미의원홍대점": 10,
+    "합정유앤미의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "닥터에버스 홍대점": {
+   "address": "대한민국 서울특별시 마포구 양화로 140, 5th floor (H Cube",
+   "google_rating": 4.7,
+   "google_reviews_total": 763,
+   "google_reviews_delta_0914_0921": 20,
+   "naver_brand_volume": 22840,
+   "naver_branch_volumes": {
+    "홍대닥터에버스": 450,
+    "닥터에버스홍대": 1520,
+    "닥터에버스홍대점": 30,
+    "합정닥터에버스": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "홍대 밴스피부과의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 144, 3층",
+   "google_rating": 4.7,
+   "google_reviews_total": 642,
+   "google_reviews_delta_0914_0921": 29,
+   "naver_brand_volume": 280,
+   "naver_branch_volumes": {
+    "홍대밴스피부과의원": 60,
+    "밴스피부과의원홍대": 35,
+    "밴스피부과의원홍대점": 15,
+    "합정밴스피부과의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "닥터디자이너의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 동교동 양화로 162, 좋은사람들 빌딩, 8층",
+   "google_rating": 4.7,
+   "google_reviews_total": 23,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 8420,
+   "naver_branch_volumes": {
+    "홍대닥터디자이너의원": 10,
+    "닥터디자이너의원홍대": 10,
+    "닥터디자이너의원홍대점": 10,
+    "합정닥터디자이너의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "차이의원 홍대본점": {
+   "address": "대한민국, KR 서울특별시 마포구 월드컵로3길 14 딜라이트스퀘어 2차 B동 3층",
+   "google_rating": 4.9,
+   "google_reviews_total": 30,
+   "google_reviews_delta_0914_0921": -6,
+   "naver_brand_volume": 970,
+   "naver_branch_volumes": {
+    "홍대차이의원": 40,
+    "차이의원홍대": 10,
+    "차이의원홍대점": 10,
+    "합정차이의원": 380
+   },
+   "search_suggestion_hits": [
+    "구글 자동완성 「차이의원 합정 피부과」"
+   ]
+  },
+  "홍대 톡스앤필의원": {
+   "address": "대한민국, KR 서울특별시 마포구 서울특별시 마포구 양화로 162 좋은사람들빌딩, 톡스앤필 홍대점, 11층-12층",
+   "google_rating": 5,
+   "google_reviews_total": 653,
+   "google_reviews_delta_0914_0921": 38,
+   "naver_brand_volume": 1240,
+   "naver_branch_volumes": {
+    "홍대톡스앤필의원": 110,
+    "톡스앤필의원홍대": 35,
+    "톡스앤필의원홍대점": 10,
+    "합정톡스앤필의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "아이디의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 140, 에이치큐브빌딩, 10층",
+   "google_rating": 4.9,
+   "google_reviews_total": 692,
+   "google_reviews_delta_0914_0921": 16,
+   "naver_brand_volume": 2530,
+   "naver_branch_volumes": {
+    "홍대아이디의원": 330,
+    "아이디의원홍대": 50,
+    "아이디의원홍대점": 10,
+    "합정아이디의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "홍대 고운세상피부과": {
+   "address": "대한민국 서울특별시 마포구 월드컵로1길 14, A동 1차 2층 202호, 딜라이트스퀘어",
+   "google_rating": 3,
+   "google_reviews_total": 14,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 6850,
+   "naver_branch_volumes": {
+    "홍대고운세상피부과": 570,
+    "고운세상피부과홍대": 15,
+    "고운세상피부과홍대점": 10,
+    "합정고운세상피부과": 55
+   },
+   "search_suggestion_hits": [
+    "구글 자동완성 「합정 고운 세상 피부과」"
+   ]
+  },
+  "에스준의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 동교로 191",
+   "google_rating": 4.3,
+   "google_reviews_total": 13,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 1460,
+   "naver_branch_volumes": {
+    "홍대에스준의원": 60,
+    "에스준의원홍대": 100,
+    "에스준의원홍대점": 10,
+    "합정에스준의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "리엔장의원 홍대": {
+   "address": "대한민국 6F 양화로18길 ３, KR 서울특별시 마포구",
+   "google_rating": 4.9,
+   "google_reviews_total": 2801,
+   "google_reviews_delta_0914_0921": 2,
+   "naver_brand_volume": 2340,
+   "naver_branch_volumes": {
+    "홍대리엔장의원": 240,
+    "리엔장의원홍대": 210,
+    "리엔장의원홍대점": 10,
+    "합정리엔장의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "벨아미리노보의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 176, 와이즈파크, 5층",
+   "google_rating": 5,
+   "google_reviews_total": 43,
+   "google_reviews_delta_0914_0921": 1,
+   "naver_brand_volume": 40,
+   "naver_branch_volumes": {
+    "홍대벨아미리노보": 15,
+    "벨아미리노보홍대": 10,
+    "벨아미리노보홍대점": 10,
+    "합정벨아미리노보": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "포에버의원 홍대글로벌": {
+   "address": "대한민국 서울특별시 마포구 양화로 162, 포에버의원, 10F",
+   "google_rating": 4.9,
+   "google_reviews_total": 395,
+   "google_reviews_delta_0914_0921": -1,
+   "naver_brand_volume": 20090,
+   "naver_branch_volumes": {
+    "홍대포에버의원": 230,
+    "포에버의원홍대": 300,
+    "포에버의원홍대점": 970,
+    "합정포에버의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "닥터쁘띠의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 양화로 151, 8층",
+   "google_rating": 4.9,
+   "google_reviews_total": 230,
+   "google_reviews_delta_0914_0921": 10,
+   "naver_brand_volume": 1960,
+   "naver_branch_volumes": {
+    "홍대닥터쁘띠의원": 25,
+    "닥터쁘띠의원홍대": 70,
+    "닥터쁘띠의원홍대점": 10,
+    "합정닥터쁘띠의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "리즈온의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 홍익로 25, 5층",
+   "google_rating": 4.7,
+   "google_reviews_total": 14,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 5590,
+   "naver_branch_volumes": {
+    "홍대리즈온의원": 100,
+    "리즈온의원홍대": 290,
+    "리즈온의원홍대점": 20,
+    "합정리즈온의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "앤봄의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 162, 좋은사람들 빌딩, 701호",
+   "google_rating": 4.9,
+   "google_reviews_total": 1606,
+   "google_reviews_delta_0914_0921": 19,
+   "naver_brand_volume": 1410,
+   "naver_branch_volumes": {
+    "홍대앤봄의원": 430,
+    "앤봄의원홍대": 120,
+    "앤봄의원홍대점": 10,
+    "합정앤봄의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "백피부과의원": {
+   "address": "대한민국 서울특별시 마포구 동교동 147-3",
+   "google_rating": 3.8,
+   "google_reviews_total": 12,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 130,
+   "naver_branch_volumes": {
+    "홍대백피부과의원": 10,
+    "백피부과의원홍대": 10,
+    "백피부과의원홍대점": 10,
+    "합정백피부과의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "톤즈의원 홍대점": {
+   "address": "대한민국, KR 서울특별시 마포구 에이치큐브, 톤즈의원 홍대입구역, 6층",
+   "google_rating": 4.4,
+   "google_reviews_total": 46,
+   "google_reviews_delta_0914_0921": -1,
+   "naver_brand_volume": 67010,
+   "naver_branch_volumes": {
+    "홍대톤즈의원": 440,
+    "톤즈의원홍대": 1110,
+    "톤즈의원홍대점": 30,
+    "합정톤즈의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "제로랩의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 151 5, 6,7 층",
+   "google_rating": 4.9,
+   "google_reviews_total": 531,
+   "google_reviews_delta_0914_0921": -61,
+   "naver_brand_volume": 820,
+   "naver_branch_volumes": {
+    "홍대제로랩의원": 35,
+    "제로랩의원홍대": 35,
+    "제로랩의원홍대점": 10,
+    "합정제로랩의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "홍대라인업의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 178",
+   "google_rating": 1,
+   "google_reviews_total": 1,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 440,
+   "naver_branch_volumes": {
+    "홍대라인업의원": 70,
+    "라인업의원홍대": 10,
+    "라인업의원홍대점": 10,
+    "합정라인업의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "아르스킨의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 164, 5층",
+   "google_rating": 5,
+   "google_reviews_total": 390,
+   "google_reviews_delta_0914_0921": 6,
+   "naver_brand_volume": 740,
+   "naver_branch_volumes": {
+    "홍대아르스킨의원": 150,
+    "아르스킨의원홍대": 10,
+    "아르스킨의원홍대점": 10,
+    "합정아르스킨의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "쁨글로벌 의원 홍대점 신관": {
+   "address": "4th, H-Cube building, 140 양화로 floor, 마포구 서울특별시, 대한민국",
+   "google_rating": 4.8,
+   "google_reviews_total": 1149,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 1560,
+   "naver_branch_volumes": {
+    "홍대쁨글로벌의원": 15,
+    "쁨글로벌의원홍대": 20,
+    "쁨글로벌의원홍대점": 10,
+    "합정쁨글로벌의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "연세피부과의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 156",
+   "google_rating": 4,
+   "google_reviews_total": 4,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 4470,
+   "naver_branch_volumes": {
+    "홍대연세피부과의원": 10,
+    "연세피부과의원홍대": 10,
+    "연세피부과의원홍대점": 10,
+    "합정연세피부과의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "델브클리닉": {
+   "address": "대한민국 서울특별시 마포구 양화로 133, M층",
+   "google_rating": 5,
+   "google_reviews_total": 175,
+   "google_reviews_delta_0914_0921": 3,
+   "naver_brand_volume": 15,
+   "naver_branch_volumes": {
+    "홍대델브클리닉": 10,
+    "델브클리닉홍대": 10,
+    "델브클리닉홍대점": 10,
+    "합정델브클리닉": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "닥터포유의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 서교동 양화로 64, 제일빌딩, 4층",
+   "google_rating": 5,
+   "google_reviews_total": 6,
+   "google_reviews_delta_0914_0921": 1,
+   "naver_brand_volume": 690,
+   "naver_branch_volumes": {
+    "홍대닥터포유의원": 10,
+    "닥터포유의원홍대": 20,
+    "닥터포유의원홍대점": 10,
+    "합정닥터포유의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "벨아미의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 176, 홍대와이즈파크관리단, 5층",
+   "google_rating": 5,
+   "google_reviews_total": 2,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 650,
+   "naver_branch_volumes": {
+    "홍대벨아미": 10,
+    "벨아미홍대": 15,
+    "벨아미홍대점": 10,
+    "합정벨아미": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "뷰티스톤의원 홍대": {
+   "address": "대한민국 215, KR 서울특별시 마포구 양화로 45 몰동 133-135호, 메세나폴리스, 218호",
+   "google_rating": 4.9,
+   "google_reviews_total": 626,
+   "google_reviews_delta_0914_0921": 12,
+   "naver_brand_volume": 1780,
+   "naver_branch_volumes": {
+    "홍대뷰티스톤의원": 10,
+    "뷰티스톤의원홍대": 10,
+    "뷰티스톤의원홍대점": 10,
+    "합정뷰티스톤의원": 35
+   },
+   "search_suggestion_hits": []
+  },
+  "뷰티유의원": {
+   "address": "상진빌딩, 양화로165 12층 일부, 동교동, 마포구 서울특별시 대한민국",
+   "google_rating": 5,
+   "google_reviews_total": 252,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 590,
+   "naver_branch_volumes": {
+    "홍대뷰티유의원": 40,
+    "뷰티유의원홍대": 30,
+    "뷰티유의원홍대점": 10,
+    "합정뷰티유의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "서 피부과": {
+   "address": "대한민국 서울특별시 마포구 서교동 353-5",
+   "google_rating": 4.4,
+   "google_reviews_total": 5,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 2660,
+   "naver_branch_volumes": {
+    "홍대서피부과": 660,
+    "서피부과홍대": 15,
+    "서피부과홍대점": 10,
+    "합정서피부과": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "올라인의원": {
+   "address": "대한민국 서울특별시 마포구 양화로 140",
+   "google_rating": 4.9,
+   "google_reviews_total": 1708,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 110,
+   "naver_branch_volumes": {
+    "홍대올라인의원": 20,
+    "올라인의원홍대": 10,
+    "올라인의원홍대점": 10,
+    "합정올라인의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "클레오르의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 165, 상진빌딩, 4층",
+   "google_rating": 4.7,
+   "google_reviews_total": 330,
+   "google_reviews_delta_0914_0921": 3,
+   "naver_brand_volume": 3040,
+   "naver_branch_volumes": {
+    "홍대클레오르의원": 320,
+    "클레오르의원홍대": 250,
+    "클레오르의원홍대점": 10,
+    "합정클레오르의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "메이퓨어의원 홍대입구점": {
+   "address": "대한민국 서울특별시 마포구 월드컵북로2길 57, 금화 빌딩, 5 층 501호",
+   "google_rating": 4.3,
+   "google_reviews_total": 12,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 40390,
+   "naver_branch_volumes": {
+    "홍대메이퓨어의원": 55,
+    "메이퓨어의원홍대": 110,
+    "메이퓨어의원홍대점": 10,
+    "합정메이퓨어의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "연세보드미의원": {
+   "address": "대한민국 서울특별시 마포구 월드컵로3길 14",
+   "google_rating": null,
+   "google_reviews_total": null,
+   "google_reviews_delta_0914_0921": null,
+   "naver_brand_volume": 3740,
+   "naver_branch_volumes": {
+    "홍대연세보드미의원": 10,
+    "연세보드미의원홍대": 10,
+    "연세보드미의원홍대점": 10,
+    "합정연세보드미의원": 950
+   },
+   "search_suggestion_hits": []
+  },
+  "디온의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 양화로 156",
+   "google_rating": 4.9,
+   "google_reviews_total": 30,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 1060,
+   "naver_branch_volumes": {
+    "홍대디온의원": 1670,
+    "디온의원홍대": 90,
+    "디온의원홍대점": 15,
+    "합정디온의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "클림의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 141, 롯데호텔L7홍대점 클림의원, 3층",
+   "google_rating": 4.8,
+   "google_reviews_total": 585,
+   "google_reviews_delta_0914_0921": 3,
+   "naver_brand_volume": 4160,
+   "naver_branch_volumes": {
+    "홍대클림의원": 330,
+    "클림의원홍대": 700,
+    "클림의원홍대점": 110,
+    "합정클림의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "로바에의원": {
+   "address": "대한민국 서울특별시 마포구 동교동 159-1, 7층",
+   "google_rating": 4.9,
+   "google_reviews_total": 161,
+   "google_reviews_delta_0914_0921": 5,
+   "naver_brand_volume": 1610,
+   "naver_branch_volumes": {
+    "홍대로바에의원": 90,
+    "로바에의원홍대": 220,
+    "로바에의원홍대점": 10,
+    "합정로바에의원": 10
+   },
+   "search_suggestion_hits": [
+    "구글 자동완성 「홍대 피부과 로바 에」"
+   ]
+  },
+  "프로젝트유의원 홍대": {
+   "address": "대한민국 서울특별시 마포구 양화로 162, 6th",
+   "google_rating": 5,
+   "google_reviews_total": 539,
+   "google_reviews_delta_0914_0921": -34,
+   "naver_brand_volume": 1300,
+   "naver_branch_volumes": {
+    "홍대프로젝트유의원": 2690,
+    "프로젝트유의원홍대": 15,
+    "프로젝트유의원홍대점": 10,
+    "합정프로젝트유의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "리버스클리닉 홍대점": {
+   "address": "대한민국 서울특별시 마포구 동교동 159 1번지, 상진빌딩, 13층",
+   "google_rating": 4.3,
+   "google_reviews_total": 30,
+   "google_reviews_delta_0914_0921": 8,
+   "naver_brand_volume": 2400,
+   "naver_branch_volumes": {
+    "홍대리버스클리닉": 180,
+    "리버스클리닉홍대": 650,
+    "리버스클리닉홍대점": 10,
+    "합정리버스클리닉": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "블리비의원 홍대점": {
+   "address": "대한민국 서울특별시 마포구 양화로 161, 케이빌딩, 4층",
+   "google_rating": 4.3,
+   "google_reviews_total": 82,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 45280,
+   "naver_branch_volumes": {
+    "홍대블리비의원": 60,
+    "블리비의원홍대": 440,
+    "블리비의원홍대점": 370,
+    "합정블리비의원": 10
+   },
+   "search_suggestion_hits": []
+  },
+  "연세굿닥터의원": {
+   "address": "대한민국, KR 서울특별시 마포구 양화로 지하45 (지하철 합정역) 지하, 역내 상가(6호선 개찰구 바로 앞/스타 약국 옆, 1층",
+   "google_rating": 4.8,
+   "google_reviews_total": 5,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 570,
+   "naver_branch_volumes": {
+    "홍대연세굿닥터의원": 10,
+    "연세굿닥터의원홍대": 10,
+    "연세굿닥터의원홍대점": 10,
+    "합정연세굿닥터의원": 15
+   },
+   "search_suggestion_hits": []
+  },
+  "다사랑의원": {
+   "address": "대한민국 서울특별시 마포구 월드컵로 80",
+   "google_rating": 3.7,
+   "google_reviews_total": 3,
+   "google_reviews_delta_0914_0921": 0,
+   "naver_brand_volume": 2120,
+   "naver_branch_volumes": {
+    "홍대다사랑의원": 10,
+    "다사랑의원홍대": 10,
+    "다사랑의원홍대점": 10,
+    "합정다사랑의원": 10
+   },
+   "search_suggestion_hits": []
+  }
+ },
+ "local_seed_volumes": {
+  "홍대피부과": 17520,
+  "합정피부과": 1330,
+  "홍대피부과추천": 190,
+  "합정피부과추천": 15
+ },
+ "lifting_device_appearances": {
+  "울쎄라": {
+   "count": 3,
+   "held": true
+  },
+  "써마지": {
+   "count": 2,
+   "held": true
+  },
+  "인모드": {
+   "count": 2,
+   "held": true
+  },
+  "온다": {
+   "count": 2,
+   "held": true
+  },
+  "엠페이스": {
+   "count": 1,
+   "held": false
+  },
+  "덴서티": {
+   "count": 1,
+   "held": true
+  },
+  "더블로": {
+   "count": 1,
+   "held": false
+  },
+  "슈링크": {
+   "count": 1,
+   "held": true
+  }
+ },
+ "opportunity_gap": {
+  "기회": [
+   "아쿠아필",
+   "침샘보톡스",
+   "태반주사",
+   "백옥주사",
+   "엑소좀",
+   "신데렐라주사",
+   "셀르디엠",
+   "크라이오",
+   "아그네스",
+   "팔자주름보톡스",
+   "코어톡스",
+   "종아리보톡스"
+  ],
+  "유지": [
+   "마운자로",
+   "슈링크",
+   "위고비",
+   "볼뉴머",
+   "리쥬란",
+   "리투오",
+   "온다리프팅",
+   "스킨보톡스",
+   "덴서티",
+   "울쎄라",
+   "쥬베룩",
+   "포텐자",
+   "레이저제모",
+   "써마지",
+   "쥬베룩볼륨",
+   "스컬트라",
+   "힐로웨이브",
+   "피코토닝",
+   "입술필러",
+   "울쎄라가격",
+   "인모드",
+   "입꼬리보톡스",
+   "세르프",
+   "LDM",
+   "레디어스",
+   "라라필",
+   "리쥬란힐러",
+   "윤곽주사",
+   "지방분해주사",
+   "승모근보톡스",
+   "실리프팅",
+   "사각턱보톡스",
+   "소프웨이브",
+   "여드름압출",
+   "물광주사",
+   "울쎄라피프라임",
+   "골드PTT",
+   "슈링크유니버스",
+   "코필러",
+   "CO2레이저",
+   "바디온다",
+   "리쥬란HB",
+   "제오민",
+   "스킨바이브",
+   "리니어지",
+   "리쥬란아이",
+   "울트라콜",
+   "어깨필러",
+   "주름보톡스",
+   "레스틸렌",
+   "써마지FLX",
+   "피코슈어",
+   "릴리이드",
+   "DCA주사",
+   "연어주사",
+   "남자제모",
+   "바디인모드",
+   "조각주사",
+   "리즈네",
+   "이중턱주사",
+   "필러녹이는주사",
+   "브이레이저",
+   "XERF",
+   "요정귀필러",
+   "다한증보톡스",
+   "아큐토닝",
+   "포텐자펌핑",
+   "콜라움",
+   "엑소힐러",
+   "바디보톡스",
+   "미쥬코",
+   "바디조각주사",
+   "필로가"
+  ],
+  "관망": [
+   "눈밑지방재배치",
+   "모공각화증",
+   "고우리",
+   "티타늄리프팅",
+   "팔자주름시술",
+   "올리지오",
+   "프락셀",
+   "올타이트",
+   "다크서클",
+   "보톡스가격",
+   "검버섯",
+   "목주름",
+   "골반필러",
+   "스킨부스터종류",
+   "블랙헤드",
+   "기미제거",
+   "여드름흉터치료",
+   "피부과시술종류",
+   "여드름흉터레이저",
+   "필러가격",
+   "울쎄라써마지차이",
+   "이중턱",
+   "모공축소",
+   "리프팅가격",
+   "리쥬란쥬베룩차이",
+   "여드름자국",
+   "얼굴홍조",
+   "잡티제거",
+   "패인흉터",
+   "피부과시술추천",
+   "남자피부과시술",
+   "안면홍조치료",
+   "임산부피부과시술",
+   "피부처짐",
+   "결혼전피부과시술",
+   "피부과시술후음주",
+   "20대피부과시술",
+   "피부과시술후운동",
+   "50대피부시술",
+   "피부과가격비교",
+   "셀라필"
+  ],
+  "소규모": [
+   "팔자필러",
+   "벨로테로",
+   "켈로이드주사",
+   "블랙필",
+   "싸이모신",
+   "브라질리언제모",
+   "브이올렛",
+   "애교필러",
+   "덴서티알파팁",
+   "쥬비덤",
+   "물톡스",
+   "이갈이보톡스",
+   "잼버실",
+   "아이울쎄라",
+   "알라딘필",
+   "리쥬비엘",
+   "피코줌패스",
+   "히알라제",
+   "민트실",
+   "엘러간보톡스",
+   "레이저제네시스",
+   "목빗근보톡스",
+   "바디울쎄라",
+   "쇄골필러",
+   "피코포커스",
+   "에피티콘",
+   "립플립"
+  ]
+ }
+}
