@@ -237,13 +237,30 @@
  "tiktok": {
   "beautyblossom_global": {
    "followers": 1143,
-   "likes": 2659
+   "likes": 2659,
+   "posts_in_window": 4
   },
   "beautyblossom_jp": {
    "followers": 12,
    "likes": 146,
-   "posts_in_window_discover": 1
+   "posts_in_window": 5
+  },
+  "beautyblossom_th": {
+   "followers": 9,
+   "likes": 97,
+   "posts_in_window": 3
+  },
+  "beautyblossom_korea": {
+   "followers": 2,
+   "likes": 7,
+   "posts_in_window": 2
   }
+ },
+ "x": {
+  "own_account": "bblossom_clinic",
+  "followers": 74,
+  "posts_in_window": 0,
+  "external_mentions_in_window": 0
  },
  "dcard": {
   "followers": 3,
@@ -273,10 +290,8 @@
   ]
  },
  "not_collected": [
-  "x_login_required",
   "instagram_comment_text",
-  "tiktok_profile_video_list",
-  "rednote",
+  "rednote_login_required",
   "facebook_th"
  ],
  "metric_notes": {
