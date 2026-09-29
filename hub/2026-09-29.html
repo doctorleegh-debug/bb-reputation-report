@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>뷰블 보고서 허브 — 2026.09.29</title>
+<style>
+:root{
+  --ground:#faf8f8; --panel:#fff; --sunk:#f3eff1; --ink:#1a1618; --ink2:#4a4247;
+  --muted:#6d646a; --faint:#9a9095; --line:#e6e0e3; --accent:#8e4257;
+  --accbg:#f9edf1; --accln:#dbb3c0;
+  --crit:#b3261e; --critbg:#fbeceb; --critln:#e8b4b0;
+  --warn:#8a5a00; --warnbg:#faf1de; --warnln:#e3cb95;
+  --ok:#1f6b47; --okbg:#e9f3ed; --okln:#a9d2bd;
+  --info:#2c5578; --infobg:#eaf0f6; --infoln:#aec5db;
+  --up:#2c5578; --down:#b3261e;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --ground:#151214; --panel:#1e1a1d; --sunk:#241f23; --ink:#ece7e9; --ink2:#c3b9be;
+  --muted:#9b9096; --faint:#786e74; --line:#302a2e; --accent:#d98a9f;
+  --accbg:#2a1c22; --accln:#5e3a48;
+  --crit:#f08a80; --critbg:#2f1a18; --critln:#5e2f2a;
+  --warn:#dba64a; --warnbg:#2c2312; --warnln:#574326;
+  --ok:#6cc396; --okbg:#132a20; --okln:#2a5240;
+  --info:#82afd8; --infobg:#152431; --infoln:#2c4761;
+  --up:#82afd8; --down:#f08a80;
+}}
+:root[data-theme=dark]{
+  --ground:#151214; --panel:#1e1a1d; --sunk:#241f23; --ink:#ece7e9; --ink2:#c3b9be;
+  --muted:#9b9096; --faint:#786e74; --line:#302a2e; --accent:#d98a9f;
+  --accbg:#2a1c22; --accln:#5e3a48;
+  --crit:#f08a80; --critbg:#2f1a18; --critln:#5e2f2a;
+  --warn:#dba64a; --warnbg:#2c2312; --warnln:#574326;
+  --ok:#6cc396; --okbg:#132a20; --okln:#2a5240;
+  --info:#82afd8; --infobg:#152431; --infoln:#2c4761;
+  --up:#82afd8; --down:#f08a80;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",system-ui,sans-serif;word-break:keep-all;overflow-wrap:anywhere}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px 56px}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0 10px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.brand b{font-size:17px;letter-spacing:-.01em}
+.brand span{color:var(--muted);font-size:13px}
+.tbtn{border:1px solid var(--line);background:var(--panel);color:var(--ink2);border-radius:999px;padding:5px 12px;font-size:12px;cursor:pointer;white-space:nowrap}
+.hero{padding:26px 0 8px}
+.hero h1{margin:0 0 8px;font-size:26px;line-height:1.3;letter-spacing:-.02em}
+.hero p{margin:0;color:var(--ink2);font-size:15px}
+.hero .meta{margin-top:10px;color:var(--muted);font-size:13px}
+.quick{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+.quick a{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--ink2);font-size:13px}
+.quick a:hover{border-color:var(--accln);text-decoration:none;color:var(--ink)}
+.quick a i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}.hero h1{font-size:22px}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:12px;border-top:4px solid var(--c,var(--accent))}
+.card .head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;background:var(--cbg);color:var(--c);border:1px solid var(--cln);white-space:nowrap}
+.card h2{margin:6px 0 2px;font-size:19px;line-height:1.35;letter-spacing:-.01em}
+.card .sub{color:var(--muted);font-size:13px}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+@media (max-width:420px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tile{background:var(--sunk);border-radius:9px;padding:8px 9px;min-width:0}
+.tile .k{font-size:11px;color:var(--muted);line-height:1.3}
+.tile .v{font-size:17px;font-weight:700;line-height:1.25;margin-top:2px;font-variant-numeric:tabular-nums}
+.tile .v small{font-size:11px;font-weight:500;color:var(--muted);margin-left:2px}
+.up{color:var(--up)}.down{color:var(--down)}
+.card ul{margin:0;padding-left:18px;color:var(--ink2);font-size:14px}
+.card li{margin:4px 0}
+.card li b{color:var(--ink);font-weight:600}
+.secs{font-size:12px;color:var(--muted);line-height:1.7}
+.secs span{display:inline-block;background:var(--sunk);border-radius:6px;padding:0 7px;margin:2px 3px 2px 0;color:var(--ink2)}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px;border-top:1px dashed var(--line)}
+.go{display:inline-flex;align-items:center;gap:8px;background:var(--c,var(--accent));color:#fff !important;padding:9px 16px;border-radius:10px;font-weight:600;font-size:14px}
+.go:hover{filter:brightness(1.08);text-decoration:none}
+.aux{font-size:12px;color:var(--muted)}
+.aux a{color:var(--muted);text-decoration:underline dotted}
+.note{margin-top:22px;padding:14px 16px;background:var(--panel);border:1px solid var(--line);border-radius:12px;color:var(--ink2);font-size:13px}
+.note b{color:var(--ink)}
+.note ol{margin:6px 0 0;padding-left:20px}
+.note li{margin:2px 0}
+footer.end{margin-top:26px;color:var(--faint);font-size:12px;line-height:1.7}
+.c-rep{--c:var(--accent);--cbg:var(--accbg);--cln:var(--accln)}
+.c-trend{--c:var(--info);--cbg:var(--infobg);--cln:var(--infoln)}
+.c-month{--c:var(--ok);--cbg:var(--okbg);--cln:var(--okln)}
+.c-strat{--c:var(--warn);--cbg:var(--warnbg);--cln:var(--warnln)}
+@media print{.tbtn,.quick{display:none}.card{break-inside:avoid}body{background:#fff}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand"><b>뷰블 보고서 허브</b><span>2026.09.29 발행분 · 4개 보고서</span></div>
+  <button class="tbtn" id="tg" type="button">🌙 다크</button>
+</header>
+
+<section class="hero">
+  <h1>이번 주 보고서 바로가기</h1>
+  <p>주간 평판·검색 트렌드 보고서와 월간 성과·10월 전략 리포트를 한 곳에 모았습니다. 카드의 요약을 읽고 「보고서 열기」로 이동하시면 됩니다.</p>
+  <div class="meta">정리일 2026-09-29 · 각 보고서의 수치는 해당 보고서 발행 시점 값입니다.</div>
+  <nav class="quick" aria-label="바로가기">
+    <a href="#rep"><i style="background:var(--accent)"></i>평판 W40</a>
+    <a href="#trend"><i style="background:var(--info)"></i>검색 트렌드 W40</a>
+    <a href="#month"><i style="background:var(--ok)"></i>월간 성과 7~9월</a>
+    <a href="#strat"><i style="background:var(--warn)"></i>10월 전략 리포트</a>
+  </nav>
+</section>
+
+<div class="grid">
+
+<article class="card c-rep" id="rep">
+  <div class="head">
+    <div>
+      <span class="badge">주간 · 평판</span>
+      <h2>뷰티블라썸의원 평판 보고서 2026-W40</h2>
+      <div class="sub">대상 2026.09.21–09.27 (추석 연휴 9/24–26 포함) · 발행 09.29 · 기보고 후기 제외</div>
+    </div>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="k">기간 내 후기</div><div class="v">121<small>건</small></div></div>
+    <div class="tile"><div class="k">부정·혼합</div><div class="v down">6<small>건</small></div></div>
+    <div class="tile"><div class="k">후기 누계</div><div class="v">6,349<small class="up">+162</small></div></div>
+    <div class="tile"><div class="k">병원 미답변</div><div class="v down">3<small>건</small></div></div>
+  </div>
+  <ul>
+    <li><b>후기 121건</b> 확인(강남언니 53 · 네이버 35 · Google 31 · 바비톡 JP 2). 긍정 115 · 혼합 3 · 부정 3이며, Critical 신규 확인은 0건입니다.</li>
+    <li><b>Google 2점 영어 후기</b>(통역 재촉 · 결정 시간 5분)에 병원 답글이 없습니다. 강남언니 미답변 2건과 함께 즉시 조치 항목입니다.</li>
+    <li><b>상담 설명·공장식 응대 불만</b>이 3주 연속 확인됐습니다. 네이버·바비톡 기간 내 후기는 모두 긍정입니다.</li>
+    <li><b>Instagram 5개국 팔로워 9,992</b>(+34). Threads KR은 9/23–24 리포스트 195건으로 팔로워가 늘었습니다. 공식 의료진 등재 8명은 변동 없습니다.</li>
+    <li>홈페이지에 고우리·신데렐라주사·제오민·코어톡스 페이지가 새로 확인됐고, JP 공지에 GOURI 안내가 올라왔습니다.</li>
+  </ul>
+  <div class="secs">구성: <span>이번 주 평판</span><span>즉시 조치</span><span>전주 대비</span><span>구글맵 태그</span><span>의료진 등재</span><span>자사 채널</span><span>성예사</span><span>소셜·해외</span><span>경쟁·시장</span><span>규제</span><span>조치</span></div>
+  <div class="foot">
+    <a class="go" href="https://doctorleegh-debug.github.io/bb-reputation-report/w/2026-W40.html" target="_blank" rel="noopener">보고서 열기 →</a>
+    <span class="aux"><a href="https://doctorleegh-debug.github.io/bb-reputation-report/w/2026-W40.json" target="_blank" rel="noopener">통계 JSON</a> · <a href="https://doctorleegh-debug.github.io/bb-reputation-report/w/2026-W39.html" target="_blank" rel="noopener">지난 회차 W39</a></span>
+  </div>
+</article>
+
+<article class="card c-trend" id="trend">
+  <div class="head">
+    <div>
+      <span class="badge">주간 · 검색 트렌드 6회차</span>
+      <h2>피부시술 검색 트렌드 보고서 2026-W40</h2>
+      <div class="sub">대상 주 2026.09.21–09.27 · 발행 09.29 · 네이버 73개 + 홈페이지 메뉴 68개 + 구글 32개</div>
+    </div>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="k">추적 키워드 합계</div><div class="v down">−3.9<small>%</small></div></div>
+    <div class="tile"><div class="k">감소 / 증가</div><div class="v">52<small>/ 15개</small></div></div>
+    <div class="tile"><div class="k">이상 신호</div><div class="v">8<small>개</small></div></div>
+    <div class="tile"><div class="k">홍대·합정 패널</div><div class="v">51<small>곳</small></div></div>
+  </div>
+  <ul>
+    <li><b>고우리·스킨보톡스</b>는 5주 연속 올랐고, <b>레이저제모·아쿠아필</b>은 5주 연속 줄었습니다. 이번 주는 73개 중 52개가 줄어 합계 1,146,390 → 1,101,655입니다.</li>
+    <li><b>이상 신호 8개</b>: 볼뉴머 −16.3%(−11,340건)가 가장 컸고, 주름보톡스 +12.9% · 스컬트라 −12.1% · 써마지FLX −11.3%입니다. 절대 증가 1위는 입술필러(+1,140건)입니다.</li>
+    <li><b>자사 장비·시술 68개</b> 중 37개 감소 · 7개 증가. 올타이트는 4주 연속 상승(5주 +13.2%), 울쎄라는 최근 2주 연속 하락입니다.</li>
+    <li><b>홍대·합정 의원 51곳</b>: 밴스피부과 구글 리뷰 −112, 톡스앤필 +56. 힐스의원·Derma7이 새로 잡혔습니다.</li>
+    <li>자사 시술 기회 갭 10개(아쿠아필 · 침샘보톡스 · 태반주사 · 엑소좀 등). 구글 7일 지수는 표본 조건을 만족한 키워드가 2개뿐입니다.</li>
+  </ul>
+  <div class="secs">구성: <span>이번 주 한 줄</span><span>주목 신호</span><span>자사 장비·시술</span><span>경쟁사 동향</span><span>4주 추세</span><span>테마·증감</span><span>자사 시술 갭</span><span>상세 지표</span></div>
+  <div class="foot">
+    <a class="go" href="https://doctorleegh-debug.github.io/bb-reputation-report/trend/2026-W40.html" target="_blank" rel="noopener">보고서 열기 →</a>
+    <span class="aux"><a href="https://doctorleegh-debug.github.io/bb-reputation-report/trend/2026-W40.json" target="_blank" rel="noopener">통계 JSON</a> · <a href="https://doctorleegh-debug.github.io/bb-reputation-report/trend/2026-W39.html" target="_blank" rel="noopener">지난 회차 W39</a></span>
+  </div>
+</article>
+
+<article class="card c-month" id="month">
+  <div class="head">
+    <div>
+      <span class="badge">월간 · 성과</span>
+      <h2>뷰티블라썸 월간 성과보고서 2026년 7~9월</h2>
+      <div class="sub">7월 · 8월 · 9월(1~28일) 비교 · 발행 09.29 · 증감은 8월 일평균 대비</div>
+    </div>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="k">홈페이지 접속</div><div class="v">92,668<small class="up">▲11.4%</small></div></div>
+    <div class="tile"><div class="k">문의</div><div class="v">2,102<small class="down">▼13.4%</small></div></div>
+    <div class="tile"><div class="k">인스타 조회</div><div class="v">472,473<small class="up">▲14.7%</small></div></div>
+    <div class="tile"><div class="k">스레드 조회</div><div class="v">30,596<small class="up">▲42.0%</small></div></div>
+  </div>
+  <ul>
+    <li><b>홈페이지(GA4)</b>: 6개국 접속 92,668회(일평균 3,310)로 늘었지만 문의는 2,102건으로 줄어 전환율이 2.9% → 2.3%입니다.</li>
+    <li><b>국가별</b>: TH 접속 ▲213.9% · 문의 ▲823.9%, CN 접속 ▲104.1%, EN ▲21.1%. JP는 접속 ▼28.3% · 문의 ▼39.4%입니다.</li>
+    <li><b>검색</b>: 구글 검색 클릭 3,192(▲1.0%, 홈페이지 7곳), 네이버 검색 클릭 1,678(▼10.2%, 한국 사이트).</li>
+    <li><b>영상·SNS</b>: 유튜브 조회 28,401(▲9.6%, 2개 채널), 인스타그램 조회 472,473(▲14.7%), 스레드 조회 30,596(▲42.0%). 모두 5개국 계정 합계입니다.</li>
+    <li>유입 경로는 유료 소셜 광고 56,952(▲9.1%) · 직접 유입 16,744(▲23.9%) 순이며, 달마다 일수가 달라 일평균으로 비교했습니다.</li>
+  </ul>
+  <div class="secs">구성: <span>홈페이지</span><span>구글 검색</span><span>네이버 검색</span><span>유튜브</span><span>인스타그램</span><span>스레드</span><span>기준·미확인</span></div>
+  <div class="foot">
+    <a class="go" href="https://doctorleegh-debug.github.io/beautyblossom-analytics/r/2026-09-29/" target="_blank" rel="noopener">보고서 열기 →</a>
+    <span class="aux">beautyblossom-analytics · r/2026-09-29</span>
+  </div>
+</article>
+
+<article class="card c-strat" id="strat">
+  <div class="head">
+    <div>
+      <span class="badge">월간 · 전략 (AI 분석)</span>
+      <h2>뷰티블라썸 통합 전략 리포트 · 10월 실행안</h2>
+      <div class="sub">9월 실적 기준 · GA4 9/1–9/28 · Search Console 9/1–9/26 · 경쟁사 광고 수집 9/29 · 생성 09.29</div>
+    </div>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="k">9월 목표 달성</div><div class="v down">0<small>/ 3</small></div></div>
+    <div class="tile"><div class="k">광고로 온 접속</div><div class="v">67<small>%</small></div></div>
+    <div class="tile"><div class="k">해외 폼 문의 중 한국 접속</div><div class="v down">91<small>%</small></div></div>
+    <div class="tile"><div class="k">경쟁 병원 광고</div><div class="v">210<small>건 · 7곳</small></div></div>
+  </div>
+  <ul>
+    <li><b>S0 지난달 판단 확인</b>: 판정 가능한 목표 3개 모두 미달(TW 문의 전환율 · EN 비광고 유입 비율 · KR 비브랜드 검색 클릭), JP 하루 접속은 판정 불가입니다.</li>
+    <li><b>문의 집계 보정</b>: 8월 해외 사이트 폼 문의 509건 중 465건이 한국에서 접속한 소수 인원이 보낸 것으로 확인됐습니다. 현지 기준으로 문의가 는 시장은 TH(6 → 72회)입니다.</li>
+    <li><b>S1 유입 경로</b>: 하루 평균 접속 3,310회 중 67%가 광고 유입입니다. 현지 문의율은 TH 8.8% · EN 1.7%가 높고 TW 0.42%가 가장 낮습니다.</li>
+    <li><b>S2–S3 경쟁 병원 메타 광고</b>: 7곳 광고 210건을 읽어 문구 패턴(메신저 상담 유도 70% · 예약 CTA 60%)과 노출 국가 변화를 정리했습니다. PRIA Clinic이 115건 · 5개국으로 가장 많습니다.</li>
+    <li><b>S4–S8 실행안</b>: 나라별 10월 할 일, 무비용 채널, 공략 검색어와 미보유 키워드, 진행 순서, 11월 성공 판단 기준, 공략 시술 키워드 리스트. 첫 과제는 시장별 광고비 자료 확보입니다.</li>
+  </ul>
+  <div class="secs">구성: <span>S0 지난달 판단</span><span>S1 유입 경로</span><span>S2 경쟁 광고</span><span>S3 노출 국가</span><span>S4 10월 할 일</span><span>S5 공략 검색어</span><span>S6 진행 순서</span><span>S7 성공 기준</span><span>S8 시술 키워드</span></div>
+  <div class="foot">
+    <a class="go" href="https://doctorleegh-debug.github.io/beautyblossom-analytics/report/strategy-2026-10.html" target="_blank" rel="noopener">보고서 열기 →</a>
+    <span class="aux">beautyblossom-analytics · report/strategy-2026-10</span>
+  </div>
+</article>
+
+</div>
+
+<section class="note">
+  <b>읽는 순서 제안</b>
+  <ol>
+    <li>월간 성과보고서로 9월 숫자를 확인합니다.</li>
+    <li>전략 리포트에서 10월에 무엇을 할지와 판단 기준을 봅니다.</li>
+    <li>평판 보고서의 즉시 조치(Google 미답변 후기 · 강남언니 미답변 2건)를 처리합니다.</li>
+    <li>트렌드 보고서로 이번 주 검색 변화와 기회 갭을 확인합니다.</li>
+  </ol>
+</section>
+
+<footer class="end">
+  이 허브는 2026-09-29 발행분 기준이며 다음 회차는 새 날짜 URL로 만들어집니다. 각 보고서의 이전 회차는 보고서 상단 「회차 보관」에서 확인할 수 있습니다.<br>
+  최신 평판 보고서: <a href="https://doctorleegh-debug.github.io/bb-reputation-report/">doctorleegh-debug.github.io/bb-reputation-report</a> · 보고서 목록: <a href="https://doctorleegh-debug.github.io/bb-reputation-report/reports.json">reports.json</a>
+</footer>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('tg'),r=document.documentElement,k='bb-theme';
+  function cur(){return r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');}
+  function paint(){b.textContent=cur()==='dark'?'☀️ 라이트':'🌙 다크';}
+  try{var s=localStorage.getItem(k);if(s)r.setAttribute('data-theme',s);}catch(e){}
+  paint();
+  b.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem(k,n);}catch(e){}paint();});
+})();
+</script>
+</body>
+</html>
