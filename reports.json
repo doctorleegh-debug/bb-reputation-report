@@ -4,6 +4,15 @@
  "latest": "https://doctorleegh-debug.github.io/bb-reputation-report/",
  "reports": [
   {
+   "type": "보고서 허브",
+   "published": "2026-10-05",
+   "url": "https://doctorleegh-debug.github.io/bb-reputation-report/hub/2026-10-05.html",
+   "includes": [
+    "평판 2026-W41",
+    "검색 트렌드 2026-W41"
+   ]
+  },
+  {
    "type": "평판",
    "week": "2026-W41",
    "published": "2026-10-05",
