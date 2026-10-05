@@ -1,0 +1,324 @@
+{
+ "issue": "2026-W41",
+ "published": "2026-10-05",
+ "window_kst": [
+  "2026-09-28",
+  "2026-10-04"
+ ],
+ "collected_at_kst": "2026-10-05",
+ "new_reviews": {
+  "naver_visit_window": 15,
+  "google_first_written": 24,
+  "babitalk_jp": 9,
+  "sungyesa": 0,
+  "gangnamunni": 75,
+  "total": 123
+ },
+ "sentiment": {
+  "positive": 118,
+  "neutral": 0,
+  "mixed": 4,
+  "negative": 1
+ },
+ "critical": 0,
+ "severity3": 0,
+ "gangnamunni": {
+  "score_distribution": {
+   "2": 1,
+   "7": 1,
+   "8": 2,
+   "9": 5,
+   "10": 66
+  },
+  "replied": 74,
+  "doctor_tags": {
+   "미기재": 32,
+   "김우종": 6,
+   "최준수": 7,
+   "최윤경": 4,
+   "구시원": 1,
+   "정성호": 6,
+   "이건호": 7,
+   "김준혁": 11,
+   "최준수, 이건호": 1
+  },
+  "complaint_themes": {
+   "consultation_skipped_or_no_doctor": 2,
+   "attitude_after_declining_upsell": 1,
+   "factory_mixed_context": 1
+  }
+ },
+ "google_negative": {
+  "count": 0,
+  "three_star_no_complaint_text": 1,
+  "prior_week_2star_still_unanswered": true
+ },
+ "unanswered": {
+  "naver": 2,
+  "google": 3,
+  "gangnamunni": 1
+ },
+ "cumulative": {
+  "Naver": {
+   "prev": 2468,
+   "now": 2513
+  },
+  "UNNI JP": {
+   "prev": 2632,
+   "now": 2686
+  },
+  "Google Maps": {
+   "prev": 1209,
+   "now": 1233
+  },
+  "성예사": {
+   "prev": 40,
+   "now": 40
+  }
+ },
+ "ratings": {
+  "google_maps": 5,
+  "unni_jp": 9.3,
+  "sungyesa": 4.1,
+  "babitalk_jp": 4.82,
+  "yeoshin": 9.6
+ },
+ "babitalk_jp_reviews_total": {
+  "prev": 124,
+  "now": 132
+ },
+ "google_star_distribution": {
+  "1": 3,
+  "2": 1,
+  "3": 7,
+  "4": 11,
+  "5": 1211
+ },
+ "google_topics": {
+  "no forced sales": 47,
+  "chinese consultant": 21,
+  "skin analysis": 19,
+  "comfortable environment": 63,
+  "gold microneedle": 11,
+  "japanese language support": 10,
+  "japanese interpreter": 6,
+  "medical aesthetics experience": 9,
+  "gentle doctor": 11,
+  "friendly staff": 169
+ },
+ "google_review_languages": {
+  "중국어": 16,
+  "영어": 6,
+  "한국어": 1,
+  "일본어": 1
+ },
+ "instagram": {
+  "KR": {
+   "followers": 1771,
+   "posts_in_window": 12,
+   "reach": 164877,
+   "views": 212651,
+   "profile_views": 1285,
+   "accounts_engaged": 7264,
+   "total_interactions": 11819,
+   "likes": 4902,
+   "comments": 25,
+   "saves": 522,
+   "shares": 3141
+  },
+  "EN": {
+   "followers": 4351,
+   "posts_in_window": 9,
+   "reach": 83651,
+   "views": 102660,
+   "profile_views": 518,
+   "accounts_engaged": 1565,
+   "total_interactions": 1270,
+   "likes": 1014,
+   "comments": 24,
+   "saves": 157,
+   "shares": 38
+  },
+  "JP": {
+   "followers": 1449,
+   "posts_in_window": 10,
+   "reach": 8689,
+   "views": 11734,
+   "profile_views": 210,
+   "accounts_engaged": 27,
+   "total_interactions": 35,
+   "likes": 30,
+   "comments": 0,
+   "saves": 5,
+   "shares": 0
+  },
+  "TH": {
+   "followers": 1723,
+   "posts_in_window": 10,
+   "reach": 353,
+   "views": 650,
+   "profile_views": 27,
+   "accounts_engaged": 12,
+   "total_interactions": 20,
+   "likes": 11,
+   "comments": 0,
+   "saves": 0,
+   "shares": 4
+  },
+  "TW": {
+   "followers": 2154,
+   "posts_in_window": 10,
+   "reach": 126865,
+   "views": 185520,
+   "profile_views": 1061,
+   "accounts_engaged": 14454,
+   "total_interactions": 26388,
+   "likes": 11560,
+   "comments": 24,
+   "saves": 882,
+   "shares": 6786
+  }
+ },
+ "threads": {
+  "KR": {
+   "followers": 1362,
+   "own_posts_in_window": 4,
+   "reposts_in_window": 196,
+   "views": 7390,
+   "likes": 508,
+   "replies": 324,
+   "reposts": 192,
+   "quotes": 0
+  },
+  "EN": {
+   "followers": 64,
+   "own_posts_in_window": 1,
+   "reposts_in_window": 0,
+   "views": 267,
+   "likes": 0,
+   "replies": 0,
+   "reposts": 0,
+   "quotes": 0
+  },
+  "JP": {
+   "followers": 11,
+   "own_posts_in_window": 3,
+   "reposts_in_window": 0,
+   "views": 87,
+   "likes": 0,
+   "replies": 0,
+   "reposts": 0,
+   "quotes": 0
+  },
+  "TH": {
+   "followers": 4,
+   "own_posts_in_window": 7,
+   "reposts_in_window": 0,
+   "views": 509,
+   "likes": 0,
+   "replies": 0,
+   "reposts": 0,
+   "quotes": 0
+  },
+  "TW": {
+   "followers": 125,
+   "own_posts_in_window": 7,
+   "reposts_in_window": 0,
+   "views": 7508,
+   "likes": 47,
+   "replies": 6,
+   "reposts": 0,
+   "quotes": 0
+  }
+ },
+ "instagram_top_post": {
+  "country": "KR",
+  "date": "2026-10-03",
+  "reach": 150396
+ },
+ "instagram_second_post": {
+  "country": "TW",
+  "date": "2026-10-03",
+  "reach": 121989
+ },
+ "youtube_uploads_in_window": {
+  "K-Beauty Doctor Lee": 11,
+  "블라썸1호": 9
+ },
+ "tiktok": {
+  "beautyblossom_global": {
+   "followers": 1143,
+   "likes": 2664,
+   "posts_in_window": 0
+  },
+  "beautyblossom_jp": {
+   "followers": 12,
+   "likes": 151,
+   "posts_in_window": null
+  },
+  "beautyblossom_th": {
+   "followers": 9,
+   "likes": 115,
+   "posts_in_window": 3
+  },
+  "beautyblossom_korea": {
+   "followers": 2,
+   "likes": 13,
+   "posts_in_window": 1
+  },
+  "note": "profile grid shows TikTok error screen; dates read from profile embed pages (JP embed returned overload-protect)"
+ },
+ "facebook_pages": {
+  "Global": 131,
+  "TW": 63,
+  "JP": 14,
+  "KR": 9,
+  "TH": 8,
+  "posts_note": "pages_read_user_content permission missing"
+ },
+ "x": {
+  "own_account": "bblossom_clinic",
+  "followers": 74,
+  "posts_in_window": 0,
+  "external_mentions_in_window": 0
+ },
+ "dcard": {
+  "followers": 3,
+  "posts_total": 79,
+  "posts_in_window": 3
+ },
+ "staff_official_count": {
+  "2026-09-29": 8,
+  "2026-10-05": 8
+ },
+ "competitors_google_maps": {
+  "뷰티라운지의원 홍대글로벌": [
+   4.9,
+   1382
+  ],
+  "BeautyStone 홍대": [
+   4.9,
+   656
+  ],
+  "프로젝트유의원 홍대": [
+   5,
+   571
+  ],
+  "뷰티유의원": [
+   5,
+   256
+  ]
+ },
+ "not_collected": [
+  "instagram_comment_text",
+  "facebook_page_posts_permission",
+  "tiktok_jp_video_list",
+  "rednote_skipped"
+ ],
+ "metric_notes": {
+  "observation_gap_days": 6,
+  "threads_posts": "REPOST_FACADE items are counted separately from own posts (KR reposted 196 on 10/1-10/3)",
+  "google_3star": "counted as mixed regardless of text"
+ },
+ "regulation_news_in_window": 4
+}
