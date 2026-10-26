@@ -1,0 +1,349 @@
+{
+ "issue": "2026-W44",
+ "published": "2026-10-26",
+ "window_kst": [
+  "2026-10-19",
+  "2026-10-25"
+ ],
+ "collected_at_kst": "2026-10-26",
+ "new_reviews": {
+  "naver_visit_window": 23,
+  "google_first_written": 29,
+  "babitalk_jp": 4,
+  "sungyesa": 1,
+  "gangnamunni": 48,
+  "total": 105
+ },
+ "sentiment": {
+  "positive": 101,
+  "neutral": 0,
+  "mixed": 4,
+  "negative": 0
+ },
+ "critical": 0,
+ "severity3": 0,
+ "gangnamunni": {
+  "score_distribution": {
+   "8": 1,
+   "9": 1,
+   "10": 46
+  },
+  "replied": 46,
+  "doctor_tags": {
+   "정성호": 6,
+   "미기재": 13,
+   "김준혁": 11,
+   "최준수": 8,
+   "이건호": 8,
+   "최윤경": 1,
+   "김우종": 1
+  },
+  "complaint_themes": {
+   "treatment_result_no_effect_or_filler": 2,
+   "treatment_result_dent_or_bruise": 0,
+   "factory_style": 2,
+   "long_wait": 1,
+   "staff_attitude": 1
+  }
+ },
+ "sungyesa": {
+  "rating": {
+   "prev": 4.0,
+   "now": 4.0
+  },
+  "evaluations": {
+   "prev": 41,
+   "now": 42
+  },
+  "new_in_window": 1,
+  "sub_scores": {
+   "doctor_kindness": 4.3,
+   "consultation": 3.7,
+   "staff_kindness": 4.0,
+   "facility": 4.3,
+   "expectation": 3.8
+  }
+ },
+ "google_negative": {
+  "count": 0,
+  "three_star_no_complaint_text": 0,
+  "four_star_positive_text": 0,
+  "prior_week_2star_still_unanswered": true,
+  "prior_week_3star_still_unanswered": false
+ },
+ "unanswered": {
+  "naver": 2,
+  "google": 4,
+  "gangnamunni": 2
+ },
+ "cumulative": {
+  "Naver": {
+   "prev": 2632,
+   "now": 2679
+  },
+  "UNNI JP": {
+   "prev": 2801,
+   "now": 2842
+  },
+  "Google Maps": {
+   "prev": 1297,
+   "now": 1330
+  },
+  "성예사": {
+   "prev": 41,
+   "now": 42
+  }
+ },
+ "ratings": {
+  "google_maps": 5,
+  "unni_jp": 9.4,
+  "sungyesa": 4.0,
+  "babitalk_jp_display": 4.9,
+  "yeoshin": 9.6
+ },
+ "babitalk_jp_reviews_total_display": {
+  "prev": 135,
+  "now": 139
+ },
+ "google_star_distribution": {
+  "1": 3,
+  "2": 1,
+  "3": 8,
+  "4": 12,
+  "5": 1306
+ },
+ "google_topics": {
+  "no forced sales": 49,
+  "chinese consultant": 21,
+  "japanese interpreter": 10,
+  "comfortable environment": 64,
+  "skin analysis": 15,
+  "gold microneedle": 11,
+  "japanese language support": 10,
+  "medical aesthetics experience": 9,
+  "gentle doctor": 11,
+  "friendly staff": 168
+ },
+ "google_review_languages": {
+  "중국어": 19,
+  "영어": 7,
+  "태국어": 2,
+  "별점만": 1
+ },
+ "instagram": {
+  "KR": {
+   "followers": 1781,
+   "posts_in_window": 19,
+   "reach": 9983,
+   "views": 15468,
+   "profile_views": 278,
+   "accounts_engaged": 26,
+   "total_interactions": 94,
+   "likes": 80,
+   "comments": 1,
+   "saves": 2,
+   "shares": 3
+  },
+  "EN": {
+   "followers": 4368,
+   "posts_in_window": 17,
+   "reach": 128330,
+   "views": 145669,
+   "profile_views": 424,
+   "accounts_engaged": 2181,
+   "total_interactions": 1657,
+   "likes": 1480,
+   "comments": 21,
+   "saves": 83,
+   "shares": 37
+  },
+  "JP": {
+   "followers": 1451,
+   "posts_in_window": 17,
+   "reach": 8219,
+   "views": 10870,
+   "profile_views": 257,
+   "accounts_engaged": 20,
+   "total_interactions": 38,
+   "likes": 31,
+   "comments": 0,
+   "saves": 7,
+   "shares": 0
+  },
+  "TH": {
+   "followers": 556,
+   "posts_in_window": 16,
+   "reach": 627,
+   "views": 904,
+   "profile_views": 23,
+   "accounts_engaged": 6,
+   "total_interactions": 7,
+   "likes": 4,
+   "comments": 0,
+   "saves": 1,
+   "shares": 1
+  },
+  "TW": {
+   "followers": 2244,
+   "posts_in_window": 14,
+   "reach": 16744,
+   "views": 25086,
+   "profile_views": 396,
+   "accounts_engaged": 1234,
+   "total_interactions": 2289,
+   "likes": 872,
+   "comments": 2,
+   "saves": 130,
+   "shares": 625
+  }
+ },
+ "threads": {
+  "KR": {
+   "followers": 1887,
+   "own_posts_in_window": 3,
+   "reposts_in_window": 197,
+   "views": 6249,
+   "likes": 467,
+   "replies": 565,
+   "reposts": 176,
+   "quotes": 0
+  },
+  "EN": {
+   "followers": 68,
+   "own_posts_in_window": 0,
+   "reposts_in_window": 0,
+   "views": 191,
+   "likes": 0,
+   "replies": 0,
+   "reposts": 0,
+   "quotes": 0
+  },
+  "JP": {
+   "followers": 80,
+   "own_posts_in_window": 8,
+   "reposts_in_window": 0,
+   "views": 1860,
+   "likes": 97,
+   "replies": 45,
+   "reposts": 2,
+   "quotes": 0
+  },
+  "TH": {
+   "followers": 5,
+   "own_posts_in_window": 2,
+   "reposts_in_window": 0,
+   "views": 5,
+   "likes": 0,
+   "replies": 0,
+   "reposts": 0,
+   "quotes": 0
+  },
+  "TW": {
+   "followers": 136,
+   "own_posts_in_window": 4,
+   "reposts_in_window": 0,
+   "views": 3145,
+   "likes": 319,
+   "replies": 0,
+   "reposts": 1,
+   "quotes": 0
+  }
+ },
+ "instagram_top_post": {
+  "country": "EN",
+  "date": "2026-10-24",
+  "reach": 445
+ },
+ "youtube_uploads_in_window": {
+  "K-Beauty Doctor Lee": 9,
+  "블라썸1호": 13
+ },
+ "tiktok": {
+  "beautyblossom_global": {
+   "followers": 1142,
+   "likes": 2785,
+   "posts_in_window": 0
+  },
+  "beautyblossom_jp": {
+   "followers": 12,
+   "likes": 169,
+   "posts_in_window": 10
+  },
+  "beautyblossom_th": {
+   "followers": 11,
+   "likes": 137,
+   "posts_in_window": 2
+  },
+  "beautyblossom_korea": {
+   "followers": 2,
+   "likes": 33,
+   "posts_in_window": 5
+  },
+  "note": "profile grid shows TikTok error screen; counts and dates read from profile embed pages"
+ },
+ "facebook_pages": {
+  "Global": 132,
+  "TW": 71,
+  "JP": 17,
+  "KR": 11,
+  "TH": 10,
+  "posts_note": "pages_read_user_content permission missing"
+ },
+ "x": {
+  "own_account": "bblossom_clinic",
+  "followers": 74,
+  "posts_in_window": 8,
+  "external_mentions_in_window": null
+ },
+ "dcard": {
+  "followers": 4,
+  "posts_total": 88,
+  "posts_in_window": 3
+ },
+ "web_search_external_mentions_in_window": 0,
+ "reddit_external_mentions_in_window": 0,
+ "threads_external_replies": {
+  "KR": 20,
+  "JP": 22,
+  "greetings_kr": 14,
+  "follow_greetings_jp": 22
+ },
+ "staff_official_count": {
+  "2026-10-19": 8,
+  "2026-10-26": 8
+ },
+ "competitors_google_maps": {
+  "뷰티라운지의원 홍대글로벌": [
+   4.9,
+   1143
+  ],
+  "BeautyStone 홍대": [
+   4.9,
+   707
+  ],
+  "프로젝트유의원 홍대": [
+   5,
+   620
+  ],
+  "뷰티유의원": [
+   5,
+   259
+  ]
+ },
+ "not_collected": [
+  "instagram_comment_text",
+  "facebook_page_posts_permission",
+  "naver_searchadvisor_console_login_pending",
+  "rednote_skipped"
+ ],
+ "metric_notes": {
+  "observation_gap_days": 7,
+  "threads_posts": "REPOST_FACADE items are counted separately from own posts (KR reposted 197 in the window)",
+  "google_3star": "counted as mixed regardless of text",
+  "google_4star": "positive text counted as positive",
+  "unni_high_score_mixed": "10/9/8-point reviews with factory-style wording, unconfirmed effect, filler-complication wording or a long-wait complaint are counted as mixed (severity 1)",
+  "sungyesa_entry": "evaluation post counted as mixed severity 2; prices in the post are not reproduced",
+  "browser": "login-gated pages read through ego-browser; regulation articles fetched through Jina Reader"
+ },
+ "regulation_news_in_window": 8
+}
