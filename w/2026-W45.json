@@ -8,14 +8,14 @@
  "collected_at_kst": "2026-11-02",
  "new_reviews": {
   "naver_visit_window": 32,
-  "google_first_written": 46,
+  "google_first_written": 34,
   "babitalk_jp": 4,
   "sungyesa": 0,
   "gangnamunni": 43,
-  "total": 125
+  "total": 113
  },
  "sentiment": {
-  "positive": 119,
+  "positive": 107,
   "neutral": 0,
   "mixed": 5,
   "negative": 1
@@ -75,7 +75,7 @@
   "four_star_positive_text": 0
  },
  "google_newest_first_returned": 5,
- "google_maps_list_in_window": 46,
+ "google_maps_list_in_window": 34,
  "unanswered": {
   "naver": 1,
   "google": 2,
@@ -204,9 +204,9 @@
   "friendly staff": 168
  },
  "google_review_languages": {
-  "중국어": 38,
+  "중국어": 28,
   "태국어": 2,
-  "영어": 6
+  "영어": 4
  },
  "instagram": {
   "KR": {
@@ -422,7 +422,7 @@
   "threads_posts": "REPOST_FACADE items are counted separately from own posts (KR reposted 199 in the window)",
   "google_3star": "counted as mixed regardless of text",
   "google_4star": "positive text counted as positive",
-  "google_collection": "SerpApi newestFirst returned only 5 reviews; in-window rows were read from the Google Maps newest list (relative dates, 9 rows shown as 1 week ago counted as 10/26); cumulative display rose by 35",
+  "google_collection": "SerpApi newestFirst returned only 5 reviews; the 34 newest 5-star rows of the Google Maps newest list were taken as this week's new reviews (displayed count +35 = 34 new 5-star + 1 re-counted edited 1-star)",
   "naver_mixed": "Naver review with a front-desk complaint counted as mixed (severity 1)",
   "unni_high_score_mixed": "9/8-point reviews with brief or unreflected consultation, price-change or unconfirmed-effect wording are counted as mixed; a 6-point review is counted as mixed on score alone",
   "sungyesa_entry": "no new evaluation post in the window",
