@@ -82,7 +82,80 @@
   "google": 0,
   "gangnamunni": 0
  },
- "naver_searchadvisor": {},
+ "naver_searchadvisor": {
+  "https://beautyblossom.kr": {
+   "expose": 23277,
+   "click": 291,
+   "prev_expose": 51685,
+   "prev_click": 315,
+   "days": 7,
+   "prev_days": 7,
+   "code": 0
+  },
+  "https://hongdae-skin.tistory.com": {
+   "expose": 157,
+   "click": 0,
+   "prev_expose": 112,
+   "prev_click": 0,
+   "days": 6,
+   "prev_days": 7,
+   "code": 0
+  },
+  "https://en.beautyblossom.kr": {
+   "expose": 328,
+   "click": 2,
+   "prev_expose": 130,
+   "prev_click": 0,
+   "days": 7,
+   "prev_days": 7,
+   "code": 0
+  },
+  "https://jp.beautyblossom.kr": {
+   "expose": 14,
+   "click": 0,
+   "prev_expose": 22,
+   "prev_click": 0,
+   "days": 7,
+   "prev_days": 7,
+   "code": 0
+  },
+  "https://cn.beautyblossom.kr": {
+   "expose": 116,
+   "click": 0,
+   "prev_expose": 62,
+   "prev_click": 0,
+   "days": 7,
+   "prev_days": 7,
+   "code": 0
+  },
+  "https://tw.beautyblossom.kr": {
+   "expose": 61,
+   "click": 0,
+   "prev_expose": 106,
+   "prev_click": 0,
+   "days": 7,
+   "prev_days": 7,
+   "code": 0
+  },
+  "https://www.beautyblossomth.kr": {
+   "expose": 2,
+   "click": 0,
+   "prev_expose": 2,
+   "prev_click": 0,
+   "days": 2,
+   "prev_days": 7,
+   "code": 0
+  },
+  "https://hk.beautyblossom.kr": {
+   "expose": 7,
+   "click": 0,
+   "prev_expose": 9,
+   "prev_click": 0,
+   "days": 7,
+   "prev_days": 7,
+   "code": 0
+  }
+ },
  "cumulative": {
   "Naver": {
    "prev": 2720,
@@ -352,7 +425,6 @@
  "not_collected": [
   "instagram_comment_text",
   "facebook_page_posts_permission",
-  "naver_searchadvisor_console_login_pending",
   "rednote_skipped"
  ],
  "metric_notes": {
